@@ -85,9 +85,6 @@
                 box-sizing: border-box;
             }
         }
-        .active {
-           
-        }
     }
     .burger {
         display: grid;
@@ -169,9 +166,9 @@
             rgba(0, 0, 0, 0.093) 0px 3px 7px -3px;
         background-color: var(--white);
         transition: all 0.5s ease-in-out;
-        a {
-            // color: var(--text);
-        }
+        // a {
+        //     // color: var(--text);
+        // }
         // border-bottom: 0.5px solid var(--primary);
     }
     .hide {

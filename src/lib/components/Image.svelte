@@ -4,7 +4,6 @@
     export let figcaption=''
     export let src="";
     export let alt="image";
-    export let loading="eager";
     export let width = "auto"
     export let height = "300px"
     // onMount(()=>{

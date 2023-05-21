@@ -32,7 +32,7 @@
 </svelte:head>
 
 <Section className="section1" >
-    <h1 id="home_section1" use:observer={params} on:enter={(entry)=>enter(entry)} on:exit={(entry)=>exit(entry)}>Section1</h1>
+    <h1 id="home_section1" use:observer={params} >Section1</h1>
     <LogoSvg height="200px" animation={true}></LogoSvg>
     <picture>
         <Image src={profile}></Image>
