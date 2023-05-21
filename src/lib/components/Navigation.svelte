@@ -45,12 +45,12 @@
         <li class:active={$page.url.pathname === "/about"}>
             <a href="/about">Über Mich</a>
         </li>
-        <li class:active={$page.url.pathname === "/service"}>
+        <!-- <li class:active={$page.url.pathname === "/service"}>
             <a href="/service">Leistungen</a>
         </li>
         <li class:active={$page.url.pathname === "/contact"}>
             <a href="/contact">Kontakt</a>
-        </li>
+        </li> -->
     </ul>
 </nav>
 
