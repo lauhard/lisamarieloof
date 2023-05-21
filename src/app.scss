@@ -1,0 +1,181 @@
+@import url(./lib/css/pico/pico.css);
+@font-face {
+    font-family: 'Poiret One';
+    src: url('./lib/css/fonts/PoiretOne-Regular.ttf');
+}
+
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+:root {
+    --font-body: 
+        Arial, 
+        -apple-system, 
+        BlinkMacSystemFont, 
+        Oxygen, 
+        Ubuntu,
+        Cantarell, 
+        'Open Sans', 
+        'Helvetica Neue', 
+        'Poiret One',
+        sans-serif
+    ;
+    // --background: linear-gradient(
+    //     75deg,
+    //     #f3f3f3 5%,
+    //     hsla(0, 0%, 79%, 0.651) 50%,
+    //     hsl(0, 3%, 64%) 100%
+    // );
+
+    --text: #202020 !important;
+
+    --primary:#c4b26a !important;
+    // --primary:#6aca9d !important;
+    // --primary:#80b99f !important;
+    // --secondary:#44b175 !important;
+    
+    --white:#fff !important;
+    --primary-hover:#c4b26ac1 !important;
+    // --primary-hover:#75daabb9 !important;
+
+    --secondary-hover:hsla(147, 44%, 48%, 0.75) !important;
+}
+@keyframes hover {
+    0% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(5px);
+    }
+    75% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+.hover{
+    animation: hover 3s linear infinite;
+}
+.svg-icons {
+    stroke:#060000;
+    fill:#060000;
+}
+
+html{
+    font-size: calc(15px + 0.390625vw);
+    scroll-behavior: smooth;
+    scroll-snap-type: proximity;
+    overflow-y: auto;
+    color:var(--text);
+    ::-webkit-scrollbar {
+        width: 7px;
+        height: 7px;
+        transition: all .3s ease-in-out;
+    }
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: var(--main-background-color, #fff);
+    }
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: var(--primary,#c4b26a);
+        border-radius: 5px;
+    }
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: var(--primary-hover,#ddc35a);
+        transition: background-color .3s ease-in-out;
+    }
+
+    body{
+        font-family: var(--font-body);
+        min-height: 100vh;
+        height: 100%;
+        margin: 0;
+        // font-family: "Poiret One";
+        font-family: 'Arial';
+		letter-spacing: 1.2px;
+
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            // font-family: "Poiret One";
+            // font-family: "Roboto-Black";
+            letter-spacing: 1px;
+            margin: 0;
+        } 
+        h1::before, h2::before, h3::before {
+            content: " ";
+            background-color: var(--primary);
+            position: absolute;
+            border-color: var(--primary);
+            border-style: solid;
+        }
+        h1::before {
+            border-bottom-width: 5px;
+            width: 5rem;
+            height: 5px;
+            border-radius: 5px;
+            margin-top:2.6rem;
+        }
+        h2::before {
+            border-bottom-width: 4.5px;
+            width: 4rem;
+            height: 4.5px;
+            border-radius: 4.5px;
+            margin-top:2.3rem;
+        } 
+        h3::before {
+            border-bottom-width: 3.5px;
+            width: 3rem;
+            height: 3.5px;
+            border-radius: 4px;
+            margin-top:2rem;
+        } 
+        li, 
+        a{
+            // font-family: "Poiret One";
+            // font-family: 'Roboto-Light';
+            text-decoration: none;
+            list-style: none;
+        } 
+        p{
+            // font-family: 'Roboto-Light';
+            margin: 0;
+            padding: 0;
+            font-size: 1rem;
+		    letter-spacing: 1px;
+        }
+    }
+
+
+}
+
+
+// [data-theme="light"],
+// :root:not([data-theme="dark"]) {
+//   --primary: #546e7a;
+//   --primary-hover: #455a64;
+//   --primary-focus: rgba(84, 110, 122, 0.125);
+//   --primary-inverse: #FFF;
+// }
+
+/* Blue-grey Dark scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+      --primary: #546e7a;
+      --primary-hover: #607d8b;
+      --primary-focus: rgba(84, 110, 122, 0.25);
+      --primary-inverse: #FFF;
+    }
+  }
+
