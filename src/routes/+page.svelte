@@ -23,13 +23,17 @@
         console.log("exit", e.target)
     }
     function mapsSelector() {
-  if /* if we're on iOS, open in Apple Maps */
-    ((navigator.platform.indexOf("iPhone") != -1) || 
-     (navigator.platform.indexOf("iPad") != -1) || 
-     (navigator.platform.indexOf("iPod") != -1))
-    window.open("maps://maps.google.com/maps?daddr=<lat>,<long>&amp;ll=");
+        let lat = 46.63675228284946;
+        let long = 14.318131612773715;
+        /* if we're on iOS, open in Apple Maps */
+    if (
+        (navigator.platform.indexOf("iPhone") != -1) || 
+        (navigator.platform.indexOf("iPad") != -1) || 
+        (navigator.platform.indexOf("iPod") != -1)
+     )
+    window.open(`maps://maps.google.com/maps?daddr=<${lat}>,<${long}>&amp;ll=`);
 else /* else use Google */
-    window.open("https://maps.google.com/maps?daddr=<lat>,<long>&amp;ll=");
+    window.open(`https://maps.google.com/maps?daddr=<${lat}>,<${long}>&amp;ll=`);
 }
 </script>
 <svelte:head>
