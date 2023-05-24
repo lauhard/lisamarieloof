@@ -22,7 +22,15 @@
     const exit = (e:IntersectionObserverEntry) => {
         console.log("exit", e.target)
     }
-
+    function mapsSelector() {
+  if /* if we're on iOS, open in Apple Maps */
+    ((navigator.platform.indexOf("iPhone") != -1) || 
+     (navigator.platform.indexOf("iPad") != -1) || 
+     (navigator.platform.indexOf("iPod") != -1))
+    window.open("maps://maps.google.com/maps?daddr=<lat>,<long>&amp;ll=");
+else /* else use Google */
+    window.open("https://maps.google.com/maps?daddr=<lat>,<long>&amp;ll=");
+}
 </script>
 <svelte:head>
     <title>Home</title>
@@ -37,7 +45,7 @@
     <picture>
         <Image src={profile}></Image>
     </picture>
-   
+    <button type="button" on:click={(e)=>mapsSelector()}></button>
     <RoundButton classNames="hover scroll-down">
         <a href="/#home_section2">
             <ArrowDownSvg width="20px" height="30px" ></ArrowDownSvg>
