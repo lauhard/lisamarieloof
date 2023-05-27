@@ -7,11 +7,14 @@
     import ArrowDownSvg from '$lib/components/ArrowDownSvg.svelte';
     import { ObserveProps, observer } from '$lib/actions/observer';
     import profile from '$lib/images/profile.png'
+    import { openMaps } from '$lib/utils';
     onMount(()=>{
         
     })
     onDestroy(() => {
+
     });
+
     let params = {
         options:{ threshold: .1, rootMargin: "0px" },
         observerProp:ObserveProps.isIntersecting
@@ -22,19 +25,7 @@
     const exit = (e:IntersectionObserverEntry) => {
         console.log("exit", e.target)
     }
-    function mapsSelector() {
-        let lat = 46.63675228284946;
-        let long = 14.318131612773715;
-        /* if we're on iOS, open in Apple Maps */
-    if (
-        (navigator.platform.indexOf("iPhone") != -1) || 
-        (navigator.platform.indexOf("iPad") != -1) || 
-        (navigator.platform.indexOf("iPod") != -1)
-     )
-    window.open(`maps://maps.google.com/maps?daddr=<${lat}>,<${long}>&amp;ll=`);
-else /* else use Google */
-    window.open(`https://maps.google.com/maps?daddr=<${lat}>,<${long}>&amp;ll=`);
-}
+    
 </script>
 <svelte:head>
     <title>Home</title>
@@ -44,12 +35,14 @@ else /* else use Google */
 </svelte:head>
 
 <Section className="section1" >
-    <h1 id="home_section1" use:observer={params} on:enter={(entry)=>enter(entry)} on:exit={(entry)=>exit(entry)}>Section1</h1>
+    <h1 id="home_section1" >Section1</h1>
+    <!-- <h1 id="home_section1" use:observer={params} on:enter={(entry)=>enter(entry)} on:exit={(entry)=>exit(entry)}>Section1</h1> -->
     <LogoSvg height="200px" animation={true}></LogoSvg>
     <picture>
         <Image src={profile}></Image>
     </picture>
-    <button type="button" on:click={(e)=>mapsSelector()}></button>
+    <button type="button" on:click={(e)=>openMaps()}></button>
+    
     <RoundButton classNames="hover scroll-down">
         <a href="/#home_section2">
             <ArrowDownSvg width="20px" height="30px" ></ArrowDownSvg>
@@ -64,8 +57,7 @@ else /* else use Google */
 <style lang="scss">
     :global(.section1){
         justify-content: center;
-        background: linear-gradient(292.05deg, #64FFEC 1.08%, #00C0A9 95.55%);
-
+        // background: linear-gradient(292.05deg, #64FFEC 1.08%, #00C0A9 95.55%);
     }
     :global(.scroll-down) {
         background:red;

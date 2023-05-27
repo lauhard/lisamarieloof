@@ -3,6 +3,7 @@
     import { onMount } from "svelte";
     import BurgerMenu from "./BurgerMenu.svelte";
     import { beforeNavigate } from "$app/navigation";
+    import LogoSvg from "./LogoSvg.svelte";
 
     export const offset = 50;
 
@@ -45,13 +46,19 @@
         <li class:active={$page.url.pathname === "/about"}>
             <a href="/about">Über Mich</a>
         </li>
-        <!-- <li class:active={$page.url.pathname === "/service"}>
+        <li class:active={$page.url.pathname === "/service"}>
             <a href="/service">Leistungen</a>
         </li>
         <li class:active={$page.url.pathname === "/contact"}>
             <a href="/contact">Kontakt</a>
-        </li> -->
+        </li>
+       
     </ul>
+    <!-- <li class="logo">
+        <slot name="logo">
+
+        </slot>
+    </li> -->
 </nav>
 
 <style lang="scss">
@@ -65,6 +72,7 @@
         border-bottom: 1px solid var(--primary);
         background-color: inherit;
         background-color: rgba(243, 243, 243, 0.87);
+       
         li {
             position: relative;
             padding: 0;
@@ -95,6 +103,7 @@
         position: fixed;
         width: 100%;
         margin: 0px;
+        height: 70px;
         box-sizing: border-box;
         z-index: 999;
         z-index: 999;
@@ -102,6 +111,18 @@
         transition: all 0.5s ease-in-out;
         ul {
             display: none;
+        }
+        .logo{
+            width:150px;
+            // height: 100%;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            right: 0px;
+            // display: flex;
+            // align-items: center;
+            background-color: gray;
+
         }
         a {
             color: black;
@@ -120,6 +141,7 @@
             // border-bottom: 0.5px solid var(--primary);
             width: 100%;
             margin: 0;
+            gap:35px;
             box-sizing: border-box;
             li {
                 position: relative;
