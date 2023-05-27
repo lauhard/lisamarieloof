@@ -35,13 +35,13 @@
 </svelte:head>
 
 <Section className="section1" >
-    <h1 id="home_section1" >Section1</h1>
+    <!-- <h1 id="home_section1" >Section1</h1> -->
     <!-- <h1 id="home_section1" use:observer={params} on:enter={(entry)=>enter(entry)} on:exit={(entry)=>exit(entry)}>Section1</h1> -->
-    <LogoSvg height="200px" animation={true}></LogoSvg>
-    <picture>
+    <!-- <LogoSvg height="200px" animation={true}></LogoSvg> -->
+    <!-- <picture>
         <Image src={profile}></Image>
-    </picture>
-    <button type="button" on:click={(e)=>openMaps()}></button>
+    </picture> -->
+    <!-- <button type="button" on:click={(e)=>openMaps()}></button> -->
     
     <RoundButton classNames="hover scroll-down">
         <a href="/#home_section2">

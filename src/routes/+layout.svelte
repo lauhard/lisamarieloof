@@ -7,14 +7,13 @@
     import LogoSvg from '$lib/components/LogoSvg.svelte';
     export let data: LayoutData
     console.log("layout")
+    $:_loaded = false;
     onMount(()=>{
-        console.log(" layout page")
+        console.log(" layout page");
+        _loaded = true;
     })
 </script>
-<Navigation>
-    <!-- <svelte:fragment slot="logo">
-    </svelte:fragment> -->
-</Navigation>
+
 
 <!-- in:fly={{ delay: 100, duration: 200, y: -10, }} out:fly={{ duration: 100,  y: 10, }}> -->
 <!-- in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 150 }}> -->
@@ -26,9 +25,12 @@
 -->
 {#key data.currentRoute}
     <div class="app">
-        <div>
-            <LogoSvg height="55px" animation={true}></LogoSvg>
-        </div>
+        <Navigation></Navigation>
+        {#if _loaded}
+            <div>
+                <LogoSvg height="55px" animation={true}></LogoSvg>
+            </div>
+        {/if}
     <main
         in:fade={{ duration: 150, delay: 150 }} out:fly={{ duration: 150, x: 100 }}
     >

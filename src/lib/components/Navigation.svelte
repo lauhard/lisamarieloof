@@ -16,7 +16,10 @@
     $: console.log("open state: ", open);
 
     $:hide=false;
-    onMount(() => {});
+    $:_loaded = false;
+    onMount(() => {
+        _loaded = true;
+    });
     beforeNavigate(() => {
         open = false;
     });
@@ -35,31 +38,32 @@
 </script>
 
 <svelte:window bind:scrollY={scrollY} bind:innerWidth={innerWidth} />
-<nav class:scroll={scrollY > offset} class:hide={hide === true}>
-    <ul class="burger">
-        <BurgerMenu bind:open />
-    </ul>
-    <ul class:navigation={innerWidth >= 680} class:mobile={innerWidth < 680 && open == true}>
-        <li class:active={$page.url.pathname === "/"}>
-            <a href="/">Startseite</a>
-        </li>
-        <li class:active={$page.url.pathname === "/about"}>
-            <a href="/about">Über Mich</a>
-        </li>
-        <li class:active={$page.url.pathname === "/service"}>
-            <a href="/service">Leistungen</a>
-        </li>
-        <li class:active={$page.url.pathname === "/contact"}>
-            <a href="/contact">Kontakt</a>
-        </li>
-       
-    </ul>
-    <!-- <li class="logo">
-        <slot name="logo">
-
-        </slot>
-    </li> -->
-</nav>
+{#if _loaded === true }
+    <nav class:scroll={scrollY > offset} class:hide={hide === true}>
+        <ul class="burger">
+            <BurgerMenu bind:open />
+        </ul>
+        <ul class:navigation={innerWidth >= 680} class:mobile={innerWidth < 680 && open == true}>
+            <li class:active={$page.url.pathname === "/"}>
+                <a href="/">Startseite</a>
+            </li>
+            <li class:active={$page.url.pathname === "/about"}>
+                <a href="/about">Über Mich</a>
+            </li>
+            <li class:active={$page.url.pathname === "/service"}>
+                <a href="/service">Leistungen</a>
+            </li>
+            <li class:active={$page.url.pathname === "/contact"}>
+                <a href="/contact">Kontakt</a>
+            </li>
+        
+        </ul>
+        <!-- <li class="logo">
+            <slot name="logo">
+            </slot>
+        </li> -->
+    </nav>
+{/if}
 
 <style lang="scss">
     .mobile {
