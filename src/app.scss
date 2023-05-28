@@ -3,7 +3,7 @@
     font-family: 'Poiret One';
     src: url('./lib/css/fonts/PoiretOne-Regular.ttf');
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
 *,*::before,*::after {
     margin: 0;
     padding: 0;
@@ -30,7 +30,8 @@
     //     hsl(0, 3%, 64%) 100%
     // );
 
-    --background: #cfcfcf;
+    // --background: #c7fde757;
+    --background: #b1c9bf;
 
     --text: #202020 !important;
 
@@ -101,7 +102,7 @@ html{
         // font-family: "Poiret One";
         font-family: 'Arial';
 		letter-spacing: 1.2px;
-
+        // background-color: var(--background);
         
         h1,
         h2,
@@ -157,8 +158,6 @@ html{
 		    letter-spacing: 1px;
         }
     }
-
-
 }
 
 

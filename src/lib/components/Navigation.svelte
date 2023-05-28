@@ -56,7 +56,6 @@
             <li class:active={$page.url.pathname === "/contact"}>
                 <a href="/contact">Kontakt</a>
             </li>
-        
         </ul>
         <!-- <li class="logo">
             <slot name="logo">
@@ -125,13 +124,11 @@
             right: 0px;
             // display: flex;
             // align-items: center;
-            background-color: gray;
-
         }
         a {
             color: black;
             color: var(--text);
-            font-size: .6rem;
+            font-size: .55rem;
             word-break: keep-all;
             text-transform: uppercase;
             font-family: "Segoe UI";
@@ -232,7 +229,7 @@
                         display: block !important;
                         margin: 0;
                         margin-left: 1rem;
-                        font-size: .6rem;
+                        font-size: .55rem;
                         box-sizing: border-box;
                     }
                 }

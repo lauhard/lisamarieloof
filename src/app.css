@@ -1,4 +1,5 @@
 @import url(./lib/css/pico/pico.css);
+@import url("https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @font-face {
   font-family: "Poiret One";
   src: url("./lib/css/fonts/PoiretOne-Regular.ttf");
@@ -21,7 +22,7 @@
       "Helvetica Neue",
       "Poiret One",
       sans-serif ;
-  --background: #cfcfcf;
+  --background: #b1c9bf;
   --text: #202020 !important;
   --primary:#c4b26a !important;
   --white:#fff !important;

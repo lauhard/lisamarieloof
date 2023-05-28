@@ -13,12 +13,9 @@
         _loaded = true;
     })
 </script>
-
-
 <!-- in:fly={{ delay: 100, duration: 200, y: -10, }} out:fly={{ duration: 100,  y: 10, }}> -->
 <!-- in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 150 }}> -->
 <!-- in:fly={{ delay: 100, duration: 200, x: -800 }} out:fade={{ duration: 150, delay: 150 }}> -->
-
 <!-- 
     Transition needs current route!
     pass route from server
@@ -27,7 +24,7 @@
     <div class="app">
         <Navigation></Navigation>
         {#if _loaded}
-            <div>
+            <div class="logo-wrapper">
                 <LogoSvg height="55px" animation={true}></LogoSvg>
             </div>
         {/if}
@@ -41,20 +38,31 @@
 
 <style lang="scss">
 .app{
-    background: var(--background);
-    div{
+    // background: var(--background);
+    height: 100%;
+    width: 100%;
+    // width: 100vw;
+    .logo-wrapper{
         top:10px;
         position: fixed;
-        right: 40px;
+        right: 60px;
         z-index: 100000;
+        display: flex;
+        vertical-align: center;
     }
     main{
-        max-width: 1240px;
-        width: 100%;
+        // max-width: 1240px;
+        // margin: 0 auto;
+
+       
+        height: 100vh;
         margin:0;
         padding:0;
-        margin: 0 auto;
-        // background-color: gray;
+    }
+    @media screen and (max-width: 680px) {
+        .logo-wrapper{
+            right:15px;
+        }
     }
 }
 </style>
