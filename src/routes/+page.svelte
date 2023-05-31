@@ -8,6 +8,7 @@
     import { ObserveProps, observer } from "$lib/actions/observer";
     import profile from "$lib/images/profile.png";
     import { openMaps } from "$lib/utils";
+    import AnimatedHeading from "$lib/components/AnimatedHeading.svelte";
     $: vars = `--background-image: url(${profile});`;
 
     onMount(() => {});
@@ -40,50 +41,16 @@
         <Image src={profile}></Image>
     </picture> -->
     <!-- <button type="button" on:click={(e)=>openMaps()}></button> -->
+    
+   
     <div class="grid">
-        <div class="box left">
-            <div class="nested circle-wrapper">
-                <div class="circle">
-                    <div class="heading">
-                        <h3 class="line1">Ihr Ort</h3>
-                        <h1 class="line2">für <span>HYPNOSE</span> &</h1>
-                        <h1 class="line3">Weiterentwicklung</h1>
-                    </div>
-                </div>
-            </div> 
-            <div class="nested">
-                <div class="spacer"></div>
-            </div>
-            <div class="nested">
-                <h5>Herzlich Willkommen</h5>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                    Atque, sint qui consectetur quis vitae nesciunt error modi labore, 
-                    saepe optio natus! Vel ullam at illum et doloremque debitis recusandae dolore.
-                </p>
-            </div>
-            <div class="nested">
-                <div class="spacer"></div>
-            </div>
-
-            <div class="nested service-wrapper">
-                <h5>Leistungen</h5>
-                <div class="services">
-                    <div class="service"></div>
-                    <div class="service"></div>
-                    <div class="service"></div>
-                    <div class="service"></div>
-                    <div class="service"></div>
-                </div>
-            </div>
+        <div class="heading">
+            <h5 class="line1">Lisa-Marie Loof</h5>
+            <h1 class="line2">Ihr Ort für <span>HYPNOSE</span> &</h1>
+            <h1 class="line3">Weiterentwicklung</h1>
         </div>
-        <div class="box right">
-            <div class="nested image-wrapper">
-                <div class="image">
-
-                </div>
-            </div>
-        </div>
+      
+       
     </div>
     <RoundButton classNames="hover scroll-down">
         <a href="/#home_section2">
@@ -92,225 +59,91 @@
     </RoundButton>
 </Section>
 
-<Section>
-    <h1 id="home_section2">Section2</h1>
+<Section className="section2">
+    <h1 id="home_section2"></h1>
 </Section>
 
 <style lang="scss">
-    :global(.section1) {
-        padding: 0 !important;
-        margin: 0 !important;
-        // width: 100vw !important;
-        // justify-content: center;
-        // background: linear-gradient(292.05deg, #64FFEC 1.08%, #00C0A9 95.55%);
-    }
-    :global(.scroll-down) {
+     :global(.scroll-down) {
         bottom: 50px;
         position: absolute;
     }
-    :global(.svg-icons) {
-        fill: var(--text) !important;
-        font-size: 30px !important;
-    }
-    picture {
-        height: 200px;
-        border-radius: 200px;
-        overflow: hidden;
+    :global(.section1) {
+        padding: 0 !important;
+        margin: 0 !important;
+        flex-direction: column !important;
+        // width: 100vw !important;
+        // justify-content: center;
+        // background: #1339AC;
+        justify-content: center;
+        align-items: center;
     }
     .grid {
-        // width: 1240px;
-        // background-color: #caac6f;
-        border: 2px solid #f76707;
+        background: #ffffff;
+        // background: #1339AC;
+        border-radius: 10px;
+        margin-top:10px;
         width: 80%;
-        height: 100%;
-     
-        gap: 0px;
-      
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-auto-rows: minmax(100px, auto);
-        box-sizing: border-box;
-        .box {
-            border: 2px solid #ffa94d;
-            border-radius: 5px;
-            // padding: 1em;
-            // color: #d9480f;
-            width: 100%;
-            box-sizing: border-box;
-
-        }
-        .spacer{
-            width: 35px;
-            height: 5px;
-            background: #ef476f;
-            border-radius: 30px;
-            margin: 30px;
-        }
-        .nested {
-            border: 2px solid #ffec99;
-            border-radius: 5px;
-            // padding: 1em;
-            position: relative;
-            width: 100%;
-            // background-color: #ef476f;
-            // height: 100%;
-            // height: 400px;
-            flex-direction: column;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            p{
-                text-align: center;
-                font-size: 16px;
-            }
-        }
-        .left,
-        .right {
-            height: 100%;
-            width: 100%;
-            
-        }
-        .left {
-            .circle-wrapper {
-                height: 340px;
-                width: 100%;
+        height: 80%;
+        // border:1px solid hsla(0, 0%, 50%, 0.3);
+        // box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        // box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        // box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+        // box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+        .heading {
                 position: relative;
-                display: flex;
-                justify-content: flex-end;
-                padding-bottom: 15px;
-                .circle {
-                    position: absolute;
-                    width: 200px;
-                    height: 200px;
-                    background: rgb(250, 241, 241);
-                    border: 1px solid rgba(246, 188, 208, 0.589);
-                    box-shadow: 0 0 20px rgba(193, 10, 74, 0.507);
-
-                    border-radius: 50%;
-                    // background: radial-gradient(
-                    //     circle,
-                    //     rgba(255, 255, 255, 0) 35%,
-                    //     rgba(251, 97, 151, 0.196) 55%,
-                    //     rgba(255, 66, 132, 0.468) 90%
-                    // );
-                    background: radial-gradient(
-                        circle,
-                        rgba(255, 255, 255, 0) 50%,
-                        rgba(251, 97, 151, 0.196) 70%,
-                        rgba(255, 66, 132, 0.323) 90%
-                    );
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    .heading {
-                        position: relative;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
-                        width: 300px;
-                        height: 200px;
-                        // background-color: rgba(128, 128, 128, 0.548);
-                        h1,
-                        h3 {
-                            position: absolute;
-                            font-size: 50px;
-                            letter-spacing: 2px;
-                            text-align: center;
-                            justify-content: center;
-                            font-family: "Saira Condensed";
-                            color: #505050;
-                        }
-                        .line1 {
-                            position: absolute;
-                            top: 30px;
-                            font-size: 28px;
-                        }
-                        .line2 {
-                            left: -15px;
-                            width: 100%;
-                            span {
-                                color: #ef476f;
-                            }
-                        }
-                        .line3 {
-                            bottom: 17px;
-                            font-size: 45px;
-                            color: #505050;
-                        }
-                        h1::after,
-                        h3::after,
-                        h1::before,
-                        h3::before {
-                            display: none;
-                        }
-                    }
-                }
-            }
-            .service-wrapper{
                 display: flex;
                 flex-direction: column;
-                width: 100%;
-                gap: .5rem;
-                h5{
-                    color:#ef476f;
-                }
-                .services{
-                    display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 400px;
+                height: 200px;
+
+                // background-color: rgba(128, 128, 128, 0.548);
+
+                h1,
+                h5 {
+                    position: absolute;
+                    letter-spacing: 2px;
+                    text-align: center;
                     justify-content: center;
-                    align-items: center;
-                    flex-wrap: wrap;
-                    gap: 1rem;
-                    .service {
-                        width: 150px;
-                        height: 120px;
-                        background: gray;
+                    font-family: "Saira Condensed";
+                    color: #505050;
+                }
+                .line1 {
+                    position: absolute;
+                    font-weight: 300;
+                    color:white;   
+                    top:40px;
+                    font-size: 14px;
+                    left:0px;
+                    background-color: var(--primary);
+                    border-radius: 10px;
+                    padding: 2px 10px;
+                }
+                .line2 {
+                    // left: -15px;
+                    font-size: 45px;
+                    width: 100%;
+                    span {
+                        color: #ef476f;
                     }
                 }
-            }
-           
-        }
-        .right{
-            // background-color: var(--background);
-            height: 100vh;
-            position:relative;
-            box-sizing: border-box;
-
-            .image-wrapper{
-                position: relative;
-                // height: 100vh;
-                // width: 50vw;
-                box-sizing: border-box;
-                background-color: red;
-
-                .image{
-                    box-sizing: border-box;
-                    width:85%;
-                    height:100%;
-                    // position: absolute;
-                    // right: 0px;
-                    // bottom: 0;
-
-                    // background-image:
-                    //     linear-gradient(90deg, var(--background) 30%, rgba(205, 189, 189, 0) 100%),
-                    //     url('$lib/images/profile.png');
-                    // background-size:  150px, cover;
-                    // background-position:10px 0px;
-                    // background-repeat: no-repeat;
-
-
-                    width:50vw;
-                    height: 100vh;
-                    width: 400px;
-                    height: 400px;
-                    border-radius: 50%;
-                    background-image: url('$lib/images/profile.png');
-                    background-repeat: no-repeat;
-                    background-position:100% 20%;
-                    background-size: cover;
+                .line3 {
+                    bottom: 17px;
+                    font-size: 45px;
+                    color: #505050;
+                }
+                h1::after,
+                h3::after,
+                h1::before,
+                h3::before {
+                    display: none;
                 }
             }
-        }
     }
+  
+   
+   
+
 </style>

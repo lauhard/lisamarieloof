@@ -25,7 +25,14 @@
         <Navigation></Navigation>
         {#if _loaded}
             <div class="logo-wrapper">
-                <LogoSvg height="55px" animation={true}></LogoSvg>
+                
+                <LogoSvg height="55px" 
+                    animation={true}
+                    --leaves-main='#C8A560'
+                    --leaves-overlay='#ae8c48'
+                    --tree-color='#515151'
+                    --tree-overlay='#2e2c2c'
+                ></LogoSvg>
             </div>
         {/if}
     <main
@@ -38,26 +45,25 @@
 
 <style lang="scss">
 .app{
-    // background: var(--background);
     height: 100%;
     width: 100%;
     // width: 100vw;
     .logo-wrapper{
         top:10px;
         position: fixed;
-        right: 60px;
+        left: 60px;
         z-index: 100000;
         display: flex;
         vertical-align: center;
+       
     }
     main{
         // max-width: 1240px;
         // margin: 0 auto;
-
-       
         height: 100vh;
         margin:0;
         padding:0;
+
     }
     @media screen and (max-width: 680px) {
         .logo-wrapper{

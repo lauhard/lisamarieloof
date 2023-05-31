@@ -12,7 +12,7 @@
             anime({
                 targets: '.leave, .overlay',
                 opacity: 1,
-                delay: anime.stagger(20, {start: 200}) 
+                delay: anime.stagger(20, {start: 50}) 
             });
         }
     })

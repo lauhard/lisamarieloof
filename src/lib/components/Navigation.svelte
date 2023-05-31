@@ -39,10 +39,11 @@
 
 <svelte:window bind:scrollY={scrollY} bind:innerWidth={innerWidth} />
 {#if _loaded === true }
-    <nav class:scroll={scrollY > offset} class:hide={hide === true}>
+    <nav class:scroll={scrollY > offset} class:hide={hide === true} >
         <ul class="burger">
             <BurgerMenu bind:open />
         </ul>
+       
         <ul class:navigation={innerWidth >= 680} class:mobile={innerWidth < 680 && open == true}>
             <li class:active={$page.url.pathname === "/"}>
                 <a href="/">Startseite</a>
@@ -53,10 +54,11 @@
             <li class:active={$page.url.pathname === "/service"}>
                 <a href="/service">Leistungen</a>
             </li>
-            <li class:active={$page.url.pathname === "/contact"}>
-                <a href="/contact">Kontakt</a>
-            </li>
+            <button class="cta">
+                <a href="/contact">Termin buchen</a>
+            </button>
         </ul>
+       
         <!-- <li class="logo">
             <slot name="logo">
             </slot>
@@ -65,6 +67,34 @@
 {/if}
 
 <style lang="scss">
+    .cta{
+        
+        width:auto;
+        height:38px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        background: var(--primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:0;
+        padding: 0;
+        a {
+            display: block;
+            margin:0;
+            text-align: center;
+            line-height: 1;
+        }
+    }
+    .cta:hover{
+        background-color: var(--secondary);
+        border: 1px solid var(--secondary);
+        box-shadow: rgba(99, 99, 99, 0.292) -4px 4px 6px 2px;
+        transform: scale(1.01);
+
+        a {
+            color:var(--inverse);            
+        }
+    }
     .mobile {
         top: 60px;
         position: absolute;
@@ -105,16 +135,15 @@
     nav {
         position: fixed;
         width: 100%;
-        margin: 0px;
         height: 70px;
         box-sizing: border-box;
         z-index: 999;
-        z-index: 999;
         box-shadow: none;
         transition: all 0.5s ease-in-out;
-        ul {
-            display: none;
-        }
+        display: flex;
+        justify-content: center;
+        vertical-align: center;
+        background: rgba(240, 240, 240, 0.7);
         .logo{
             width:150px;
             // height: 100%;
@@ -142,8 +171,12 @@
             // border-bottom: 0.5px solid var(--primary);
             width: 100%;
             margin: 0;
-            gap:35px;
+            gap:20px;
             box-sizing: border-box;
+            display: flex;
+            width: 80%;
+            justify-content: end;
+            vertical-align: center;
             li {
                 position: relative;
                 &:first-child {
@@ -182,24 +215,34 @@
                     border-radius: 5px;
                 }
             }
+            transition: all 1s ease-in-out;
         }
+        transition: all 1s ease-in-out;
     }
     .scroll {
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-            rgba(0, 0, 0, 0.093) 0px 3px 7px -3px;
+        // box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        //     rgba(0, 0, 0, 0.093) 0px 3px 7px -3px;
+        opacity: 1;
         background-color: var(--white);
         transition: all 0.5s ease-in-out;
+        background: rgba(240, 240, 240, 0.7);
+        transition: all .2s ease-in-out;
         // a {
         //     // color: var(--text);
         // }
         // border-bottom: 0.5px solid var(--primary);
     }
     .hide {
-        display: none;
-        transition: position 1s ease-in-out;
+        // display: none;
+        opacity: 0;
+        transition: all .2s ease-in-out;
     }
     @media screen and (max-width: 680px) {
         nav {
+            justify-content: start;
+            ul{
+                display: none;
+            }
             .mobile {
                 top: 60px;
                 position: absolute;
