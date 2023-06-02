@@ -1,9 +1,4 @@
 @import url(./lib/css/pico/pico.css);
-@font-face {
-    font-family: 'Poiret One';
-    src: url('./lib/css/fonts/PoiretOne-Regular.ttf');
-}
-@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
 *,*::before,*::after {
     margin: 0;
     padding: 0;
@@ -23,49 +18,24 @@
         'Poiret One',
         sans-serif
     ;
-    // --background: linear-gradient(
-    //     75deg,
-    //     #f3f3f3 5%,
-    //     hsla(0, 0%, 79%, 0.651) 50%,
-    //     hsl(0, 3%, 64%) 100%
-    // );
-
-    // --background: #c7fde757;
-    --background: #b1c9bf;
-
+   
+    --background: #ffffff !important;
     --text: #202020 !important;
-
     --primary:#c4b26a !important;
-    // --primary:#6aca9d !important;
-    // --primary:#80b99f !important;
-    // --secondary:#44b175 !important;
-    
+    --secondary:#44b175 !important;
     --white:#fff !important;
     --primary-hover:#c4b26ac1 !important;
-    // --primary-hover:#75daabb9 !important;
-
     --secondary-hover:hsla(147, 44%, 48%, 0.75) !important;
-}
-@keyframes hover {
-    0% {
-        transform: translateY(0px);
-    }
-    25% {
-        transform: translateY(5px);
-    }
-    75% {
-        transform: translateY(-5px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
+
+    --svg-icon-fill:#060000;
+    --svg-icon-stroke:#060000;
 }
 .hover{
     animation: hover 3s linear infinite;
 }
 .svg-icons {
-    stroke:#060000;
-    fill:#060000;
+    stroke:var(--svg-icon-stroke);
+    fill:var(--svg-icon-fill);
 }
 
 html{
@@ -73,7 +43,6 @@ html{
     scroll-behavior: smooth;
     scroll-snap-type: proximity;
     overflow-y: auto;
-    color:var(--text);
     ::-webkit-scrollbar {
         width: 7px;
         height: 7px;
@@ -98,11 +67,13 @@ html{
         font-family: var(--font-body);
         min-height: 100vh;
         height: 100%;
+        width: 100%;
         margin: 0;
-        // font-family: "Poiret One";
+        // box-sizing: inherit;
         font-family: 'Arial';
 		letter-spacing: 1.2px;
-        // background-color: var(--background);
+        color:var(--text);
+        background-color: var(--background);
         
         h1,
         h2,
@@ -110,8 +81,6 @@ html{
         h4,
         h5,
         h6 {
-            // font-family: "Poiret One";
-            // font-family: "Roboto-Black";
             letter-spacing: 1px;
             margin: 0;
         } 
@@ -143,15 +112,14 @@ html{
             border-radius: 4px;
             margin-top:2rem;
         } 
+       
         li, 
         a{
-            // font-family: "Poiret One";
-            // font-family: 'Roboto-Light';
+          
             text-decoration: none;
             list-style: none;
         } 
         p{
-            // font-family: 'Roboto-Light';
             margin: 0;
             padding: 0;
             font-size: 1rem;
@@ -160,6 +128,20 @@ html{
     }
 }
 
+@keyframes hover {
+    0% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(5px);
+    }
+    75% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
 
 // [data-theme="light"],
 // :root:not([data-theme="dark"]) {

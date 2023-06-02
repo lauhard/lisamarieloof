@@ -3,5 +3,5 @@
 </script>
 
 <Section>
-    <h2>about me</h2>
+    <h2>Über Mich</h2>
 </Section>

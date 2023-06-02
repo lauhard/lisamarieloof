@@ -3,8 +3,7 @@
     import { onMount } from "svelte";
     import BurgerMenu from "./BurgerMenu.svelte";
     import { beforeNavigate } from "$app/navigation";
-    import LogoSvg from "./LogoSvg.svelte";
-
+   
     export const offset = 50;
 
     $: scrollY = 0;
@@ -43,35 +42,31 @@
         <ul class="burger">
             <BurgerMenu bind:open />
         </ul>
-       
         <ul class:navigation={innerWidth >= 680} class:mobile={innerWidth < 680 && open == true}>
             <li class:active={$page.url.pathname === "/"}>
                 <a href="/">Startseite</a>
             </li>
-            <li class:active={$page.url.pathname === "/about"}>
-                <a href="/about">Über Mich</a>
+            <li class:active={$page.url.pathname === "/ueber-mich"}>
+                <a href="/ueber-mich">Über Mich</a>
             </li>
-            <li class:active={$page.url.pathname === "/service"}>
-                <a href="/service">Leistungen</a>
+            <li class:active={$page.url.pathname === "/leistungen"}>
+                <a href="/leistungen">Leistungen</a>
             </li>
             <button class="cta">
-                <a href="/contact">Termin buchen</a>
+                <a href="/kontakt">Kontakt</a>
             </button>
         </ul>
-       
-        <!-- <li class="logo">
+        <li class="logo">
             <slot name="logo">
             </slot>
-        </li> -->
+        </li>
     </nav>
 {/if}
 
 <style lang="scss">
     .cta{
-        
         width:auto;
         height:38px;
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         background: var(--primary);
         display: flex;
         justify-content: center;
@@ -88,45 +83,41 @@
     .cta:hover{
         background-color: var(--secondary);
         border: 1px solid var(--secondary);
-        box-shadow: rgba(99, 99, 99, 0.292) -4px 4px 6px 2px;
         transform: scale(1.01);
-
         a {
             color:var(--inverse);            
         }
     }
-    .mobile {
-        top: 60px;
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        height: auto;
-        width: 100%;
-        border-bottom: 1px solid var(--primary);
-        background-color: inherit;
-        background-color: rgba(243, 243, 243, 0.87);
+    // .mobile {
+    //     top: 60px;
+    //     position: absolute;
+    //     display: flex;
+    //     flex-direction: column;
+    //     height: auto;
+    //     width: 100%;
+    //     background-color: rgba(243, 243, 243, 0.87);
        
-        li {
-            position: relative;
-            padding: 0;
-            width: 100%;
-            box-sizing: border-box;
-            height: 100%;
-            height: 2.5rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            a {
-                width: 100%;
-                height: 100%;
-                display: block !important;
-                margin: 0;
-                margin-left: 1rem;
-                font-size: smaller;
-                box-sizing: border-box;
-            }
-        }
-    }
+    //     li {
+    //         position: relative;
+    //         padding: 0;
+    //         width: 100%;
+    //         box-sizing: border-box;
+    //         height: 100%;
+    //         height: 2.5rem;
+    //         display: flex;
+    //         justify-content: center;
+    //         align-items: center;
+    //         a {
+    //             width: 100%;
+    //             height: 100%;
+    //             display: block !important;
+    //             margin: 0;
+    //             margin-left: 1rem;
+    //             font-size: smaller;
+    //             box-sizing: border-box;
+    //         }
+    //     }
+    // }
     .burger {
         display: grid;
         min-height: 3.5rem;
@@ -137,23 +128,12 @@
         width: 100%;
         height: 70px;
         box-sizing: border-box;
-        z-index: 999;
+        z-index: 9999;
         box-shadow: none;
         transition: all 0.5s ease-in-out;
         display: flex;
         justify-content: center;
         vertical-align: center;
-        background: rgba(240, 240, 240, 0.7);
-        .logo{
-            width:150px;
-            // height: 100%;
-            margin: 0;
-            padding: 0;
-            position: absolute;
-            right: 0px;
-            // display: flex;
-            // align-items: center;
-        }
         a {
             color: black;
             color: var(--text);
@@ -161,14 +141,12 @@
             word-break: keep-all;
             text-transform: uppercase;
             font-family: "Segoe UI";
-            // font-weight: 500;
         }
         .burger{
             display: none;
         }
         .navigation {
             display: flex;
-            // border-bottom: 0.5px solid var(--primary);
             width: 100%;
             margin: 0;
             gap:20px;
@@ -176,7 +154,6 @@
             display: flex;
             width: 80%;
             justify-content: end;
-            vertical-align: center;
             li {
                 position: relative;
                 &:first-child {
@@ -223,22 +200,19 @@
         // box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
         //     rgba(0, 0, 0, 0.093) 0px 3px 7px -3px;
         opacity: 1;
-        background-color: var(--white);
         transition: all 0.5s ease-in-out;
-        background: rgba(240, 240, 240, 0.7);
         transition: all .2s ease-in-out;
-        // a {
-        //     // color: var(--text);
-        // }
-        // border-bottom: 0.5px solid var(--primary);
     }
     .hide {
-        // display: none;
         opacity: 0;
         transition: all .2s ease-in-out;
     }
     @media screen and (max-width: 680px) {
+        .scroll {
+            background: rgba(243, 243, 243, 0.87);
+        }
         nav {
+            background: rgba(243, 243, 243, 0.87);
             justify-content: start;
             ul{
                 display: none;
@@ -250,8 +224,6 @@
                 flex-direction: column;
                 height: auto;
                 width: 100%;
-                border-bottom: 1px solid var(--primary);
-                background-color: inherit;
                 background-color: rgba(243, 243, 243, 0.87);
                 .burger{
                     display: block;

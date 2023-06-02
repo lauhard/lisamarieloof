@@ -27,11 +27,9 @@
         width: 100%;
         min-width: 100%;
         display:flex;
-        // justify-content: center;
         align-items: center;
         flex-direction: column;
         margin: 0;
-        // padding: 0 10px;
         box-sizing: border-box;
     }
 </style>

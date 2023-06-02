@@ -1,9 +1,4 @@
 @import url(./lib/css/pico/pico.css);
-@import url("https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@font-face {
-  font-family: "Poiret One";
-  src: url("./lib/css/fonts/PoiretOne-Regular.ttf");
-}
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -22,35 +17,24 @@
       "Helvetica Neue",
       "Poiret One",
       sans-serif ;
-  --background: #b1c9bf;
+  --background: #ffffff !important;
   --text: #202020 !important;
   --primary:#c4b26a !important;
+  --secondary:#44b175 !important;
   --white:#fff !important;
   --primary-hover:#c4b26ac1 !important;
   --secondary-hover:hsla(147, 44%, 48%, 0.75) !important;
+  --svg-icon-fill:#060000;
+  --svg-icon-stroke:#060000;
 }
 
-@keyframes hover {
-  0% {
-    transform: translateY(0px);
-  }
-  25% {
-    transform: translateY(5px);
-  }
-  75% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
 .hover {
   animation: hover 3s linear infinite;
 }
 
 .svg-icons {
-  stroke: #060000;
-  fill: #060000;
+  stroke: var(--svg-icon-stroke);
+  fill: var(--svg-icon-fill);
 }
 
 html {
@@ -58,7 +42,6 @@ html {
   scroll-behavior: smooth;
   scroll-snap-type: proximity;
   overflow-y: auto;
-  color: var(--text);
   /* Track */
   /* Handle */
   /* Handle on hover */
@@ -85,9 +68,12 @@ html body {
   font-family: var(--font-body);
   min-height: 100vh;
   height: 100%;
+  width: 100%;
   margin: 0;
   font-family: "Arial";
   letter-spacing: 1.2px;
+  color: var(--text);
+  background-color: var(--background);
 }
 html body h1,
 html body h2,
@@ -138,6 +124,20 @@ html body p {
   letter-spacing: 1px;
 }
 
+@keyframes hover {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 /* Blue-grey Dark scheme (Auto) */
 /* Automatically enabled if user has Dark mode enabled */
 @media only screen and (prefers-color-scheme: dark) {

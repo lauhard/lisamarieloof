@@ -24,16 +24,13 @@
     <div class="app">
         <Navigation></Navigation>
         {#if _loaded}
-            <div class="logo-wrapper">
-                
-                <LogoSvg height="55px" 
+                <!-- <LogoSvg height="55px" 
                     animation={true}
                     --leaves-main='#C8A560'
                     --leaves-overlay='#ae8c48'
                     --tree-color='#515151'
                     --tree-overlay='#2e2c2c'
-                ></LogoSvg>
-            </div>
+                ></LogoSvg> -->
         {/if}
     <main
         in:fade={{ duration: 150, delay: 150 }} out:fly={{ duration: 150, x: 100 }}
@@ -44,29 +41,33 @@
 {/key}
 
 <style lang="scss">
+
 .app{
+    box-sizing: border-box;
     height: 100%;
     width: 100%;
-    // width: 100vw;
-    .logo-wrapper{
-        top:10px;
+    margin:0;
+    padding:0;
+    :global(#logoSvg){
         position: fixed;
-        left: 60px;
+        top:10px;
+        left: 20px;
+        width: auto;
+        height: 100%;
         z-index: 100000;
         display: flex;
         vertical-align: center;
-       
     }
     main{
         // max-width: 1240px;
         // margin: 0 auto;
         height: 100vh;
+        width: 100%;
         margin:0;
         padding:0;
-
     }
     @media screen and (max-width: 680px) {
-        .logo-wrapper{
+        :global(#logoSvg){
             right:15px;
         }
     }
