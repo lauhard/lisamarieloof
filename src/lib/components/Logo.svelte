@@ -6,6 +6,7 @@
 <div class="logo logo-wrapper">
     <div class="circle">
         <LogoSvg
+            height="50px"
             animation={true}
             --leaves-main=#fff
             --leaves-overlay=#fff
@@ -21,19 +22,16 @@
 <style lang="scss">
     :global(#logoSvg){
         width: auto;
-        height: 50px;
         z-index: 100000;
         display: flex;
         vertical-align: center;
     }
     .logo-wrapper{
-        // height: 100%;
         min-width:220px;
         display: flex;
         flex-direction: row;
         vertical-align: center;
         align-items: center;
-      
     }
 
     .circle{
@@ -46,6 +44,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        border:1px solid white;
     }
     .brand-name{
         border: 1.5px solid #77B6BA;

@@ -81,8 +81,9 @@
     justify-content: center;
     align-items: center;
     main{
-        max-width: var(--content-width);
+        // max-width: var(--content-width);
         // height: 100vh;
+        // background-color: green;
         height: 100%;
         width: 100%;
     }
