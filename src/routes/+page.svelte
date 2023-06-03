@@ -142,7 +142,7 @@
             width: 100%;
             min-width: 100%;
             padding: 0 10px;
-            background: navy !important;
+            // background: navy !important;
         }
         :global(.heading) {
             left:0px !important;
