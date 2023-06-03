@@ -112,8 +112,9 @@
             // background-color: red;
             width:100%;
             max-width: var(--content-width);
-            height: 100%;
+            height: 100vh;
             z-index: 1;
+            overflow: hidden;
         }
         
 
