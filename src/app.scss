@@ -1,69 +1,80 @@
 @import url(./lib/css/pico/pico.css);
-*,*::before,*::after {
+
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box
 }
 
 :root {
-    --font-body: 
-        Arial, 
-        -apple-system, 
-        BlinkMacSystemFont, 
-        Oxygen, 
+    --font-body:
+        Arial,
+        -apple-system,
+        BlinkMacSystemFont,
+        Oxygen,
         Ubuntu,
-        Cantarell, 
-        'Open Sans', 
-        'Helvetica Neue', 
+        Cantarell,
+        'Open Sans',
+        'Helvetica Neue',
         'Poiret One',
-        sans-serif
-    ;
-   
+        sans-serif;
+
+    --content-width: 1240px;
+
     --background: #ffffff !important;
-    --text: #202020 !important;
-    --primary:#c4b26a !important;
-    --secondary:#44b175 !important;
-    --white:#fff !important;
-    --primary-hover:#c4b26ac1 !important;
-    --secondary-hover:hsla(147, 44%, 48%, 0.75) !important;
+    --text: #4A4A4A !important;
+    --primary: #77B6BA !important;
+    --primary-hover: #77b5bac8 !important;
 
-    --svg-icon-fill:#060000;
-    --svg-icon-stroke:#060000;
+    --secondary: #c4b26a !important;
+    --white: #fff !important;
+    --secondary-hover: #c4b26a !important;
+
+    --svg-icon-fill: #060000;
+    --svg-icon-stroke: #060000;
 }
-.hover{
-    animation: hover 3s linear infinite;
+
+.hover {
+    animation: hover 1.5s linear infinite;
 }
+
 .svg-icons {
-    stroke:var(--svg-icon-stroke);
-    fill:var(--svg-icon-fill);
+    stroke: var(--svg-icon-stroke);
+    fill: var(--svg-icon-fill);
 }
 
-html{
+html {
     font-size: calc(15px + 0.390625vw);
     scroll-behavior: smooth;
     scroll-snap-type: proximity;
-    overflow-y: auto;
+    overflow-y: scroll;
+
     ::-webkit-scrollbar {
         width: 7px;
         height: 7px;
         transition: all .3s ease-in-out;
     }
+
     /* Track */
     ::-webkit-scrollbar-track {
         background: var(--main-background-color, #fff);
     }
+
     /* Handle */
     ::-webkit-scrollbar-thumb {
-        background: var(--primary,#c4b26a);
+        background: var(--primary, #c4b26a);
         border-radius: 5px;
     }
+
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
-        background-color: var(--primary-hover,#ddc35a);
+        background-color: var(--primary-hover, #ddc35a);
         transition: background-color .3s ease-in-out;
     }
 
-    body{
+    body {
         font-family: var(--font-body);
         min-height: 100vh;
         height: 100%;
@@ -71,10 +82,10 @@ html{
         margin: 0;
         // box-sizing: inherit;
         font-family: 'Arial';
-		letter-spacing: 1.2px;
-        color:var(--text);
+        letter-spacing: 1.2px;
+        color: var(--text);
         background-color: var(--background);
-        
+
         h1,
         h2,
         h3,
@@ -83,47 +94,68 @@ html{
         h6 {
             letter-spacing: 1px;
             margin: 0;
-        } 
-        h1::before, h2::before, h3::before {
-            content: " ";
+        }
+
+        h1.decoeator::before,
+        h2.decoeator::before,
+        h3.decoeator::before {
+            content: "";
             background-color: var(--primary);
             position: absolute;
             border-color: var(--primary);
             border-style: solid;
         }
-        h1::before {
+
+        h1.decoeator::before {
             border-bottom-width: 5px;
             width: 5rem;
             height: 5px;
             border-radius: 5px;
-            margin-top:2.6rem;
+            margin-top: 2.6rem;
         }
-        h2::before {
+
+        h2.decoeator::before {
             border-bottom-width: 4.5px;
             width: 4rem;
             height: 4.5px;
             border-radius: 4.5px;
-            margin-top:2.3rem;
-        } 
-        h3::before {
+            margin-top: 2.3rem;
+        }
+
+        h3.decoeator::before {
             border-bottom-width: 3.5px;
             width: 3rem;
             height: 3.5px;
             border-radius: 4px;
-            margin-top:2rem;
-        } 
-       
-        li, 
-        a{
-          
+            margin-top: 2rem;
+        }
+
+        li,
+        a {
             text-decoration: none;
             list-style: none;
-        } 
-        p{
+            font-weight: 300;
+        }
+
+        a:hover,
+        a:active,
+        a:focus,
+        a:focus:focus-within,
+        a:visited,
+        a:target,
+        a:focus:focus-visible {
+            outline: none;
+            list-style: none;
+            background-color: transparent !important;
+            transition: none !important;
+            border: none !important;
+        }
+
+        p {
             margin: 0;
             padding: 0;
             font-size: 1rem;
-		    letter-spacing: 1px;
+            letter-spacing: 1px;
         }
     }
 }
@@ -132,12 +164,15 @@ html{
     0% {
         transform: translateY(0px);
     }
+
     25% {
         transform: translateY(5px);
     }
+
     75% {
         transform: translateY(-5px);
     }
+
     100% {
         transform: translateY(0px);
     }
@@ -155,10 +190,9 @@ html{
 /* Automatically enabled if user has Dark mode enabled */
 @media only screen and (prefers-color-scheme: dark) {
     :root:not([data-theme]) {
-      --primary: #546e7a;
-      --primary-hover: #607d8b;
-      --primary-focus: rgba(84, 110, 122, 0.25);
-      --primary-inverse: #FFF;
+        --primary: #546e7a;
+        --primary-hover: #607d8b;
+        --primary-focus: rgba(84, 110, 122, 0.25);
+        --primary-inverse: #FFF;
     }
-  }
-
+}

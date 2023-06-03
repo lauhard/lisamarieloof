@@ -1,7 +1,4 @@
 <script>
-	import Section from '$lib/components/Section.svelte';
 </script>
+<h2>Kontakt</h2>
 
-<Section>
-    <h2>Kontakt</h2>
-</Section>

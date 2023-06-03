@@ -1,7 +1,5 @@
-<script>
-	import Section from '$lib/components/Section.svelte';
+<script lang="ts">
+
 </script>
 
-<Section>
     <h2>Meine Pakete</h2>
-</Section>

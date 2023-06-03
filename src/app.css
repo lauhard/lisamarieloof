@@ -1,5 +1,7 @@
 @import url(./lib/css/pico/pico.css);
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,20 +18,21 @@
       "Open Sans",
       "Helvetica Neue",
       "Poiret One",
-      sans-serif ;
+      sans-serif;
+  --content-width: 1240px;
   --background: #ffffff !important;
-  --text: #202020 !important;
-  --primary:#c4b26a !important;
-  --secondary:#44b175 !important;
-  --white:#fff !important;
-  --primary-hover:#c4b26ac1 !important;
-  --secondary-hover:hsla(147, 44%, 48%, 0.75) !important;
-  --svg-icon-fill:#060000;
-  --svg-icon-stroke:#060000;
+  --text: #4A4A4A !important;
+  --primary: #77B6BA !important;
+  --primary-hover: #77b5bac8 !important;
+  --secondary: #c4b26a !important;
+  --white: #fff !important;
+  --secondary-hover: #c4b26a !important;
+  --svg-icon-fill: #060000;
+  --svg-icon-stroke: #060000;
 }
 
 .hover {
-  animation: hover 3s linear infinite;
+  animation: hover 1.5s linear infinite;
 }
 
 .svg-icons {
@@ -41,7 +44,7 @@ html {
   font-size: calc(15px + 0.390625vw);
   scroll-behavior: smooth;
   scroll-snap-type: proximity;
-  overflow-y: auto;
+  overflow-y: scroll;
   /* Track */
   /* Handle */
   /* Handle on hover */
@@ -84,28 +87,30 @@ html body h6 {
   letter-spacing: 1px;
   margin: 0;
 }
-html body h1::before, html body h2::before, html body h3::before {
-  content: " ";
+html body h1.decoeator::before,
+html body h2.decoeator::before,
+html body h3.decoeator::before {
+  content: "";
   background-color: var(--primary);
   position: absolute;
   border-color: var(--primary);
   border-style: solid;
 }
-html body h1::before {
+html body h1.decoeator::before {
   border-bottom-width: 5px;
   width: 5rem;
   height: 5px;
   border-radius: 5px;
   margin-top: 2.6rem;
 }
-html body h2::before {
+html body h2.decoeator::before {
   border-bottom-width: 4.5px;
   width: 4rem;
   height: 4.5px;
   border-radius: 4.5px;
   margin-top: 2.3rem;
 }
-html body h3::before {
+html body h3.decoeator::before {
   border-bottom-width: 3.5px;
   width: 3rem;
   height: 3.5px;
@@ -116,6 +121,20 @@ html body li,
 html body a {
   text-decoration: none;
   list-style: none;
+  font-weight: 300;
+}
+html body a:hover,
+html body a:active,
+html body a:focus,
+html body a:focus:focus-within,
+html body a:visited,
+html body a:target,
+html body a:focus:focus-visible {
+  outline: none;
+  list-style: none;
+  background-color: transparent !important;
+  transition: none !important;
+  border: none !important;
 }
 html body p {
   margin: 0;

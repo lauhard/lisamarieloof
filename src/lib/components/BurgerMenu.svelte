@@ -18,7 +18,6 @@
         justify-content: space-around;
         padding: .25rem;
         position: relative;
-        margin-right:30px;
         box-sizing: border-box;
         &:hover{
             .bar{

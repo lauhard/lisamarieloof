@@ -4,7 +4,7 @@
     export let classNames = "";
     const dispatch = createEventDispatcher();
 </script>
-<button on:mousedown={(e)=>dispatch("action",e)}
+<button on:click={(e)=>dispatch("action",e)}
     type="submit"
     title="Toggles light & dark"
     aria-label="auto"
