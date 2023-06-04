@@ -28,11 +28,14 @@
         position: absolute;
         display: flex;
         flex-direction: column;
-        top:120px;
-        left:150px;
+        // top:120px;
+        // left:150px;
         width: auto;
         padding:15px;
-        background-color: white;
+        // background-color: rgb(172, 44, 44);
+        height: 160px;
+        box-sizing: border-box;
+        // height: auto;
     }
     .wrapper{
         color:var(--text);
