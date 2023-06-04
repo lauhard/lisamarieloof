@@ -26,7 +26,7 @@
 <!-- content here -->
 <nav class="navigation" class:scroll={scrollY > offset} class:hide={hide === true}>
     <!-- <ul class="burger"> -->
-        <BurgerMenu bind:open />
+        <BurgerMenu bind:open className="burger" />
     <!-- </ul> -->
     <ul class="menu-entries" class:mobile={innerWidth < 680 && open == true}>
         <li class:active={$page.url.pathname === "/"}>
@@ -45,9 +45,6 @@
 </nav>
 
 <style lang="scss">
-    :global(.burger){
-        border-width: 1px !important;
-    }
     ul {
         margin: 0;
         padding: 0;
@@ -64,6 +61,10 @@
         // z-index: 999;
         .burger {
             display: none;
+        }
+        :global(.burger) {
+            border-width: 1px !important;
+            display: none !important;
         }
         .menu-entries {
             font-weight: 300;
@@ -137,9 +138,9 @@
             align-items: center;
             width: 100%;
             margin-top: 5px;
-            .burger {
-                display: grid;
-                margin-right: 20px;
+            :global(.burger) {
+                display: flex !important;
+                margin-right: 20px !important;
             }
             .menu-entries {
                 display: none;

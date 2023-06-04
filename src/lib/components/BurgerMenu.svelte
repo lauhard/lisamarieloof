@@ -1,8 +1,9 @@
 <script lang="ts">
     export let open:boolean = false;
+    export let className = "";
 </script>
 
-<ul class="burger" on:mousedown={()=>{open=!open;}} class:open={open === true}>
+<ul class="bar-wrapper {className}" on:mousedown={()=>{open=!open;}} class:open={open === true}>
     <li class="bar first"></li>
     <li class="bar second"></li>
     <li class="bar third"></li>
@@ -13,7 +14,7 @@
         margin: 0;
         padding: 0;
     }
-    .burger {
+    .bar-wrapper {
         width: 2.5rem;
         height: 1.9rem;
         border: 0.5px solid var(--primary);
