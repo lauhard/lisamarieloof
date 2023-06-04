@@ -41,14 +41,14 @@
     
     <div class="content-wrapper">
         <Heading></Heading>
-        <RoundButton classNames="hover scroll-down">
-            <a href="/#home_section2">
+        <RoundButton classNames="hover scroll-down" title="scroll to the next headline">
+            <a href="/#home_section2" aria-label="links to section 2" style="padding:0 10px;">
                 <ArrowDownSvg width="20px" height="30px" />
             </a>
         </RoundButton>
     </div>
 
-    <div class="background">
+    <div class="background-svg-banner">
         <div class="svg-wrapper">
             <LogoSvg
                 height="800px"
@@ -118,7 +118,7 @@
         }
         
 
-        .background {
+        .background-svg-banner {
             overflow: hidden;
             width: 100%;
             height: 550px;

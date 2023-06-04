@@ -1,12 +1,14 @@
 <script lang="ts">
     import { createEventDispatcher } from "svelte";
-
     export let classNames = "";
+    export let title = "scroll down";
+
     const dispatch = createEventDispatcher();
 </script>
+
 <button on:click={(e)=>dispatch("action",e)}
-    type="submit"
-    title="Toggles light & dark"
+    type="button"
+    title="{title}"
     aria-label="auto"
     aria-live="polite"
     class="base {classNames}"

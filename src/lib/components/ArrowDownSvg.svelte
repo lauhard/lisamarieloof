@@ -3,10 +3,12 @@
     export let height = "100%";
     export let viewBox = "0 0 267 267";
     export let style = "";
+    export let className = "";
 </script>
 
 <svg
     id="arrowDownSvg"
+    class="{className}"
     {width}
     {height}
     {viewBox}

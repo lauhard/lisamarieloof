@@ -25,9 +25,9 @@
 <svelte:window bind:scrollY bind:innerWidth />
 <!-- content here -->
 <nav class="navigation" class:scroll={scrollY > offset} class:hide={hide === true}>
-    <ul class="burger">
+    <!-- <ul class="burger"> -->
         <BurgerMenu bind:open />
-    </ul>
+    <!-- </ul> -->
     <ul class="menu-entries" class:mobile={innerWidth < 680 && open == true}>
         <li class:active={$page.url.pathname === "/"}>
             <a href="/">Startseite</a>
@@ -45,6 +45,9 @@
 </nav>
 
 <style lang="scss">
+    :global(.burger){
+        border-width: 1px !important;
+    }
     ul {
         margin: 0;
         padding: 0;

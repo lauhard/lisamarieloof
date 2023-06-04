@@ -1,7 +1,7 @@
 <script lang="ts">
 </script>
 
-<div class="heading">
+<header class="heading">
     <h1 class="wrapper">
         <span class="line-1">Ihre Zeit</span>
         <span class="line-2">für <span class="hypnose">Hypnose</span> &</span>
@@ -9,7 +9,7 @@
         <span class="subheading">Entdecken Sie die Kraft von Hypnose</span>
     </h1>
     <div class="separator"></div>
-</div>
+</header>
 
 
 

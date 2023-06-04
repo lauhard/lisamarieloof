@@ -279,8 +279,8 @@
 
 <style lang="scss">
     #logoSvg{
-        font-smooth: none; /* in case it works one day*/
-        -webkit-font-smoothing: none; 
+        // font-smooth: none; /* in case it works one day*/
+        // -webkit-font-smoothing: none; 
     }
     :root {
         --leaves-main:#61be9a;
