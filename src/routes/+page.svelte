@@ -41,6 +41,7 @@
     
     <div class="content-wrapper">
         <Heading></Heading>
+        <button><a href="https://wa.me/06991948032" target="_blank" rel="noopener noreferrer"></a></button>
         <RoundButton classNames="hover scroll-down" title="scroll to the next headline">
             <a href="/#home_section2" aria-label="links to section 2" style="padding:0 10px;">
                 <ArrowDownSvg width="20px" height="30px" />
