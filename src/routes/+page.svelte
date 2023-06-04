@@ -42,8 +42,8 @@
     <div class="content-wrapper">
         <Heading></Heading>
         <br> <br>
-      <a style="color:white;" href="https://wa.me/+436991948032/send?text=This is WhatsApp sharing example using link" target="_blank" rel="noopener noreferrer">069919048032</a>
-      <br>
+      <a style="color:white;" href="{encodeURI('https://wa.me/+4369919048032?text=This is WhatsApp sharing example using link')}" data-action="share/whatsapp/share" target="_blank" rel="noopener noreferrer">069919048032</a>
+      <!-- <br>
       <a style="color:white;" href="https://wa.me/+436991948032" target="_blank" >069919048032</a>
 <br>
       <a style="color:white;" href="whatsapp://send?text=This is WhatsApp sharing example using link" data-action="share/whatsapp/share"  
@@ -51,7 +51,8 @@
         <br>
         <button on:click="{()=>window.open('whatsapp://send?text=This is WhatsApp sharing example using button')}"> Open WhatsApp </button>    
         <br>
-        <button on:click="{()=>window.open('https://web.whatsapp.com://send?text=This is whatsapp sharing example using button')}"> Open WhatsApp </button>
+        <button on:click="{()=>window.open('https://web.whatsapp.com://send?text=This is whatsapp sharing example using button')}"> Open WhatsApp </button> -->
+        <button on:click="{()=>window.open('https://wa.me/+4369919048032?text=This is WhatsApp sharing example using link')}" data-action="share/whatsapp/share"  >c Open WhatsApp </button>
         
         
         <RoundButton classNames="hover scroll-down" title="scroll to the next headline">
