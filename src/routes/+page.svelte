@@ -41,7 +41,19 @@
     
     <div class="content-wrapper">
         <Heading></Heading>
-        <button><a href="https://wa.me/06991948032" target="_blank" rel="noopener noreferrer"></a></button>
+        <br> <br>
+      <a style="color:white;" href="https://wa.me/06991948032" target="_blank" rel="noopener noreferrer">069919048032</a>
+      <br>
+      <a style="color:white;" href="https://wa.me/06991948032" target="_blank" >069919048032</a>
+<br>
+      <a style="color:white;" href="whatsapp://send?text=This is WhatsApp sharing example using link" data-action="share/whatsapp/share"  
+        target="_blank"> Share to WhatsApp </a>   
+        <br>
+        <button on:click="{()=>window.open('whatsapp://send?text=This is WhatsApp sharing example using button')}"> Open WhatsApp </button>    
+        <br>
+        <button on:click="{()=>window.open('https://web.whatsapp.com://send?text=This is whatsapp sharing example using button')}"> Open WhatsApp </button>
+        
+        
         <RoundButton classNames="hover scroll-down" title="scroll to the next headline">
             <a href="/#home_section2" aria-label="links to section 2" style="padding:0 10px;">
                 <ArrowDownSvg width="20px" height="30px" />
@@ -109,7 +121,9 @@
         .content-wrapper{
             position: relative;
             display: flex;
-            font-display: column;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             // background-color: red;
             width:100%;
             max-width: var(--content-width);
