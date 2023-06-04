@@ -42,9 +42,9 @@
     <div class="content-wrapper">
         <Heading></Heading>
         <br> <br>
-      <a style="color:white;" href="https://wa.me/06991948032" target="_blank" rel="noopener noreferrer">069919048032</a>
+      <a style="color:white;" href="https://wa.me/+436991948032" target="_blank" rel="noopener noreferrer">069919048032</a>
       <br>
-      <a style="color:white;" href="https://wa.me/06991948032" target="_blank" >069919048032</a>
+      <a style="color:white;" href="https://wa.me/+436991948032" target="_blank" >069919048032</a>
 <br>
       <a style="color:white;" href="whatsapp://send?text=This is WhatsApp sharing example using link" data-action="share/whatsapp/share"  
         target="_blank"> Share to WhatsApp </a>   
