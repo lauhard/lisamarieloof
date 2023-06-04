@@ -71,6 +71,29 @@
         // top:246px;
         border-radius: 5px;
     }
+    @media screen and (max-width: 480px) {
+        span{
+            font-family: 'Segoe UI';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 38px;
+            line-height: 38px;
+            // letter-spacing: .15rem;
+            letter-spacing: 2.7px;
+            // letter-spacing: 4px;
+        }
+        .heading{
+            padding:10px;
+        }
+        .wrapper{
+            .subheading{
+                line-height: 30px;
+                font-size: 15px;
+                letter-spacing: 3px;
+                width:100%;
+            }
+        }
+    }
 
 
 </style>
