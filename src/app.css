@@ -70,7 +70,7 @@ html ::-webkit-scrollbar-thumb:hover {
 html body {
   font-family: var(--font-body);
   min-height: 100vh;
-  height: 100%;
+  height: auto;
   width: 100%;
   margin: 0;
   font-family: "Arial";

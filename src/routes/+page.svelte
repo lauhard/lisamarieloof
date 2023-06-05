@@ -9,6 +9,8 @@
     import LogoSvg from "$lib/components/LogoSvg.svelte";
     // import { ObserveProps, observer } from "$lib/actions/observer";
     import profile from "$lib/images/profile2.png";
+    import tel from "$lib/svg/telephone.svg";
+    import mail from "$lib/svg/mail-solid.svg";
     // import { openMaps, scrollToAnchor } from "$lib/utils";
     // $: vars = `--background-image: url(${profile});`;
 
@@ -31,29 +33,21 @@
     <title>Startseite</title>
 </svelte:head>
 
-<section class="section1">
-    <!-- Intersection Observer example -->
-    <!-- <h1 id="home_section1" use:observer={params} on:enter={(entry)=>enter(entry)} on:exit={(entry)=>exit(entry)}>Section1</h1> -->
-
-    <!-- Maps Example -->
-    <!--<button type="button" on:click={(e)=>openMaps()}></button> -->
+<section class="section section-one">
 
     <div class="content-wrapper ">
+        <span style="visibility:hidden;" id="section_one"></span>
 
-
-
-
-
-        <div class="grid">
-            <div class="box heading">
-                <div class="heading-wrapper">
-                    <Heading></Heading>
+        <div class="content grid main-grid">
+            <div class="grid-cell heading">
+                <div class="heading-card">
+                    <Heading className="heading-desktop"></Heading>
                 </div>
             </div>
-            <div class="box profile">
-                <div class="profile-wrapper">
+            <div class="grid-cell profile">
+                <div class="profile-card">
                     <div class="profile-img">
-                        <img src="{profile}" alt="">
+                        <img src="{profile}" alt="profile-image">
                     </div>
                     <div class="profile-description">
                         <h2 class="profile-name">Lisa-Marie Loof B.Sc</h2>
@@ -65,9 +59,9 @@
                     </div>
                 </div>
             </div>
-            <div class="box info">
-                <div class="info-wrapper">
-                    <div class="catchphrase-wrapper">
+            <div class="grid-cell information">
+                <div class="information-card">
+                    <div class="catchphrases">
                         <p class="catchphrase">
                             Sie wollen aufhören zu <span class="attention"
                                 >rauchen</span
@@ -95,65 +89,82 @@
                         </p>
                     </div>
                     <a
-                        class="btn cta-leistungen"
+                        class="cta"
                         type="button"
                         href="/leistungen">HIER ERFAHREN SIE MEHR</a
                     >
                 </div>
             </div>
-            <div class="box contact"><h2>termin buchen</h2></div>
+            <div class="grid-cell contact">
+                <div class="contact-card">
+                    <header class="card-header">
+                        <h5>Terminvereinbarung</h5>
+                    </header>
+                    <p>Sie können Termine gerne telefonisch oder über E-Mail vereinbaren.</p>
+                    
+                    <div class="contact-buttons">
+                        
+                        <a
+                            class="cta"
+                            type="button"
+                            href="tel:+4369919048032">
+                            <img  alt="svg icon" src="{tel}" width="30" height="30" />
+                             +43 69919048032
+                        </a>
+                        
+                        <a
+                            class="cta"
+                            type="button"
+                            href="/kontakt">
+                            <img  alt="svg icon" src="{mail}" width="30" height="30" />
+                            Kontakformular
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
 
-
-
-
-
-
-
-
-
-        <!-- <a style="color:white;" href="{encodeURI('https://wa.me/+4369919048032?text=This is WhatsApp sharing example using link')}" data-action="share/whatsapp/share" target="_blank" rel="noopener noreferrer">whatsapp test</a>
-      <a style="color:white;" href="tel:+4369919048032" data-action="call Lisa Marie Loof" target="_blank" rel="noopener noreferrer">Anrufen</a> -->
-        <!-- <button on:click="{()=>window.open('https://wa.me/+4369919048032?text=This is WhatsApp sharing example using link')}" data-action="share/whatsapp/share">whatsapp test</button> -->
-
-        <RoundButton
-            classNames="hover scroll-down"
-            title="scroll to the next headline"
-        >
-            <a
-                href="/#home_section2"
-                aria-label="links to section 2"
-                style="padding:0 10px;"
-            >
-                <ArrowDownSvg width="20px" height="30px" />
-            </a>
-        </RoundButton>
     </div>
 
-    <div class="background-svg-banner">
-        <div class="svg-wrapper">
-            <LogoSvg
-                height="800px"
-                animation={false}
-                --leaves-main="#f0f0f01a"
-                --leaves-overlay="#f0f0f01a"
-                --tree-color="#f0f0f01a"
-                --tree-overlay="#f0f0f01a"
-                --svg-stroke-width="0px"
-            />
-        </div>
-    </div>
 </section>
 
-<section class="section2">
+<section class="section section-two">
     <h1 class="decoeator" id="home_section2">Section2</h1>
 </section>
 
-<section class="section3">
+<section class="section section-three">
     <h1 class="decoeator" id="home_section3">Section3</h1>
 </section>
 
 <style lang="scss">
+    :root{
+        // --bg-grid:#37cf2ce2;
+        // --bg-content-wrapper: #c3ff80;
+        // --bg-heading: red;
+        // --bg-profile: green;
+        // --bg-information: blue;
+        // --bg-contact: orange;
+
+        --grid-columns: 20% 20% 20% 20% auto;
+        --grid-rows-desktop:15% 10% 10% auto;
+        --grid-rows-mobile: 23% 15% 37%;
+        --grid-template-desktop: 
+            "heading heading heading profile profile"
+            "heading heading heading profile profile"
+            "heading heading heading profile profile"
+            "information information information profile profile"
+            "information information information contact contact"
+            "information information information contact contact";
+
+        --grid-template-mobile: 
+            "profile profile profile profile profile"
+            "heading heading heading heading heading"
+            "information information information information information"
+            "contact contact contact contact contact";
+
+        --grid-gap: 10px;
+
+    }
     :global(.scroll-down) {
         bottom: 50px;
         position: absolute;
@@ -161,153 +172,152 @@
         left: calc(50% - 22.5px) !important;
     }
 
-    section {
+    h5{
+        font-family: var(--font-family,"Segoe UI");
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 19px;
+        /* identical to box height */
+
+        letter-spacing: 0.05rem;
+
+        color: #FFFFFF;
+    }
+    .cta {
+        background-color: var(--secondary);
+        font-family: var(--font-family,"Segoe UI");
+        box-sizing: border-box;
+
+        width: 250px;
+        height: auto;
+        padding: 13px 20px;
+
+        font-style: normal;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 18px;
+        color:var(--text);
+        /* identical to box height */
+        text-align: center;
+    }
+
+    .section {
         position: relative;
-        height: 100%;
         min-height: 100vh;
+        // height: 100%; !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        height: auto;
         width: 100%;
         min-width: 100%;
         display: flex;
         align-items: center;
         flex-direction: column;
         box-sizing: border-box;
-        // background-color: red;
-        // max-width: var(--content-width);
     }
-
-
-
-    .section1 {
-        width: 100%;
-        height: 100%;
-        .content-wrapper {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            // background-color: red;
-            width: 100%;
-            max-width: var(--content-width);
-            height: 100vh;
-            z-index: 1;
-            overflow: hidden;
-            // margin-top: 80px;
-        }
-
-        .background-svg-banner {
-            overflow: hidden;
-            width: 100%;
-            height: 550px;
-            background-color: var(--primary);
-            position: absolute;
-            transform: translatY(32%);
-            top: 32%;
-            z-index: 0;
-            .svg-wrapper {
-                position: absolute;
-                top: 250px;
-                left: -250px;
-                height: 100% !important;
-                width: auto;
-            }
-        }
-    }
-
     .grid{
-        margin: 0;
-        padding: 0;
         box-sizing: border-box;
         display: grid;
-        width:100%;
-        height: 100%;
-
-        // min-height: 600px;
+        gap:var(--grid-gap, 10px);
+        background: var(--bg-grid, transparent);
         margin-top: 80px;
-        // background-color:rgb(178, 187, 0);
-        // gap: 10px;
-        /* grid-template-columns: 1fr 1fr; */
-        grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); 
-        grid-template-rows: 200px 1fr 1fr auto;
-    }
-
-    .box{
-        margin: 0;
-        padding: 0;
-        width:100%;
-        // background-color: #e35f5f;
-    }
-
-    .heading {
-        /* grid-column: 1; */
-        display: flex;
-        align-items:  end;
         width: 100%;
-        .heading-wrapper {
+        min-height: 100vh; /**"""""!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"*/
+        height: 100%;
+    }
+    .main-grid {
+        grid-template-columns:var(--grid-columns);
+        grid-template-rows: var(--grid-rows-desktop, auto);
+        grid-template-areas: var(--grid-template-desktop);
+    }
+    .grid-cell {
+        position: relative;
+        box-sizing: border-box;
+        background: white;
+        display: grid;
+        height: 100%;
+        width: 100%;
+    }
+    .heading{
+        grid-area: heading;
+        background-color: var(--bg-heading);
+       
+    }
+    .profile{
+        grid-area: profile;
+        background-color: var(--bg-profile);
+    }
+    .information{
+        grid-area: information;
+        background-color: var(--bg-information);
+    }
+    .contact{
+        grid-area: contact;
+        background-color: var(--bg-contact);
+    }
+    .section-one{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // min-height: 100vh;
+        // height: 100%;
+        .content-wrapper{
+            box-sizing: border-box;
+            display: flex;
             position: relative;
+            flex-direction: column;
+            background: var(--bg-content-wrapper, transparent);
+            min-height: 100vh;
+
+            height: 100%;
+            // height: 100vh; !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
             width: 100%;
-            // background-color: rgb(101, 178, 223);
-            display: grid;
-            // align-self: center;
-            // justify-self: center;
-            :global(.heading) {
-                align-self: center;
-                // justify-self: center;
-                position: relative !important;
-                background-color: #fff;
-                width: 385px;
-                // height: 180px;
-                margin-left: 70px;
-            }
+            max-width: var(--content-width,1240px);
         }
     }
-  
 
-    .profile {
-        display: flex;
-        // background-color: #e35f5f;
-        justify-content: end;
-        // justify-self: center;
-        // align-self: center;
-        grid-row-start:1;
-        grid-row-end:3;
-        grid-column: 2;
-        height: 500px;
-
-        .profile-wrapper {
-            width: 400px;
-            height:450px;
-            margin-top: 25px;
-            margin-right: 70px;
-
-            padding: 0 15px;
-            box-shadow: 0px 6px 15px -5px rgba(0, 0, 0, 0.25);
-            // background-color: rgb(101, 178, 223);
+    .heading-card {
+        position: absolute;
+        justify-self: left;
+        align-self: start;
+        margin-left:70px;
+        :global(.heading-desktop) {
+            align-self: center;
+            position: relative !important;
             background-color: #fff;
-            display: grid;
-            // flex-direction: column;
-            // justify-content: center;
-            // vertical-align: center;
-            /* justify-content: center;
-            vertical-align: center;
-            flex-direction: column; */
-            /* justify-self: center;
-            align-self: center; */
-            .profile-img{
-                width: 200px;
-                height: 250px;
-                overflow: hidden;
-                justify-self: center;
-                img {
-                    height: 440px;
-                    object-fit: cover;
-                    object-position: -80px -10px;
-                }
+        }
+    }
+
+    .profile-card{
+        position: absolute;
+        justify-self: right;
+        align-self: start;
+        max-width: 400px;
+        max-height: 500px;
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 15px;
+        box-shadow: 0px 6px 15px -5px rgba(0, 0, 0, 0.25);
+
+        .profile-img{
+            width: 200px;
+            height: 240px;
+            overflow: hidden;
+            // justify-self: center;
+            img {
+                height: 440px;
+                object-fit: cover;
+                object-position: -80px -15px;
             }
-            .profile-description{
+        }
+        .profile-description{
                 width: 100%;
                 height: 200px;
-                font-family: "Segoe UI";
+                font-family: var(--font-family, "Segoe UI");
                 // background-color: green;
                 .profile-name {
                     color: var(--text);
@@ -335,244 +345,239 @@
                 
                 /* align-self: center; */
             }
-        }
-        
     }
- 
-    .info{
-        grid-column-start: 1;
-        // background-color: #e35f5f;
-        grid-row-start:2;
-        grid-row-end:4;
-        height: 550px;
-        align-self: center;
-        justify-self: center;
-        display: grid;
-        .info-wrapper{
-            // align-self: center;
-            justify-self: center;
-            background: #fff;
+
+    .information-card{
+        position: absolute;
+        justify-self: left;
+        align-self: start;
+        background: #fff;
+        max-width: 610px;
+        width: 100%;
+        min-height: 260px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 1.2rem;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin-left:70px;
+        .catchphrases{
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            // justify-self: center;
-            // align-self: center;
-            padding: 10px 0 15px 0;
-            width:100%;
-            max-width: 560px;
-            height: 280px;
-            .catchphrase-wrapper {
-                // display: grid;
-                // background: yellow;
-
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                // align-items: center;
-                // align-items: flex-start;
-                // padding: 0 0 0 27px;
-                height: 180px;
-
-                .catchphrase {
-                    font-family: "Segoe UI";
-                    font-style: normal;
-                    font-weight: 300;
-                    font-size: 16px;
-                    line-height: 19px;
-                    /* identical to box height */
-
-                    letter-spacing: 0.05em;
-
-                    color: #222222;
-                }
-            }
-
-            .btn{
-                outline: none;
-                border-style: none;
-            }
-            .cta-leistungen{
-                background-color: var(--secondary);
-                font-family: 'Segoe UI';
-                box-sizing: border-box;
-
-                width: 250px;
-                height: auto;
-                padding: 13px 20px;
-
-                font-style: normal;
-                font-weight: 300;
-                font-size: 15px;
-                line-height: 18px;
-                color:var(--text);
-                /* identical to box height */
-
-                text-align: center;
-            }
-        
-        }
-    
-    }
-
-    .contact{
-        min-width:450px;
-        grid-column: 2;
-        /* grid-row:1; */
-        background: yellow;
-        grid-column-start: 2;
-        /* grid-column:span 2; */
-        grid-row:3;
-    }
-
-    @media screen and (max-width:800px) {
-        .grid{
-            // background:rgb(255, 0, 183);
-            grid-template-columns:100%;
-            grid-template-rows: 10rem 12rem auto auto;
-            height: auto;
-            gap:10px;
-        }
-        :global(.scroll-down){
-                display: none !important;
-            }
-        .box{
-            grid-column-start: auto;
-            grid-column-end: auto;
-            grid-row-start: auto;
-            grid-row-end: auto;
-            margin: 0px;
-            display: flex;
-            height: 100%;
-        }  
-        .profile {
-            order: 1;
             justify-content: center;
-            .profile-wrapper{
-                background-color: transparent !important;
-                box-shadow: none !important;
-                margin-right: 0px !important;
-                // margin-top: 40px !important;
-                z-index: 10;
-                .profile-img{
-                    width: 200px;
-                    height: 200px;
-                    border-radius: 50%;
-                    overflow: hidden;
-                    justify-self: center;
-                    background-color: var(--primary);
-                    border: 8px solid #fff;
-                    img {
-                        height: 350px;
-                        object-fit: cover;
-                        object-position: -50px -15px;
-                    }
-                }
-                .profile-description{
-                    display: none;
-                }
+            align-items: flex-start;
+            font-family: var(--font-family, "Segoe UI");
+            // height: 150px;
+            gap:10px;
+            span{
+                font-weight: 700;
+                color:#378D93;
+            }
+            .catchphrase{
+                font-weight: 300;
+                font-size: 16px;
+                // letter-spacing: .06rem;
             }
         }
-       
-       
-        .heading {
-            order: 2;
-            position: relative;
-            height: 200px;
-            width: 100%;
-            // background-color: #e35f5f;
-            /* align-self: center; */
-            justify-self: center;
-            display: grid;
-
-        }
-        .heading-wrapper{
-            // position: absolute;
-            // top:-30px;
-            height: auto;
-            // background-color: blue;
-            justify-self: center;
-            :global(.heading){
-                align-self: center;
-                justify-self: center;
-                position: relative !important;
-                background-color: #111875;
-                width: auto !important;
-                
-                // height: 180px;
-                margin-left: 0px  !important;
-            }
-             :global(.heading){
-                align-self: center;
-                justify-self: center;
-                position: relative !important;
-                // background-color: #111875;
-                width: 385px;
-                
-                // height: 180px;
-                margin-left: 0px  !important;
-            }
-        }
-        .info {
-            order:3;
-            height: auto;
-            display: grid;
-            align-self: start;
-
-            .info-wrapper{
-                .catchphrase-wrapper {
-                    // text-align: justify;
-                    padding: 10px;
-                    justify-content: space-between;
-                    // word-wrap: break-word;
-                    // word-break: break-all;
-                    .catchphrase{
-                        font-size: 14px;
-
-                        padding: 7px 0;
-                    }
-                }
-            }
-        }
-        .contact{
-            order:4;
-            height: auto;
-        }
+        
     }
 
-    @media screen and (max-width: 480px) {
-        .content-wrapper {
+    .contact-card {
+        position: absolute;
+        justify-self: right;
+        align-self: start;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #fff;
+        box-shadow: 0px 6px 15px -5px rgba(0, 0, 0, 0.25);
+        .card-header {
+            height: 40px;
             width: 100%;
-            height: 100%;
-            min-width: 100%;
-            padding: 0 10px;
-            
-            // background: navy !important;
-        }
-        :global(.scroll-down){
-                display: none !important;
+            background: #5D5D5D;
+            display: flex;
+            align-items: center;
+            padding-left:15px;
+            h5{
+                color:white;
             }
-        .background-svg-banner {
-            overflow: hidden;
-            width: 100%;
-            height: 550px;
-            background-color: var(--primary);
-            position: absolute;
-            transform: translatY(22%) !important;
-            top: 22% !important;
-           
-            .svg-wrapper {
-                position: absolute;
-                top: 250px;
-                left: -250px;
-                height: 100% !important;
+        }
+        p {
+            font-weight: 300;
+            font-size: 14px;
+            font-family: var(--font-family, "Segoe UI");
+            padding: 10px 15px 40px 15px;
+        }
+        .contact-buttons {
+            .cta{
+                font-size: 14px;
+                padding: 10px 15px;
                 width: auto;
             }
-            
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 15px;
         }
-        .grid{
-            // margin-top: 180px !important;
+    }
+
+
+    // @media screen and (max-width:374px) {   
+    //     .section::after {
+    //         font-size: 13px;
+    //         font-family: 'Arial';
+    //         content: "device: too small";
+    //     }
+    //     .main-grid{
+    //         grid-template-rows: var(--grid-rows-mobile, auto);
+    //         grid-template-areas: var(--grid-template-mobile, auto);
+    //         background: var(--primary);
+    //     }
+       
+    //     .profile-card {
+    //         box-shadow: none !important;
+    //         .profile-description{
+    //             display: none !important;
+    //         }
+    //     }
+    // }
+    // @media screen and (min-width:375px) and (max-width:390px) {   
+    //     .section::after {
+    //         font-size: 13px;
+    //         font-family: 'Arial';
+    //         content: "device: i-phone SE 375 x 667";
+    //     }
+    //     .main-grid{
+    //         grid-template-rows: var(--grid-rows-mobile, auto);
+    //         grid-template-areas: var(--grid-template-mobile, auto);
+    //         background: var(--primary);
+    //     }
+    //     .profile-card {
+    //         box-shadow: none !important;
+    //         top:50px;
+    //         .profile-img{
+    //             border-radius: 50%;
+    //             height:200px;
+    //             width:200px;
+    //             background-color: var(--primary);
+    //             img {
+    //                 height: 350px;
+    //                 object-fit: cover;
+    //                 object-position: -50px -15px;
+    //             }
+    //         }
+    //         .profile-description{
+    //             display: none !important;
+    //         }
+    //     }
+    // }
+    // @media screen and (min-width:390px) and (max-width:393px) {   
+    //     .section::after {
+    //         font-size: 13px;
+    //         font-family: 'Arial';
+    //         content: "device: i-phone 12 pro 390 x 844";
+    //     }
+    //     .main-grid{
+    //         grid-template-rows: var(--grid-rows-mobile, auto);
+    //         grid-template-areas: var(--grid-template-mobile, auto);
+    //         background: var(--primary);
+    //     }
+    //     .profile-card {
+    //         box-shadow: none !important;
+    //         top:50px;
+    //         .profile-img{
+    //             border-radius: 50%;
+    //             height:200px;
+    //             width:200px;
+    //             background-color: var(--primary);
+    //             img {
+    //                 height: 350px;
+    //                 object-fit: cover;
+    //                 object-position: -50px -15px;
+    //             }
+    //         }
+    //         .profile-description{
+    //             display: none !important;
+    //         }
+    //     }
+    // }
+    @media screen and (min-width:375px) and (max-width:1093px) {   
+        .section::after {
+            font-size: 13px;
+            font-family: 'Arial';
+            content: "device: pixel 5 393 x 851";
+        }
+        .section-one {
+            height: 1000px;
+        }
+        .main-grid{
+            grid-template-rows: var(--grid-rows-mobile, auto);
+            grid-template-areas: var(--grid-template-mobile, auto);
+            background: var(--primary);
+        }
+        .profile-card {
+            box-shadow: none;
+            // top:50px;
+            background: transparent;
+            justify-self: center;
+            .profile-img{
+                border-radius: 50%;
+                height:200px;
+                width:200px;
+                background-color: var(--primary);
+                border: 8px solid #fff;
+                img {
+                    height: 350px;
+                    object-fit: cover;
+                    object-position: -50px -15px;
+                }
+            }
+            .profile-description{
+                display: none;
+            }
+        }
+
+        .heading-card{
+            top:-40px;
+            margin-left: 0;
+            justify-self: center;
+        }
+
+        .information-card{
+            margin-left: 0;
+            padding: 10px 0;
+            height: 320px;
+            justify-self: center;
+            .catchphrases{
+                align-items: center;
+                .catchphrase{
+                    text-align: center;
+                }
+            }
+        }
+        .contact-card{
+            justify-self: center;
+        }
+    }
+
+    @media screen and (min-width:1094px) {   
+        .section::after {
+            font-size: 13px;
+            font-family: 'Arial';
+            content: "device: i dont care...";
+        }
+        .section-one {
+            height: 100vh;
+        }
+        .main-grid{
+            grid-template-areas: var(--grid-template-desktop, auto);
+            grid-template-rows: var(--grid-rows-desktop, auto);
         }
         
+        
     }
+
 </style>

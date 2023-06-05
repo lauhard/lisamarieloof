@@ -1,14 +1,15 @@
 <script lang="ts">
+    export let className="";
 </script>
 
-<header class="heading">
+<header class="heading {className}">
     <h1 class="wrapper">
         <span class="line-1">Ihre Zeit</span>
         <span class="line-2">für <span class="hypnose">Hypnose</span> &</span>
         <span class="line-3">Weiterentwicklung</span>
         <span class="subheading">Entdecken Sie die Kraft von Hypnose</span>
+        <div class="separator"></div>
     </h1>
-    <div class="separator"></div>
 </header>
 
 
@@ -20,6 +21,7 @@
         font-weight: 300;
         font-size: 40px;
         line-height: 40px;
+        width: 100%;
         // letter-spacing: .15rem;
         letter-spacing: 2.9px;
         // letter-spacing: 4px;
@@ -28,10 +30,12 @@
         position: absolute;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         // top:120px;
         // left:150px;
-        width: auto;
-        padding:15px;
+        width: 385px;
+        // padding:15px;
         // background-color: rgb(172, 44, 44);
         height: 160px;
         box-sizing: border-box;
@@ -69,6 +73,7 @@
         width:233px;
         height: 3px;
         // top:246px;
+        align-self: flex-start;
         border-radius: 5px;
     }
     @media screen and (max-width: 480px) {
