@@ -1,5 +1,5 @@
 <script lang="ts">
-	import LogoSvg from '$lib/components/LogoSvg.svelte';
+	import LogoSvg from '$lib/components/svgs/LogoSvg.svelte';
 
 </script>
 

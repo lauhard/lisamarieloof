@@ -68,7 +68,8 @@
         }
         .menu-entries {
             font-weight: 300;
-            font-size: .65rem;
+            // font-size: .55rem;
+            font-size: 12px;
             // max-width: var(--content-width);
             width: 100%;
             display: flex;

@@ -5,8 +5,9 @@
     // import Section from "$lib/components/Section.svelte";
     import { onDestroy, onMount, setContext } from "svelte";
     import RoundButton from "$lib/components/RoundButton.svelte";
-    import ArrowDownSvg from "$lib/components/ArrowDownSvg.svelte";
-    import LogoSvg from "$lib/components/LogoSvg.svelte";
+    import ArrowDownSvg from "$lib/components/svgs/ArrowDownSvg.svelte";
+    import LogoSvg from "$lib/components/svgs/LogoSvg.svelte";
+    import AlertSvg from "$lib/components/svgs/AlertSvg.svelte";
     // import { ObserveProps, observer } from "$lib/actions/observer";
     import profile from "$lib/images/profile2.png";
     import tel from "$lib/svg/telephone.svg";
@@ -34,7 +35,20 @@
 </svelte:head>
 
 <section class="section section-one">
-
+    <div class="background-svg-banner">
+        <div class="svg-wrapper">
+            <LogoSvg
+                className="background-svg"
+                height="1000px"
+                animation={false}
+                --leaves-main="#f0f0f01a"
+                --leaves-overlay="#f0f0f01a"
+                --tree-color="#f0f0f01a"
+                --tree-overlay="#f0f0f01a"
+                --svg-stroke-width="0px"
+            />
+        </div>
+    </div>
     <div class="content-wrapper ">
         <span style="visibility:hidden;" id="section_one"></span>
 
@@ -60,7 +74,10 @@
                 </div>
             </div>
             <div class="grid-cell information">
+          
                 <div class="information-card">
+                    <AlertSvg svgClass="alert-svg" pathClass="alert-path" width="50px" height="50px"></AlertSvg>
+
                     <div class="catchphrases">
                         <p class="catchphrase">
                             Sie wollen aufhören zu <span class="attention"
@@ -165,6 +182,7 @@
         --grid-gap: 10px;
 
     }
+
     :global(.scroll-down) {
         bottom: 50px;
         position: absolute;
@@ -172,15 +190,34 @@
         left: calc(50% - 22.5px) !important;
     }
 
+    .background-svg-banner {
+        overflow: hidden;
+        width: 100%;
+        height: 600px;
+        background-color: var(--primary);
+        position: absolute;
+        transform: translatY(25%) !important;
+        top: 25% !important;
+        :global(.background-svg) {
+            // height:500px;
+            // height: 1100px;
+        }
+        .svg-wrapper {
+            position: absolute;
+            top: 250px;
+            left: -250px;
+            width: auto;
+        }
+    }
+
     h5{
         font-family: var(--font-family,"Segoe UI");
         font-weight: 400;
         font-size: 18px;
         line-height: 19px;
+        
         /* identical to box height */
-
         letter-spacing: 0.05rem;
-
         color: #FFFFFF;
     }
     .cta {
@@ -346,8 +383,9 @@
                 /* align-self: center; */
             }
     }
-
+    
     .information-card{
+       
         position: absolute;
         justify-self: left;
         align-self: start;
@@ -363,12 +401,31 @@
         padding: 0 1.2rem;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         margin-left:70px;
+        :global(.alert-svg){
+            position: absolute;
+            left:-30px;
+            top:-30px;
+            box-sizing: border-box;
+            padding: 5px;
+            width:60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--primary);
+        }
+        :global(.alert-path) {
+            fill:white;
+            stroke:white;
+            stroke-width: 0px;
+        }
         .catchphrases{
+          
+            position: relative;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
             font-family: var(--font-family, "Segoe UI");
+          
             // height: 150px;
             gap:10px;
             span{

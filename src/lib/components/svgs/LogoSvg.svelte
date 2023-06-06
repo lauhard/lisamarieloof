@@ -6,6 +6,7 @@
     export let height = "100%";
     export let viewBox = "0 0 1730 2388";
     export let animation = false;
+    export let className = "";
 
     onMount(()=>{
         if(animation){
@@ -18,7 +19,7 @@
     })
 </script>
 
-<svg id="logoSvg" {width} {height} {viewBox}>
+<svg id="logoSvg" class="{className}" {width} {height} {viewBox}>
     <g id="logo">
         <path
             id="tree"
