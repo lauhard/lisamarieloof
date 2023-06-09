@@ -9,7 +9,7 @@
     import LogoSvg from "$lib/components/svgs/LogoSvg.svelte";
     import AlertSvg from "$lib/components/svgs/AlertSvg.svelte";
     // import { ObserveProps, observer } from "$lib/actions/observer";
-    import profileImage from "$lib/images/profile2.png";
+    import profileImage from "$lib/images/profile2.webp";
   
     import Profile from "$lib/components/Profile.svelte";
     import Information from "$lib/components/Information.svelte";
