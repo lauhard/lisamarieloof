@@ -7,7 +7,7 @@
 <header class="profile {className}">
     <div class="wrapper">
         <div class="profile-img">
-            <img src={profileImage} alt="profile-image" width="200" height="350" loading="lazy" />
+            <img src={profileImage} alt="profile-image" width="200" height="350" loading="eager" />
         </div>
         <div class="profile-description">
             <h2 class="profile-name">Lisa-Marie Loof B.Sc</h2>
