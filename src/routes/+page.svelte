@@ -14,7 +14,6 @@
     import Profile from "$lib/components/Profile.svelte";
     import Information from "$lib/components/Information.svelte";
     import Contact from "$lib/components/Contact.svelte";
-    import { loadConfigFromFile, loadConfigFromFile } from "vite";
     // import { openMaps, scrollToAnchor } from "$lib/utils";
     // $: vars = `--background-image: url(${profile});`;
     $:loading = false;
