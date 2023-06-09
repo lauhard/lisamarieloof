@@ -39,7 +39,7 @@
     <link rel="preload" as="image" href={profileImage} />
 </svelte:head>
 
-{#if loading}
+
      <!-- content here -->
 
 <section class="section section-one">
@@ -84,9 +84,7 @@
         </div>
     </div>
 </section>
-{:else}
-     loading ...
-{/if}
+
 <section class="section section-two">
     <h1 class="decoeator" id="home_section2">Section2</h1>
 </section>
