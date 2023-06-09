@@ -36,7 +36,7 @@
         </header>
              <!-- content here -->
              <main
-             in:fly={{ duration: 250, delay: 0, y: 100 }} out:fly={{ delay:0, duration:250, y: -100}}
+             in:fly={{ duration: 250, delay: 0, x: 100 }} out:fly={{ delay:0, duration:250, x: 100}}
         >
             <slot></slot>
         </main>
