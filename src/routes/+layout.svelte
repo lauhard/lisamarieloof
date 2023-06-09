@@ -20,8 +20,11 @@
 -->
 
 <!-- in:fade={{ duration: 150, delay: 150 }} out:fly={{ duration: 150, x: 100 }} -->
-{#key data.currentRoute}
+    <!-- in:fade={{ duration: 150, delay: 100 }} out:fade={{ delay:100, duration:150}} -->
+
+{#key data.currentRoute }
     <div class="app"
+    in:fade={{ duration: 50, delay: 100 }} out:fade={{ delay:100, duration:50}}
     >
         <header>
             <Logo>
@@ -31,11 +34,14 @@
 
             </Navigation>
         </header>
-        <main
+             <!-- content here -->
+             <main
+             in:fly={{ duration: 250, delay: 0, y: 100 }} out:fly={{ delay:0, duration:250, y: -100}}
         >
-
             <slot></slot>
         </main>
+       
+        
     </div>
 {/key}
 

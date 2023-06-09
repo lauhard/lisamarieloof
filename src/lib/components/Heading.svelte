@@ -27,7 +27,6 @@
         letter-spacing: 2.9px;
         letter-spacing: .13rem;
         text-transform: uppercase;
-        // font-weight: 600;
         color: var(--text);
         // letter-spacing: 4px;
     }
@@ -74,7 +73,7 @@
             // letter-spacing: 4px;
             .hypnose{
                 color: var(--text);
-                // color: var(--secondary);
+                color: var(--secondary);
             }
         }
         .subheading{
@@ -91,6 +90,7 @@
     .separator {
         background-color: var(--secondary);
         width:233px;
+        width:12.9rem;
         height: 3px;
         // top:246px;
         align-self: flex-start;

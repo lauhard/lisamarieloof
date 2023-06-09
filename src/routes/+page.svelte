@@ -67,8 +67,8 @@
                 </div>
             </div>
             <div class="grid-cell profile">
-                <div class="profile-card">
-                    <Profile {profileImage} />
+                <div class="profile-card" >
+                    <Profile {profileImage} className="profile-card" />
                 </div>
             </div>
             <div class="grid-cell information">
@@ -245,8 +245,11 @@
 
     .profile-card {
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: end;
+        :global(.profile-card) {
+            max-width: 400px;
+        }
     }
 
     .information-card {

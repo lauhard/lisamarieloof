@@ -22,6 +22,11 @@
 
 <style lang="scss">
     .profile {
+        --font-size-name:20px;
+        --font-size-greeter:15px;
+        --font-size-description:14px;
+        --background:#fff;
+        
         // position: absolute;
         display: flex;
         justify-content: center;
@@ -31,7 +36,7 @@
 
         height: auto;
         width: auto;
-        background-color: #ffffff;
+        background-color: var(--background,#fff);
         padding: 5px;
         // box-shadow: 0px 6px 15px -5px rgba(0, 0, 0, 0.25);
         .wrapper {
@@ -58,7 +63,7 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
-                    padding: 20px;
+                    padding: 5px 20px 20px 20px;
                     // width: calc(100% - 200px);
                     // height: 200px;
                     height: 100%;
@@ -66,24 +71,25 @@
                     // background-color: green;
                     .profile-name {
                         color: var(--text);
-                        font-size: 20px;
+                        font-size: var(--font-size-name, 20px);
                         letter-spacing: 1.5px;
                         // font-family: 'Segoe UI';
                         font-weight: 400;
                         text-align: center;
+                        // text-transform: uppercase;
                     }
                     .greeter {
                         text-align: center;
                         margin-top: 20px;
                         font-weight: 300;
-                        font-size: 15px;
+                        font-size: var(--font-size-greeter, 15px);
                         text-transform: uppercase;
                         letter-spacing: 2px;
                     }
                     .description {
                         width: 100%;
                         font-weight: 300;
-                        font-size: 14px;
+                        font-size: var(--font-size-description, 14px);
                         // font-size: 0.62rem;
                         text-align: center;
                         letter-spacing: 0.5px;

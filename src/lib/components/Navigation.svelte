@@ -55,6 +55,7 @@
         height: 70px;
         display: flex;
         justify-content: center;
+
         // background-color: blueviolet;
         // position: fixed;
         // top: 0;
@@ -67,7 +68,6 @@
             display: none !important;
         }
         .menu-entries {
-            font-weight: 300;
             // font-size: .55rem;
             font-size: 12px;
             // max-width: var(--content-width);
