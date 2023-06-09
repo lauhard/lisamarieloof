@@ -1,4 +1,5 @@
 @import url(./lib/css/pico/pico.css);
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 
 *,
 *::before,
@@ -26,6 +27,7 @@
     --background: #ffffff !important;
     --text: #4A4A4A !important;
     --primary: #77B6BA !important;
+    // --primary: #2a9ebb !important;
     --primary-hover: #77b5bac8 !important;
 
     --secondary: #c4b26a !important;
@@ -34,6 +36,7 @@
 
     --svg-icon-fill: #060000;
     --svg-icon-stroke: #060000;
+
 }
 
 .hover {
