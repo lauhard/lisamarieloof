@@ -24,7 +24,7 @@ const BurgerMenu = create_ssr_component(($$result, $$props, $$bindings, slots) =
 });
 const Navigation_svelte_svelte_type_style_lang = "";
 const css$2 = {
-  code: 'ul.svelte-1ai7v2u.svelte-1ai7v2u{margin:0;padding:0}nav.svelte-1ai7v2u.svelte-1ai7v2u{font-family:var(--font-family, "Segoe UI");width:100%;height:70px;display:flex;justify-content:center}nav.svelte-1ai7v2u .burger{border-width:1px !important;display:none !important}nav.svelte-1ai7v2u .menu-entries.svelte-1ai7v2u{font-weight:300;font-size:12px;width:100%;display:flex;justify-content:end;transition:all 1s ease-out}nav.svelte-1ai7v2u .menu-entries li.svelte-1ai7v2u{position:relative;word-break:keep-all;text-transform:uppercase}nav.svelte-1ai7v2u .menu-entries li a.svelte-1ai7v2u{outline:none;list-style:none;color:var(--text, #fff);background-color:none}nav.svelte-1ai7v2u .menu-entries li a.svelte-1ai7v2u::before{content:" ";width:0px;border:2px solid transparent;position:absolute;bottom:0.8rem;border-radius:5px;transition:all 0.2s ease-in-out}nav.svelte-1ai7v2u .menu-entries li.svelte-1ai7v2u:hover{transition:all 0.2s ease-in-out}nav.svelte-1ai7v2u .menu-entries li:hover a.svelte-1ai7v2u::before{content:" ";width:45px;border:2px solid var(--primary);position:absolute;border-radius:5px;bottom:0.8rem;transition:all 0.2s ease-in-out}nav.svelte-1ai7v2u .menu-entries .active a.svelte-1ai7v2u::before{content:" ";width:45px;height:0.15rem;background-color:var(--primary);position:absolute;bottom:0.8rem;border-radius:5px}.scroll.svelte-1ai7v2u.svelte-1ai7v2u{opacity:1;transition:all 0.5s ease-in-out;transition:all 0.2s ease-in-out}.hide.svelte-1ai7v2u.svelte-1ai7v2u{opacity:0;transition:all 0.2s ease-in-out}@media screen and (max-width: 680px){nav.svelte-1ai7v2u.svelte-1ai7v2u{display:flex;justify-content:end;align-items:center;width:100%;margin-top:5px}nav.svelte-1ai7v2u .burger{display:flex !important;margin-right:20px !important}nav.svelte-1ai7v2u .menu-entries.svelte-1ai7v2u{display:none;width:100%;font-size:12px}nav.svelte-1ai7v2u .mobile.svelte-1ai7v2u{justify-content:center;align-items:center;width:100% !important;position:absolute;top:70px;display:flex;flex-direction:column;background-color:gray;transition:all 1s ease-out}nav.svelte-1ai7v2u .mobile li.svelte-1ai7v2u{display:block;width:100%;background-color:#fff;height:100%}nav.svelte-1ai7v2u .mobile li a.svelte-1ai7v2u{display:block;text-align:center;height:100%}}',
+  code: 'ul.svelte-1l4m7co.svelte-1l4m7co{margin:0;padding:0}nav.svelte-1l4m7co.svelte-1l4m7co{font-family:var(--font-family, "Segoe UI");width:100%;height:70px;display:flex;justify-content:center}nav.svelte-1l4m7co .burger{border-width:1px !important;display:none !important}nav.svelte-1l4m7co .menu-entries.svelte-1l4m7co{font-size:12px;width:100%;display:flex;justify-content:end;transition:all 1s ease-out}nav.svelte-1l4m7co .menu-entries li.svelte-1l4m7co{position:relative;word-break:keep-all;text-transform:uppercase}nav.svelte-1l4m7co .menu-entries li a.svelte-1l4m7co{outline:none;list-style:none;color:var(--text, #fff);background-color:none}nav.svelte-1l4m7co .menu-entries li a.svelte-1l4m7co::before{content:" ";width:0px;border:2px solid transparent;position:absolute;bottom:0.8rem;border-radius:5px;transition:all 0.2s ease-in-out}nav.svelte-1l4m7co .menu-entries li.svelte-1l4m7co:hover{transition:all 0.2s ease-in-out}nav.svelte-1l4m7co .menu-entries li:hover a.svelte-1l4m7co::before{content:" ";width:45px;border:2px solid var(--primary);position:absolute;border-radius:5px;bottom:0.8rem;transition:all 0.2s ease-in-out}nav.svelte-1l4m7co .menu-entries .active a.svelte-1l4m7co::before{content:" ";width:45px;height:0.15rem;background-color:var(--primary);position:absolute;bottom:0.8rem;border-radius:5px}.scroll.svelte-1l4m7co.svelte-1l4m7co{opacity:1;transition:all 0.5s ease-in-out;transition:all 0.2s ease-in-out}.hide.svelte-1l4m7co.svelte-1l4m7co{opacity:0;transition:all 0.2s ease-in-out}@media screen and (max-width: 680px){nav.svelte-1l4m7co.svelte-1l4m7co{display:flex;justify-content:end;align-items:center;width:100%;margin-top:5px}nav.svelte-1l4m7co .burger{display:flex !important;margin-right:20px !important}nav.svelte-1l4m7co .menu-entries.svelte-1l4m7co{display:none;width:100%;font-size:12px}nav.svelte-1l4m7co .mobile.svelte-1l4m7co{justify-content:center;align-items:center;width:100% !important;position:absolute;top:70px;display:flex;flex-direction:column;background-color:gray;transition:all 1s ease-out}nav.svelte-1l4m7co .mobile li.svelte-1l4m7co{display:block;width:100%;background-color:#fff;height:100%}nav.svelte-1l4m7co .mobile li a.svelte-1l4m7co{display:block;text-align:center;height:100%}}',
   map: null
 };
 const Navigation = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -62,7 +62,7 @@ const Navigation = create_ssr_component(($$result, $$props, $$bindings, slots) =
     $$rendered = `
 
 <nav class="${[
-      "navigation svelte-1ai7v2u",
+      "navigation svelte-1l4m7co",
       (scrollY > offset ? "scroll" : "") + " " + (hide === true ? "hide" : "")
     ].join(" ").trim()}">
         ${validate_component(BurgerMenu, "BurgerMenu").$$render(
@@ -78,12 +78,12 @@ const Navigation = create_ssr_component(($$result, $$props, $$bindings, slots) =
     )}
     
     <ul class="${[
-      "menu-entries svelte-1ai7v2u",
+      "menu-entries svelte-1l4m7co",
       innerWidth < 680 && open == true ? "mobile" : ""
-    ].join(" ").trim()}"><li class="${["svelte-1ai7v2u", $page.url.pathname === "/" ? "active" : ""].join(" ").trim()}"><a href="/" class="svelte-1ai7v2u">Startseite</a></li>
-        <li class="${["svelte-1ai7v2u", $page.url.pathname === "/leistungen" ? "active" : ""].join(" ").trim()}"><a href="/leistungen" class="svelte-1ai7v2u">Leistungen</a></li>
-        <li class="${["svelte-1ai7v2u", $page.url.pathname === "/ueber-mich" ? "active" : ""].join(" ").trim()}"><a href="/ueber-mich" class="svelte-1ai7v2u">Über Mich</a></li>
-        <li class="${["svelte-1ai7v2u", $page.url.pathname === "/kontakt" ? "active" : ""].join(" ").trim()}"><a href="/kontakt" class="svelte-1ai7v2u">Kontakt</a></li></ul>
+    ].join(" ").trim()}"><li class="${["svelte-1l4m7co", $page.url.pathname === "/" ? "active" : ""].join(" ").trim()}"><a href="/" class="svelte-1l4m7co">Startseite</a></li>
+        <li class="${["svelte-1l4m7co", $page.url.pathname === "/leistungen" ? "active" : ""].join(" ").trim()}"><a href="/leistungen" class="svelte-1l4m7co">Leistungen</a></li>
+        <li class="${["svelte-1l4m7co", $page.url.pathname === "/ueber-mich" ? "active" : ""].join(" ").trim()}"><a href="/ueber-mich" class="svelte-1l4m7co">Über Mich</a></li>
+        <li class="${["svelte-1l4m7co", $page.url.pathname === "/kontakt" ? "active" : ""].join(" ").trim()}"><a href="/kontakt" class="svelte-1l4m7co">Kontakt</a></li></ul>
 </nav>`;
   } while (!$$settled);
   $$unsubscribe_page();
@@ -117,9 +117,12 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 
 
 
+    
+
 <div class="app svelte-yo64n6"><header class="svelte-yo64n6">${validate_component(Logo, "Logo").$$render($$result, {}, {}, {})}
             ${validate_component(Navigation, "Navigation").$$render($$result, {}, {}, {})}</header>
-        <main class="svelte-yo64n6">${slots.default ? slots.default({}) : ``}</main></div>`;
+             
+             <main class="svelte-yo64n6">${slots.default ? slots.default({}) : ``}</main></div>`;
 });
 export {
   Layout as default
