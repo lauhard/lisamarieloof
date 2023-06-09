@@ -1,5 +1,4 @@
 <script lang="ts">
-    import profile from "$lib/images/profile2.png";
     import AlertSvg from "./svgs/AlertSvg.svelte";
 
     export let className = "";
