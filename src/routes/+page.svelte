@@ -41,10 +41,9 @@
 
 
      <!-- content here -->
-
+<!-- #d7c88e2e -->
 <section class="section section-one">
     <div class="background-svg-banner">
-        <div class="svg-wrapper">
             <LogoSvg
                 className="background-svg"
                 height="1000px"
@@ -55,7 +54,6 @@
                 --tree-overlay="#f0f0f01a"
                 --svg-stroke-width="0px"
             />
-        </div>
     </div>
     <div class="content-wrapper">
         <span style="visibility:hidden;" id="section_one" />
@@ -95,16 +93,16 @@
 
 <style lang="scss">
     :root {
-        --bg-grid: #37cf2ce2;
-        --bg-content-wrapper: #c3ff80;
-        --bg-heading: red;
-        --bg-profile: green;
-        --bg-information: blue;
-        --bg-contact: orange;
+        // --bg-grid: #37cf2ce2;
+        // --bg-content-wrapper: #c3ff80;
+        // --bg-heading: red;
+        // --bg-profile: green;
+        // --bg-information: blue;
+        // --bg-contact: orange;
 
-        --grid-columns: 20% 24% 10% 20% auto;
+        --grid-columns: 20% 25% 10% 20% auto;
         --grid-rows-desktop: 10% 10% 10% auto;
-        --grid-rows-mobile: 23% 15% 37%;
+        --grid-rows-mobile: 210px 170px 37%;
         --grid-template-desktop: "heading heading heading profile profile"
             "heading heading heading profile profile"
             "heading heading heading profile profile"
@@ -136,7 +134,8 @@
         position: absolute;
         transform: translatY(25%) !important;
         top: 25% !important;
-
+        :global(.background-svg) {
+        }
         .svg-wrapper {
             position: absolute;
             top: 250px;
@@ -228,18 +227,11 @@
 
     .heading-card {
         display: flex;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
-        // top:25%;
+        margin-left: 70px;
         :global(.heading-desktop) {
-            // align-self: center;
-            // position: relative !important;
-            // // background-color: #2a9ebb;
-            // // background-color: white;
-            // width: 400px;
-            // height:180px;
-            // text-transform: uppercase;
-            // border: 2px solid var(--primary);
+        
         }
     }
 
@@ -255,55 +247,86 @@
     .information-card {
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: start;
+        margin-top:5rem;
+        margin-left: 70px;
     }
 
     .contact-card {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: end;
+        align-items: start;
+        :global(.profile-card) {
+            max-width: 400px;
+        }
     }
 
     @media screen and (min-width: 375px) and (max-width: 1093px) {
+        .background-svg-banner {
+            overflow: hidden;
+            width: 100%;
+            height: 800px;
+            background-color: var(--primary);
+            position: absolute;
+            transform: translatY(15%) !important;
+            top: 15% !important;
+            :global(.background-svg) {
+                height: 1200px;
+                // left: 150px;
+            }
+        }
         .section::after {
             font-size: 13px;
             font-family: "Arial";
             content: "device: pixel 5 393 x 851";
         }
         .section-one {
-            height: 1000px;
+            min-height: auto;
         }
         .main-grid {
             grid-template-rows: var(--grid-rows-mobile, auto);
             grid-template-areas: var(--grid-template-mobile, auto);
-            background: var(--primary);
+            // background: var(--primary);
         }
         .profile-card {
-            box-shadow: none;
-            // top:50px;
-            background: transparent;
-            justify-self: center;
-            .profile-img {
-                border-radius: 50%;
-                height: 200px;
-                width: 200px;
-                background-color: var(--primary);
-                border: 8px solid #fff;
-                img {
-                    height: 350px;
-                    object-fit: cover;
-                    object-position: -50px -15px;
-                }
-            }
-            .profile-description {
-                display: none;
+            :global(.profile-card){
+                max-width:100%;
             }
         }
+        // .profile-card {
+        //     box-shadow: none;
+        //     // top:50px;
+        //     background: transparent;
+        //     justify-self: center;
+        //     .profile-img {
+        //         border-radius: 50%;
+        //         height: 200px;
+        //         width: 200px;
+        //         background-color: var(--primary);
+        //         border: 8px solid #fff;
+        //         img {
+        //             height: 350px;
+        //             object-fit: cover;
+        //             object-position: -50px -15px;
+        //         }
+        //     }
+        //     .profile-description {
+        //         display: none;
+        //     }
+        // }
 
         .heading-card {
-            top: -40px;
-            margin-left: 0;
-            justify-self: center;
+            justify-content: center;
+            align-items: center;
+            margin: 0px;
+            padding: 0px;
+            // width:100%;
+            // max-width:100%;
+            :global(.heading-card){
+
+                
+
+            }
         }
 
         .information-card {

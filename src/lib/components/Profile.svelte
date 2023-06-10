@@ -122,4 +122,33 @@
         //     }
         // }
     }
+    @media screen and (min-width: 375px) and (max-width: 1093px) {
+        .profile {
+            box-shadow: none;
+            // background: #fff;
+            background: transparent;
+            justify-self: center;
+            align-items: center;
+            width:100%;
+            .wrapper{
+                .profile-img {
+                    border-radius: 50%;
+                    height: 200px !important;
+                    width: 200px !important;
+                    background-color: var(--primary);
+                    border: 8px solid #fff;
+                    img {
+                        object-fit: cover;
+                        object-position: -35px -15px;
+                    }
+                }
+                .profile-description {
+                    display: none;
+                }
+            }
+            
+           
+      
+        }
+    }
 </style>

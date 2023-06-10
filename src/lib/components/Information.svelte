@@ -53,12 +53,17 @@
         background-color: var(--primary);
     }
     :global(.alert-path) {
-        fill: white;
-        stroke: white;
+        fill: #fff !important;
+        stroke: #fff !important;
         stroke-width: 0px;
     }
     
     .cta {
+        input[type=text], input[type=button] {
+            -webkit-appearance: none;
+            -webkit-border-radius: 0;
+            border-style: none;
+        }
         background-color: var(--secondary);
         font-family: var(--font-family, "Segoe UI");
         box-sizing: border-box;
@@ -74,6 +79,7 @@
         color: var(--text);
         /* identical to box height */
         text-align: center;
+        margin-bottom: 10px;
     }
     .Information {
         position: relative;
@@ -103,7 +109,7 @@
                 align-items: flex-start;
                 font-family: var(--font-family, "Segoe UI");
                 // background-color: #ffffff;
-                // padding:30px;
+                padding:30px;
                 // height: 150px;
                 gap: 10px;
                 span {

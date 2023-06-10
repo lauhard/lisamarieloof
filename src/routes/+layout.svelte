@@ -24,7 +24,7 @@
 
 {#key data.currentRoute }
     <div class="app"
-    in:fade={{ duration: 50, delay: 100 }} out:fade={{ delay:100, duration:50}}
+    in:fade={{ duration: 250, delay: 100 }} out:fade={{ delay:100, duration:250}}
     >
         <header>
             <Logo>
@@ -36,7 +36,7 @@
         </header>
              <!-- content here -->
              <main
-             in:fly={{ duration: 250, delay: 0, x: 100 }} out:fly={{ delay:0, duration:250, x: 100}}
+            
         >
             <slot></slot>
         </main>
