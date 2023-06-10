@@ -88,9 +88,15 @@
             // max-width: var(--content-width);
             // height: 100vh;
             // background-color: green;
-            min-height: 100%;
+            // min-height: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
             height: auto;
+            justify-content: space-between;
+            // background-color: blue;
             width: 100%;
+            // overflow: scroll;
         }
         @media screen and (max-width: 680px) {
             :global(#logoSvg) {

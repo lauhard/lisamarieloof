@@ -106,7 +106,7 @@ const Logo = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 });
 const _layout_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".navigation{margin-top:5px}.logo{z-index:999;padding-top:10px}header.svelte-1dzui5o.svelte-1dzui5o{position:fixed;top:0;z-index:999;width:100%;background:#fff;justify-self:center;display:flex;flex-direction:row;justify-content:space-between}.app.svelte-1dzui5o.svelte-1dzui5o{width:100%;min-height:100vh;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center}.app.svelte-1dzui5o main.svelte-1dzui5o{min-height:100%;height:auto;width:100%}@media screen and (max-width: 680px){.app.svelte-1dzui5o #logoSvg{right:15px}}",
+  code: ".navigation{margin-top:5px}.logo{z-index:999;padding-top:10px}header.svelte-1o5k8or.svelte-1o5k8or{position:fixed;top:0;z-index:999;width:100%;background:#fff;justify-self:center;display:flex;flex-direction:row;justify-content:space-between}.app.svelte-1o5k8or.svelte-1o5k8or{width:100%;min-height:100vh;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center}.app.svelte-1o5k8or main.svelte-1o5k8or{min-height:100vh;display:flex;flex-direction:column;height:auto;justify-content:space-between;width:100%}@media screen and (max-width: 680px){.app.svelte-1o5k8or #logoSvg{right:15px}}",
   map: null
 };
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -122,10 +122,10 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 
 
 
-<div class="app svelte-1dzui5o"><header class="svelte-1dzui5o">${validate_component(Logo, "Logo").$$render($$result, {}, {}, {})}
+<div class="app svelte-1o5k8or"><header class="svelte-1o5k8or">${validate_component(Logo, "Logo").$$render($$result, {}, {}, {})}
             ${validate_component(Navigation, "Navigation").$$render($$result, {}, {}, {})}</header>
         
-        <main class="svelte-1dzui5o">${slots.default ? slots.default({}) : ``}</main></div>`;
+        <main class="svelte-1o5k8or">${slots.default ? slots.default({}) : ``}</main></div>`;
 });
 export {
   Layout as default

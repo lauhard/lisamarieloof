@@ -87,7 +87,7 @@
 </section>
 
 <section class="section section-two">
-    <h1 class="decoeator" id="home_section2">Section2</h1>
+    <h1 class="decoeator" id="home_section2">Was ist Hypnose</h1>
 </section>
 
 <section class="section section-three">
@@ -103,6 +103,7 @@
         // --bg-information: blue;
         // --bg-contact: orange;
         // --bg-section-one: gray;
+        // --bg-section-two: red;
 
         --grid-columns: 20% 25% 10% 20% auto;
         --grid-rows-desktop: 10% 10% 10% auto;
@@ -165,7 +166,8 @@
         justify-content: center;
         // min-height: 100vh;
         height: 100%;
-        min-height: 1000px;
+        margin:0px;
+        // min-height: 1000px;
         background-color: var(--bg-section-one);
         .content-wrapper {
             box-sizing: border-box;
@@ -173,7 +175,7 @@
             position: relative;
             flex-direction: column;
             background: var(--bg-content-wrapper, transparent);
-            // min-height: 100vh;
+            min-height: 100vh;
             height: 100%;
             width: 100%;  // height: 100vh; !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             max-width: var(--content-width, 1240px);
@@ -187,7 +189,7 @@
         background: var(--bg-grid, transparent);
         margin-top: 80px;
         width: 100%;
-        // min-height: 100vh; /**"""""!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"*/
+        min-height: 100vh; /**"""""!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"*/
         height: 100vh;
     }
 
@@ -259,6 +261,24 @@
         }
     }
 
+
+
+
+
+    .section-two{
+        background-color: var(--bg-section-two);
+        height: auto;
+        // margin-top:80px;
+
+    }
+
+
+
+
+
+
+
+
     @media screen and (min-width: 375px) and (max-width: 1093px) {
         .background-svg-banner {
             overflow: hidden;
@@ -279,12 +299,11 @@
         }
         .section-one {
             min-height: 100vh;
-            // margin-bottom: 100px;
-            height: auto;
+            height: 100%;
         }
         .grid{
             height: 100%;
-            margin-bottom: 50px;
+            margin-bottom: 100px;
         }
         .main-grid {
             grid-template-rows: var(--grid-rows-mobile, auto);
@@ -322,13 +341,13 @@
     }
 
     @media screen and (min-width: 1094px) {
-        .section::after {
-            font-size: 13px;
-            font-family: "Arial";
-            content: "device: i dont care...";
-        }
+        // .section::after {
+        //     font-size: 13px;
+        //     font-family: "Arial";
+        //     content: "device: i dont care...";
+        // }
         .section-one {
-            height: 100vh;
+            // height: 100vh;
         }
         .main-grid {
             grid-template-areas: var(--grid-template-desktop, auto);
