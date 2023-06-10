@@ -24,11 +24,10 @@ const BurgerMenu = create_ssr_component(($$result, $$props, $$bindings, slots) =
 });
 const Navigation_svelte_svelte_type_style_lang = "";
 const css$2 = {
-  code: 'ul.svelte-1xufqzp.svelte-1xufqzp{margin:0;padding:0}nav.svelte-1xufqzp.svelte-1xufqzp{font-family:var(--font-family, "Segoe UI");width:100%;height:70px;display:flex;justify-content:center}nav.svelte-1xufqzp .burger{border-width:1px !important;display:none !important}nav.svelte-1xufqzp .menu-entries.svelte-1xufqzp{font-size:12px;width:100%;display:flex;justify-content:end;transition:all 1s ease-out}nav.svelte-1xufqzp .menu-entries li.svelte-1xufqzp{position:relative;word-break:keep-all;text-transform:uppercase}nav.svelte-1xufqzp .menu-entries li a.svelte-1xufqzp{outline:none;list-style:none;color:var(--text, #fff);background-color:none}nav.svelte-1xufqzp .menu-entries li a.svelte-1xufqzp::before{content:" ";width:0px;border:2px solid transparent;position:absolute;bottom:0.8rem;border-radius:5px;transition:all 0.2s ease-in-out}nav.svelte-1xufqzp .menu-entries li.svelte-1xufqzp:hover{transition:all 0.2s ease-in-out}nav.svelte-1xufqzp .menu-entries li:hover a.svelte-1xufqzp::before{content:" ";width:45px;border:2px solid var(--primary);position:absolute;border-radius:5px;bottom:0.8rem;transition:all 0.2s ease-in-out}nav.svelte-1xufqzp .menu-entries .active a.svelte-1xufqzp::before{content:" ";width:45px;height:0.15rem;background-color:var(--primary);position:absolute;bottom:0.8rem;border-radius:5px}.scroll.svelte-1xufqzp.svelte-1xufqzp{opacity:1;transition:all 0.5s ease-in-out;transition:all 0.2s ease-in-out}.hide.svelte-1xufqzp.svelte-1xufqzp{opacity:0;transition:all 0.2s ease-in-out}@media screen and (max-width: 680px){nav.svelte-1xufqzp.svelte-1xufqzp{display:flex;justify-content:end;align-items:center;width:100%;margin-top:5px}nav.svelte-1xufqzp .burger{display:flex !important;margin-right:20px !important}nav.svelte-1xufqzp .menu-entries.svelte-1xufqzp{display:none;width:100%;font-size:12px}nav.svelte-1xufqzp .mobile.svelte-1xufqzp{justify-content:center;align-items:center;width:100% !important;position:absolute;top:70px;display:flex;flex-direction:column;background-color:gray;transition:all 1s ease-out}nav.svelte-1xufqzp .mobile li.svelte-1xufqzp{display:block;width:100%;background-color:#fff;height:100%}nav.svelte-1xufqzp .mobile li a.svelte-1xufqzp{display:block;text-align:center;height:100%}}',
+  code: 'ul.svelte-zmnsx8.svelte-zmnsx8{margin:0;padding:0}nav.svelte-zmnsx8.svelte-zmnsx8{font-family:var(--font-family, "Segoe UI");width:100%;height:70px;display:flex;justify-content:center}nav.svelte-zmnsx8 .burger{border-width:1px !important;display:none !important}nav.svelte-zmnsx8 .menu-entries.svelte-zmnsx8{font-size:12px;width:100%;display:flex;justify-content:end;transition:all 1s ease-out}nav.svelte-zmnsx8 .menu-entries li.svelte-zmnsx8{position:relative;word-break:keep-all;text-transform:uppercase}nav.svelte-zmnsx8 .menu-entries li a.svelte-zmnsx8{outline:none;list-style:none;color:var(--text, #fff);background-color:none}nav.svelte-zmnsx8 .menu-entries li a.svelte-zmnsx8::before{content:" ";width:0px;border:2px solid transparent;position:absolute;bottom:0.8rem;border-radius:5px;transition:all 0.2s ease-in-out}nav.svelte-zmnsx8 .menu-entries li.svelte-zmnsx8:hover{transition:all 0.2s ease-in-out}nav.svelte-zmnsx8 .menu-entries li:hover a.svelte-zmnsx8::before{content:" ";width:45px;border:2px solid var(--primary);position:absolute;border-radius:5px;bottom:0.8rem;transition:all 0.2s ease-in-out}nav.svelte-zmnsx8 .menu-entries .active a.svelte-zmnsx8::before{content:" ";width:45px;height:0.15rem;background-color:var(--primary);position:absolute;bottom:0.8rem;border-radius:5px}.scroll.svelte-zmnsx8.svelte-zmnsx8{opacity:1;transition:all 0.5s ease-in-out;transition:all 0.2s ease-in-out}.hide.svelte-zmnsx8.svelte-zmnsx8{opacity:0;transition:all 0.2s ease-in-out}@media screen and (max-width: 680px){nav.svelte-zmnsx8.svelte-zmnsx8{display:flex;justify-content:end;align-items:center;width:100%;margin-top:5px}nav.svelte-zmnsx8 .burger{display:flex !important;margin-right:20px !important}nav.svelte-zmnsx8 .menu-entries.svelte-zmnsx8{display:none;width:100%;font-size:12px}nav.svelte-zmnsx8 .mobile.svelte-zmnsx8{justify-content:end;align-items:center;width:100% !important;position:absolute;top:80px;display:flex;flex-direction:column;background-color:#fff;transition:all 1s ease-out;height:250px}nav.svelte-zmnsx8 .mobile li.svelte-zmnsx8{display:flex;width:100%;background-color:#fff;height:60px;margin:0;padding:0px;border-bottom:1px solid rgba(194, 193, 193, 0.74);justify-content:center;align-items:center}nav.svelte-zmnsx8 .mobile li a.svelte-zmnsx8{display:block;text-align:center;align-self:center;padding:20px;height:100%;width:100%}}',
   map: null
 };
 const Navigation = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let scrollY;
   let innerWidth;
   let hide;
   let $page, $$unsubscribe_page;
@@ -36,14 +35,16 @@ const Navigation = create_ssr_component(($$result, $$props, $$bindings, slots) =
   let open = false;
   let oldScroll = void 0;
   const offset = 50;
+  let { scrollY = 0 } = $$props;
   if ($$props.offset === void 0 && $$bindings.offset && offset !== void 0)
     $$bindings.offset(offset);
+  if ($$props.scrollY === void 0 && $$bindings.scrollY && scrollY !== void 0)
+    $$bindings.scrollY(scrollY);
   $$result.css.add(css$2);
   let $$settled;
   let $$rendered;
   do {
     $$settled = true;
-    scrollY = 0;
     innerWidth = 0;
     hide = false;
     {
@@ -62,7 +63,7 @@ const Navigation = create_ssr_component(($$result, $$props, $$bindings, slots) =
     $$rendered = `
 
 <nav class="${[
-      "navigation svelte-1xufqzp",
+      "navigation svelte-zmnsx8",
       (scrollY > offset ? "scroll" : "") + " " + (hide === true ? "hide" : "")
     ].join(" ").trim()}">
         ${validate_component(BurgerMenu, "BurgerMenu").$$render(
@@ -78,12 +79,12 @@ const Navigation = create_ssr_component(($$result, $$props, $$bindings, slots) =
     )}
     
     <ul class="${[
-      "menu-entries svelte-1xufqzp",
+      "menu-entries svelte-zmnsx8",
       innerWidth < 680 && open == true ? "mobile" : ""
-    ].join(" ").trim()}"><li class="${["svelte-1xufqzp", $page.url.pathname === "/" ? "active" : ""].join(" ").trim()}"><a href="/" class="svelte-1xufqzp">Startseite</a></li>
-        <li class="${["svelte-1xufqzp", $page.url.pathname === "/leistungen" ? "active" : ""].join(" ").trim()}"><a href="/leistungen" class="svelte-1xufqzp">Leistungen</a></li>
-        <li class="${["svelte-1xufqzp", $page.url.pathname === "/ueber-mich" ? "active" : ""].join(" ").trim()}"><a href="/ueber-mich" class="svelte-1xufqzp">Über Mich</a></li>
-        <li class="${["svelte-1xufqzp", $page.url.pathname === "/kontakt" ? "active" : ""].join(" ").trim()}"><a href="/kontakt" class="svelte-1xufqzp">Kontakt</a></li></ul>
+    ].join(" ").trim()}"><li class="${["svelte-zmnsx8", $page.url.pathname === "/" ? "active" : ""].join(" ").trim()}"><a href="/" class="svelte-zmnsx8">Startseite</a></li>
+        <li class="${["svelte-zmnsx8", $page.url.pathname === "/leistungen" ? "active" : ""].join(" ").trim()}"><a href="/leistungen" class="svelte-zmnsx8">Leistungen</a></li>
+        <li class="${["svelte-zmnsx8", $page.url.pathname === "/ueber-mich" ? "active" : ""].join(" ").trim()}"><a href="/ueber-mich" class="svelte-zmnsx8">Über Mich</a></li>
+        <li class="${["svelte-zmnsx8", $page.url.pathname === "/kontakt" ? "active" : ""].join(" ").trim()}"><a href="/kontakt" class="svelte-zmnsx8">Kontakt</a></li></ul>
 </nav>`;
   } while (!$$settled);
   $$unsubscribe_page();
@@ -92,28 +93,49 @@ const Navigation = create_ssr_component(($$result, $$props, $$bindings, slots) =
 const app = "";
 const Logo_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: '#logoSvg{width:auto;z-index:100000;display:flex;vertical-align:center}.logo-wrapper.svelte-22psy5.svelte-22psy5{min-width:220px;display:flex;flex-direction:row;vertical-align:center;align-items:center}.circle.svelte-22psy5.svelte-22psy5{min-width:70px;width:70px;height:70px;min-height:70px;background:#77B6BA;border-radius:50%;display:flex;justify-content:center;align-items:center;border:1px solid white}.brand-wrapper.svelte-22psy5.svelte-22psy5{display:flex;flex-direction:column;padding:0;margin:0;margin:3px 0 0 10px}.brand-wrapper.svelte-22psy5 .brand-name.svelte-22psy5{padding:0;margin:0;border:1.5px solid #77B6BA;height:30px;display:flex;justify-content:center;align-items:center;padding:0 5px;background-color:white;margin:2px 0}.brand-wrapper.svelte-22psy5 .brand-name h1.svelte-22psy5{font-size:16px;font-family:"Segoe UI";font-weight:400;color:var(--primary);margin:0;padding:0;line-height:1;letter-spacing:1px}.brand-wrapper.svelte-22psy5 small.svelte-22psy5{padding:0;margin:0;margin-left:2px;font-family:"Segoe UI";line-height:1.4;font-size:8px;letter-spacing:2.5px}',
+  code: '#logoSvg{width:auto;z-index:100000;display:flex;vertical-align:center}.logo-wrapper.svelte-1rao7iy.svelte-1rao7iy{min-width:220px;display:flex;flex-direction:row;vertical-align:center;align-items:center}.circle.svelte-1rao7iy.svelte-1rao7iy{min-width:70px;width:70px;height:70px;min-height:70px;background:#77B6BA;border-radius:50%;display:flex;justify-content:center;align-items:center;border:1px solid white}.brand-wrapper.svelte-1rao7iy.svelte-1rao7iy{display:flex;flex-direction:column;padding:0;margin:0;margin:-5px 0 0 10px}.brand-wrapper.svelte-1rao7iy .brand-name.svelte-1rao7iy{padding:0;margin:0;border:1.5px solid #77B6BA;height:30px;display:flex;justify-content:center;align-items:center;padding:0 5px;background-color:white;margin:2px 0}.brand-wrapper.svelte-1rao7iy .brand-name h1.svelte-1rao7iy{font-size:16px;font-family:"Segoe UI";font-weight:400;color:var(--primary);margin:0;padding:0;line-height:1;letter-spacing:1px}.brand-wrapper.svelte-1rao7iy small.svelte-1rao7iy{padding:0;margin:0;margin-left:2px;font-family:"Segoe UI";line-height:1.4;font-size:8px;letter-spacing:2.5px}',
   map: null
 };
 const Logo = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
-  return `<div class="logo logo-wrapper svelte-22psy5"><div class="circle svelte-22psy5"><div style="display: contents; --leaves-main:#fff; --leaves-overlay:#fff; --tree-color:#fff; --tree-overlay:#fff;">${validate_component(LogoSvg, "LogoSvg").$$render($$result, { height: "50px", animation: true }, {}, {})}</div></div>
-    <div class="brand-wrapper svelte-22psy5"><small class="svelte-22psy5">B.Sc in Psychologie</small>
-        <div class="brand-name svelte-22psy5"><h1 class="svelte-22psy5">Lisa-Marie Loof</h1></div>
-        <small class="svelte-22psy5">Dipl. Hypnosetrainerin</small></div>
+  return `<div class="logo logo-wrapper svelte-1rao7iy"><div class="circle svelte-1rao7iy"><div style="display: contents; --leaves-main:#fff; --leaves-overlay:#fff; --tree-color:#fff; --tree-overlay:#fff;">${validate_component(LogoSvg, "LogoSvg").$$render($$result, { height: "50px", animation: true }, {}, {})}</div></div>
+    <div class="brand-wrapper svelte-1rao7iy"><small class="svelte-1rao7iy">B.Sc in Psychologie</small>
+        <div class="brand-name svelte-1rao7iy"><h1 class="svelte-1rao7iy">Lisa-Marie Loof</h1></div>
+        <small class="svelte-1rao7iy">Dipl. Hypnosetrainerin</small></div>
   
 </div>`;
 });
 const _layout_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".navigation{margin-top:5px}.logo{z-index:999;padding-top:10px}header.svelte-1o5k8or.svelte-1o5k8or{position:fixed;top:0;z-index:999;width:100%;background:#fff;justify-self:center;display:flex;flex-direction:row;justify-content:space-between}.app.svelte-1o5k8or.svelte-1o5k8or{width:100%;min-height:100vh;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center}.app.svelte-1o5k8or main.svelte-1o5k8or{min-height:100vh;display:flex;flex-direction:column;height:auto;justify-content:space-between;width:100%}@media screen and (max-width: 680px){.app.svelte-1o5k8or #logoSvg{right:15px}}",
+  code: ".navigation{margin-top:5px}.logo{z-index:999;padding-top:10px}.hide.svelte-1qkrsnf.svelte-1qkrsnf{opacity:0;height:0;transition:all 0.2s ease-in-out}.scroll.svelte-1qkrsnf.svelte-1qkrsnf{box-shadow:rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.093) 0px 3px 7px -3px;opacity:1;transition:all 0.5s ease-in-out;transition:all 0.2s ease-in-out;height:85px !important}.content-wrapper.svelte-1qkrsnf.svelte-1qkrsnf{width:100vw;height:80px;display:flex;justify-content:center;align-items:center;background-color:#fff;z-index:999;position:fixed;top:0;transition:all 0.5s ease-in-out}.content-wrapper.svelte-1qkrsnf header.svelte-1qkrsnf{position:absolute;display:flex;justify-content:center;align-items:center;top:0;z-index:999;width:100%;max-width:var(--content-width);justify-self:center;display:flex;flex-direction:row;justify-content:space-between;opacity:1;transition:all 0.5s ease-in-out}.app.svelte-1qkrsnf.svelte-1qkrsnf{width:100%;min-height:100vh;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center}.app.svelte-1qkrsnf main.svelte-1qkrsnf{min-height:100vh;display:flex;flex-direction:column;height:auto;justify-content:space-between;width:100%}@media screen and (max-width: 680px){.app.svelte-1qkrsnf #logoSvg{right:15px}}",
   map: null
 };
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let scrollY;
+  let hide;
   let { data } = $$props;
+  let oldScroll = void 0;
+  const offset = 50;
   if ($$props.data === void 0 && $$bindings.data && data !== void 0)
     $$bindings.data(data);
+  if ($$props.offset === void 0 && $$bindings.offset && offset !== void 0)
+    $$bindings.offset(offset);
   $$result.css.add(css);
+  scrollY = 0;
+  hide = false;
+  {
+    if (scrollY) {
+      if (oldScroll === void 0) {
+        oldScroll = scrollY;
+      }
+      if (oldScroll < scrollY) {
+        hide = true;
+      } else {
+        hide = false;
+      }
+      oldScroll = scrollY;
+    }
+  }
   return `
 
 
@@ -122,10 +144,14 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 
 
 
-<div class="app svelte-1o5k8or"><header class="svelte-1o5k8or">${validate_component(Logo, "Logo").$$render($$result, {}, {}, {})}
-            ${validate_component(Navigation, "Navigation").$$render($$result, {}, {}, {})}</header>
+
+<div class="app svelte-1qkrsnf"><div class="${[
+    "content-wrapper svelte-1qkrsnf",
+    (scrollY > offset && !hide ? "scroll" : "") + " " + (hide === true ? "hide" : "")
+  ].join(" ").trim()}"><header class="svelte-1qkrsnf">${validate_component(Logo, "Logo").$$render($$result, {}, {}, {})}
+                ${validate_component(Navigation, "Navigation").$$render($$result, {}, {}, {})}</header></div>
         
-        <main class="svelte-1o5k8or">${slots.default ? slots.default({}) : ``}</main></div>`;
+        <main class="svelte-1qkrsnf">${slots.default ? slots.default({}) : ``}</main></div>`;
 });
 export {
   Layout as default

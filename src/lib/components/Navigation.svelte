@@ -5,7 +5,8 @@
     let open = false;
     let oldScroll:number|undefined = undefined;
     export const offset = 50;
-    $: scrollY = 0;
+    export let scrollY = 0;
+    // $: scrollY = 0;
     $: innerWidth = 0;
     $:hide=false;
     $: if(scrollY) {
@@ -22,7 +23,7 @@
     onMount(async () => {});
 </script>
 
-<svelte:window bind:scrollY bind:innerWidth />
+<svelte:window bind:innerWidth />
 <!-- content here -->
 <nav class="navigation" class:scroll={scrollY > offset} class:hide={hide === true}>
     <!-- <ul class="burger"> -->
@@ -149,24 +150,36 @@
                 font-size: 12px;
             }
             .mobile {
-                justify-content: center;
+                justify-content: end;
                 align-items: center;
                 width: 100% !important;
                 position: absolute;
-                top: 70px;
+                top: 80px;
                 display: flex;
                 flex-direction: column;
-                background-color: gray;
+                background-color: #fff;
                 transition: all 1s ease-out;
+                height: 250px;
                 li {
-                    display: block;
+                    display: flex;
                     width: 100%;
                     background-color: #fff;
-                    height: 100%;
+                    height: 60px;
+                    margin: 0;
+                    padding: 0px;
+                    border-bottom: 1px solid rgba(194, 193, 193, 0.74);
+                    justify-content: center;
+                    align-items: center;
                     a {
+                        // background-color: #b31616;
                         display: block;
                         text-align: center;
+                        align-self: center;
+                    padding: 20px;
+                        
                         height: 100%;
+                        width:100%;
+                        
                     }
                 }
             }

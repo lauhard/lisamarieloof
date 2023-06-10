@@ -1,4 +1,4 @@
-import { c as create_ssr_component, d as add_attribute } from "./index2.js";
+import { c as create_ssr_component, f as add_attribute } from "./index2.js";
 import "animejs";
 const LogoSvg_svelte_svelte_type_style_lang = "";
 const css = {

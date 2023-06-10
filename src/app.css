@@ -27,7 +27,7 @@
   --primary-hover: #77b5bac8 !important;
   --secondary: #c4b26a !important;
   --white: #fff !important;
-  --secondary-hover: #c4b26a !important;
+  --secondary-hover: #c4b26a9e !important;
   --svg-icon-fill: #060000;
   --svg-icon-stroke: #060000;
 }
@@ -85,33 +85,35 @@ html body h3,
 html body h4,
 html body h5,
 html body h6 {
+  font-family: "Segoe UI";
+  font-weight: 300;
   letter-spacing: 1px;
   margin: 0;
 }
-html body h1.decoeator::before,
-html body h2.decoeator::before,
-html body h3.decoeator::before {
+html body h1.decorator::before,
+html body h2.decorator::before,
+html body h3.decorator::before {
   content: "";
   background-color: var(--primary);
   position: absolute;
   border-color: var(--primary);
   border-style: solid;
 }
-html body h1.decoeator::before {
+html body h1.decorator::before {
   border-bottom-width: 5px;
   width: 5rem;
   height: 5px;
   border-radius: 5px;
   margin-top: 2.6rem;
 }
-html body h2.decoeator::before {
+html body h2.decorator::before {
   border-bottom-width: 4.5px;
   width: 4rem;
   height: 4.5px;
   border-radius: 4.5px;
   margin-top: 2.3rem;
 }
-html body h3.decoeator::before {
+html body h3.decorator::before {
   border-bottom-width: 3.5px;
   width: 3rem;
   height: 3.5px;

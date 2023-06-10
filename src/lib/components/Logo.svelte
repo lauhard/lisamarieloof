@@ -58,7 +58,7 @@
         flex-direction: column;
         padding: 0;
         margin: 0;
-        margin:3px 0 0 10px ;
+        margin:-5px 0 0 10px ;
         .brand-name{
             padding: 0;
             margin: 0;

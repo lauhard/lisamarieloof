@@ -22,6 +22,11 @@ function subscribe(store, ...callbacks) {
 /* @__PURE__ */ new Set();
 const globals = typeof window !== "undefined" ? window : typeof globalThis !== "undefined" ? globalThis : global;
 "WeakMap" in globals ? /* @__PURE__ */ new WeakMap() : void 0;
+function custom_event(type, detail, { bubbles = false, cancelable = false } = {}) {
+  const e = document.createEvent("CustomEvent");
+  e.initCustomEvent(type, bubbles, cancelable, detail);
+  return e;
+}
 /* @__PURE__ */ new Map();
 let current_component;
 function set_current_component(component) {
@@ -31,6 +36,20 @@ function get_current_component() {
   if (!current_component)
     throw new Error("Function called outside component initialization");
   return current_component;
+}
+function createEventDispatcher() {
+  const component = get_current_component();
+  return (type, detail, { cancelable = false } = {}) => {
+    const callbacks = component.$$.callbacks[type];
+    if (callbacks) {
+      const event = custom_event(type, detail, { cancelable });
+      callbacks.slice().forEach((fn) => {
+        fn.call(component, event);
+      });
+      return !event.defaultPrevented;
+    }
+    return true;
+  };
 }
 function setContext(key, context) {
   get_current_component().$$.context.set(key, context);
@@ -143,8 +162,9 @@ export {
   subscribe as a,
   safe_not_equal as b,
   create_ssr_component as c,
-  add_attribute as d,
+  createEventDispatcher as d,
   escape as e,
+  add_attribute as f,
   getContext as g,
   missing_component as m,
   noop as n,

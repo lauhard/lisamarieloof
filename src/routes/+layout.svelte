@@ -5,11 +5,27 @@
     import "../app.css";
     import { onMount } from "svelte";
     import Logo from "$lib/components/Logo.svelte";
+    import Header from "$lib/components/svgs/Header.svelte";
     export let data: LayoutData;
-    $: domReady = false;
-    onMount(async () => {
-        domReady = true;
-    });
+    onMount(async () => {});
+    let oldScroll: number | undefined = undefined;
+    export const offset = 50;
+    $: scrollY = 0;
+    $: innerWidth = 0;
+    $: hide = false;
+    $: if (scrollY) {
+        if (oldScroll === undefined) {
+            oldScroll = scrollY;
+        }
+        if (oldScroll < scrollY) {
+            hide = true;
+        } else {
+            hide = false;
+        }
+        
+        oldScroll = scrollY;
+       
+    }
 </script>
 
 <!-- in:fly={{ delay: 100, duration: 200, y: -10, }} out:fly={{ duration: 100,  y: 10, }}> -->
@@ -22,6 +38,7 @@
 
 <!-- in:fade={{ duration: 150, delay: 150 }} out:fly={{ duration: 150, x: 100 }} -->
 <!-- in:fade={{ duration: 150, delay: 100 }} out:fade={{ delay:100, duration:150}} -->
+<svelte:window bind:scrollY bind:innerWidth />
 
 {#key data.currentRoute}
     <div
@@ -29,10 +46,12 @@
         in:fade={{ duration: 250, delay: 10 }}
         out:fade={{ delay: 10, duration: 250 }}
     >
-        <header>
-            <Logo />
-            <Navigation />
-        </header>
+        <div class="content-wrapper" class:scroll={scrollY > offset && !hide} class:hide={hide === true}>
+            <header>
+                <Logo />
+                <Navigation />
+            </header>
+        </div>
         <!-- content here -->
         <main>
             <slot />
@@ -51,19 +70,54 @@
 
         // margin-left: -70px;
     }
-    header {
+
+    .hide {
+        opacity: 0;
+        height: 0;
+        transition: all 0.2s ease-in-out;
+    }
+    .scroll {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+            rgba(0, 0, 0, 0.093) 0px 3px 7px -3px;
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+        transition: all .2s ease-in-out;
+        height: 85px !important;
+    }
+    .content-wrapper {
+        
+        width: 100vw;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        z-index: 999;
         position: fixed;
         top: 0;
-        z-index: 999;
-        width: 100%;
-        // max-width: var(--content-width);
-        // background: var(--primary);
-        background: #fff;
-        // padding: 0 15%;
-        justify-self: center;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        transition: all .5s ease-in-out;
+
+        //  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        //     rgba(0, 0, 0, 0.093) 0px 3px 7px -3px;
+        header {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            z-index: 999;
+            width: 100%;
+            max-width: var(--content-width);
+            // background: var(--primary);
+            // background: #fff;
+            // padding: 0 15%;
+            justify-self: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            opacity: 1;
+            transition: all .5s ease-in-out;
+        }
     }
     // :global(#logoSvg){
     //     position: fixed;
