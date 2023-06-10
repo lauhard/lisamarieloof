@@ -92,18 +92,21 @@ const Navigation = create_ssr_component(($$result, $$props, $$bindings, slots) =
 const app = "";
 const Logo_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: '#logoSvg{width:auto;z-index:100000;display:flex;vertical-align:center}.logo-wrapper.svelte-aeddur.svelte-aeddur{min-width:220px;display:flex;flex-direction:row;vertical-align:center;align-items:center}.circle.svelte-aeddur.svelte-aeddur{min-width:70px;width:70px;height:70px;min-height:70px;background:#77B6BA;border-radius:50%;display:flex;justify-content:center;align-items:center;border:1px solid white}.brand-name.svelte-aeddur.svelte-aeddur{border:1.5px solid #77B6BA;height:30px;display:flex;justify-content:center;align-items:center;padding:0 5px;background-color:white;margin:0 0 10px 10px}.brand-name.svelte-aeddur h1.svelte-aeddur{font-size:16px;font-family:"Segoe UI";font-weight:400;color:#77B6BA;margin:0;padding:0;line-height:1;letter-spacing:1px}',
+  code: '#logoSvg{width:auto;z-index:100000;display:flex;vertical-align:center}.logo-wrapper.svelte-22psy5.svelte-22psy5{min-width:220px;display:flex;flex-direction:row;vertical-align:center;align-items:center}.circle.svelte-22psy5.svelte-22psy5{min-width:70px;width:70px;height:70px;min-height:70px;background:#77B6BA;border-radius:50%;display:flex;justify-content:center;align-items:center;border:1px solid white}.brand-wrapper.svelte-22psy5.svelte-22psy5{display:flex;flex-direction:column;padding:0;margin:0;margin:3px 0 0 10px}.brand-wrapper.svelte-22psy5 .brand-name.svelte-22psy5{padding:0;margin:0;border:1.5px solid #77B6BA;height:30px;display:flex;justify-content:center;align-items:center;padding:0 5px;background-color:white;margin:2px 0}.brand-wrapper.svelte-22psy5 .brand-name h1.svelte-22psy5{font-size:16px;font-family:"Segoe UI";font-weight:400;color:var(--primary);margin:0;padding:0;line-height:1;letter-spacing:1px}.brand-wrapper.svelte-22psy5 small.svelte-22psy5{padding:0;margin:0;margin-left:2px;font-family:"Segoe UI";line-height:1.4;font-size:8px;letter-spacing:2.5px}',
   map: null
 };
 const Logo = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
-  return `<div class="logo logo-wrapper svelte-aeddur"><div class="circle svelte-aeddur"><div style="display: contents; --leaves-main:#fff; --leaves-overlay:#fff; --tree-color:#fff; --tree-overlay:#fff;">${validate_component(LogoSvg, "LogoSvg").$$render($$result, { height: "50px", animation: true }, {}, {})}</div></div>
-    <div class="brand-name svelte-aeddur"><h1 class="svelte-aeddur">Lisa-Marie Loof</h1></div>
+  return `<div class="logo logo-wrapper svelte-22psy5"><div class="circle svelte-22psy5"><div style="display: contents; --leaves-main:#fff; --leaves-overlay:#fff; --tree-color:#fff; --tree-overlay:#fff;">${validate_component(LogoSvg, "LogoSvg").$$render($$result, { height: "50px", animation: true }, {}, {})}</div></div>
+    <div class="brand-wrapper svelte-22psy5"><small class="svelte-22psy5">B.Sc in Psychologie</small>
+        <div class="brand-name svelte-22psy5"><h1 class="svelte-22psy5">Lisa-Marie Loof</h1></div>
+        <small class="svelte-22psy5">Dipl. Hypnosetrainerin</small></div>
+  
 </div>`;
 });
 const _layout_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".navigation{margin-top:5px}.logo{z-index:999;padding-top:10px}header.svelte-yo64n6.svelte-yo64n6{position:fixed;top:0;z-index:999;width:100%;max-width:var(--content-width);justify-self:center;display:flex;flex-direction:row;justify-content:space-between}.app.svelte-yo64n6.svelte-yo64n6{width:100%;min-height:100vh;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center}.app.svelte-yo64n6 main.svelte-yo64n6{min-height:100%;height:auto;width:100%}@media screen and (max-width: 680px){.app.svelte-yo64n6 #logoSvg{right:15px}}",
+  code: ".navigation{margin-top:5px}.logo{z-index:999;padding-top:10px}header.svelte-1dzui5o.svelte-1dzui5o{position:fixed;top:0;z-index:999;width:100%;background:#fff;justify-self:center;display:flex;flex-direction:row;justify-content:space-between}.app.svelte-1dzui5o.svelte-1dzui5o{width:100%;min-height:100vh;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center}.app.svelte-1dzui5o main.svelte-1dzui5o{min-height:100%;height:auto;width:100%}@media screen and (max-width: 680px){.app.svelte-1dzui5o #logoSvg{right:15px}}",
   map: null
 };
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -117,12 +120,12 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 
 
 
-    
 
-<div class="app svelte-yo64n6"><header class="svelte-yo64n6">${validate_component(Logo, "Logo").$$render($$result, {}, {}, {})}
+
+<div class="app svelte-1dzui5o"><header class="svelte-1dzui5o">${validate_component(Logo, "Logo").$$render($$result, {}, {}, {})}
             ${validate_component(Navigation, "Navigation").$$render($$result, {}, {}, {})}</header>
-             
-             <main class="svelte-yo64n6">${slots.default ? slots.default({}) : ``}</main></div>`;
+        
+        <main class="svelte-1dzui5o">${slots.default ? slots.default({}) : ``}</main></div>`;
 });
 export {
   Layout as default

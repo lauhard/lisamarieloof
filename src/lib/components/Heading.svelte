@@ -12,8 +12,6 @@
     </h1>
 </header>
 
-
-
 <style lang="scss">
     span{
         font-family: 'Segoe UI';
@@ -23,55 +21,40 @@
         font-size: 1.86rem;
         line-height:  1.86rem;
         width: 100%;
-        // letter-spacing: .15rem;
         letter-spacing: 2.9px;
         letter-spacing: .13rem;
         text-transform: uppercase;
         color: var(--text);
-        // letter-spacing: 4px;
     }
     .heading{
-        // position: absolute;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        // top:120px;
-        // left:150px;
         width: auto;
         height: auto;
-        // padding:10px;
         background-color: #ffffff;
-        // height: 160px;
         box-sizing:border-box;
         white-space: nowrap;
         border:2px solid white;
-
-        // height: auto;
-
+        box-shadow: 0px 6px 15px -5px rgba(0, 0, 0, 0.25);
 
     }
     .wrapper{
         display: flex;
-       
         box-sizing:border-box;
         flex-direction: column;
         border:2px solid var(--secondary);
         border:2px solid var(--primary);
         padding: 20px;
         .line-1{
-
             font-size: 15px;
             font-size: .72rem;
             line-height: 18px;
-            // letter-spacing: 0.22em;
-            // letter-spacing: 3.3px;
             letter-spacing: 3.5px;
             letter-spacing: .206rem;
         }
         .line-2{
-            // letter-spacing: .15rem;
-            // letter-spacing: 4px;
             .hypnose{
                 color: var(--text);
                 color: var(--secondary);
@@ -79,30 +62,25 @@
         }
         .subheading{
             line-height: 30px;
-            // font-size: 15px;
             font-size: .72rem;
-            // letter-spacing: .17rem;
             letter-spacing: .206rem;
-            // width:100%;
-            // word-break:keep-all;
-            // font-weight: 900;
         }
     }
     .separator {
         background-color: var(--secondary);
-        // width:233px;
         width:12.9rem;
         height: 3px;
-        // top:246px;
         align-self: flex-start;
         border-radius: 5px;
     }
     @media screen and (min-width: 375px) and (max-width: 1093px) {
         .heading {
+            // margin:1rem;
+
             .wrapper{
                 justify-content: center;
                 align-items: center;
-                margin:0px;
+                margin:0;
                 padding: 1rem;
             }
         }

@@ -44,16 +44,19 @@
 <!-- #d7c88e2e -->
 <section class="section section-one">
     <div class="background-svg-banner">
+        <div class="svg-wrapper">
             <LogoSvg
-                className="background-svg"
-                height="1000px"
-                animation={false}
-                --leaves-main="#f0f0f01a"
-                --leaves-overlay="#f0f0f01a"
-                --tree-color="#f0f0f01a"
-                --tree-overlay="#f0f0f01a"
-                --svg-stroke-width="0px"
-            />
+            className="background-svg"
+            height="1000px"
+            animation={false}
+            --leaves-main="#f0f0f01a"
+            --leaves-overlay="#f0f0f01a"
+            --tree-color="#f0f0f01a"
+            --tree-overlay="#f0f0f01a"
+            --svg-stroke-width="0px"
+        />
+        </div>
+            
     </div>
     <div class="content-wrapper">
         <span style="visibility:hidden;" id="section_one" />
@@ -76,7 +79,7 @@
             </div>
             <div class="grid-cell contact">
                 <div class="contact-card">
-                   <Contact></Contact> 
+                   <Contact className="contact-card"></Contact> 
                 </div>
             </div>
         </div>
@@ -99,10 +102,11 @@
         // --bg-profile: green;
         // --bg-information: blue;
         // --bg-contact: orange;
+        // --bg-section-one: gray;
 
         --grid-columns: 20% 25% 10% 20% auto;
         --grid-rows-desktop: 10% 10% 10% auto;
-        --grid-rows-mobile: 210px 170px 37%;
+        --grid-rows-mobile: 210px 190px 38%;
         --grid-template-desktop: "heading heading heading profile profile"
             "heading heading heading profile profile"
             "heading heading heading profile profile"
@@ -129,17 +133,15 @@
     .background-svg-banner {
         overflow: hidden;
         width: 100%;
-        height: 600px;
+        height: 650px;
         background-color: var(--primary);
         position: absolute;
-        transform: translatY(25%) !important;
-        top: 25% !important;
-        :global(.background-svg) {
-        }
+        transform: translatY(22%) !important;
+        top: 22% !important;
         .svg-wrapper {
             position: absolute;
-            top: 250px;
-            left: -250px;
+            top: 30px;
+            left: 20px;
             width: auto;
         }
     }
@@ -162,19 +164,18 @@
         align-items: center;
         justify-content: center;
         // min-height: 100vh;
-        // height: 100%;
-        // background-color: #5fd5de2d;
+        height: 100%;
+        min-height: 1000px;
+        background-color: var(--bg-section-one);
         .content-wrapper {
             box-sizing: border-box;
             display: flex;
             position: relative;
             flex-direction: column;
             background: var(--bg-content-wrapper, transparent);
-            min-height: 100vh;
-
+            // min-height: 100vh;
             height: 100%;
-            // height: 100vh; !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            width: 100%;
+            width: 100%;  // height: 100vh; !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             max-width: var(--content-width, 1240px);
         }
     }
@@ -186,8 +187,8 @@
         background: var(--bg-grid, transparent);
         margin-top: 80px;
         width: 100%;
-        min-height: 100vh; /**"""""!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"*/
-        height: 100%;
+        // min-height: 100vh; /**"""""!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"*/
+        height: 100vh;
     }
 
     .main-grid {
@@ -230,9 +231,6 @@
         justify-content: start;
         align-items: center;
         margin-left: 70px;
-        :global(.heading-desktop) {
-        
-        }
     }
 
     .profile-card {
@@ -248,7 +246,7 @@
         display: flex;
         justify-content: center;
         align-items: start;
-        margin-top:5rem;
+        margin-top:3rem;
         margin-left: 70px;
     }
 
@@ -256,7 +254,7 @@
         display: flex;
         justify-content: end;
         align-items: start;
-        :global(.profile-card) {
+        :global(.contact-card) {
             max-width: 400px;
         }
     }
@@ -268,11 +266,10 @@
             height: 800px;
             background-color: var(--primary);
             position: absolute;
-            transform: translatY(15%) !important;
-            top: 15% !important;
+            transform: translatY(16.5%) !important;
+            top: 16.5% !important;
             :global(.background-svg) {
                 height: 1200px;
-                // left: 150px;
             }
         }
         .section::after {
@@ -281,59 +278,37 @@
             content: "device: pixel 5 393 x 851";
         }
         .section-one {
-            min-height: auto;
+            min-height: 100vh;
+            // margin-bottom: 100px;
+            height: auto;
+        }
+        .grid{
+            height: 100%;
+            margin-bottom: 50px;
         }
         .main-grid {
             grid-template-rows: var(--grid-rows-mobile, auto);
             grid-template-areas: var(--grid-template-mobile, auto);
-            // background: var(--primary);
         }
         .profile-card {
             :global(.profile-card){
                 max-width:100%;
             }
         }
-        // .profile-card {
-        //     box-shadow: none;
-        //     // top:50px;
-        //     background: transparent;
-        //     justify-self: center;
-        //     .profile-img {
-        //         border-radius: 50%;
-        //         height: 200px;
-        //         width: 200px;
-        //         background-color: var(--primary);
-        //         border: 8px solid #fff;
-        //         img {
-        //             height: 350px;
-        //             object-fit: cover;
-        //             object-position: -50px -15px;
-        //         }
-        //     }
-        //     .profile-description {
-        //         display: none;
-        //     }
-        // }
-
+      
         .heading-card {
             justify-content: center;
             align-items: center;
             margin: 0px;
             padding: 0px;
-            // width:100%;
-            // max-width:100%;
-            :global(.heading-card){
-
-                
-
-            }
         }
 
         .information-card {
-            margin-left: 0;
+            margin: 0;
             padding: 10px 0;
-            height: 320px;
-            justify-self: center;
+            // justify-self: center;
+            justify-content:center;
+            align-items: center;
             .catchphrases {
                 align-items: center;
                 .catchphrase {

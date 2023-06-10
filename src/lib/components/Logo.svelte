@@ -14,9 +14,15 @@
             --tree-overlay=#fff
         ></LogoSvg>
     </div>
-    <div class="brand-name">
-        <h1>Lisa-Marie Loof</h1>
+    <div class="brand-wrapper">
+        <small>B.Sc in Psychologie</small>
+        <div class="brand-name">
+            <h1>Lisa-Marie Loof</h1>
+           
+        </div>
+        <small>Dipl. Hypnosetrainerin</small>
     </div>
+  
 </div>
 
 <style lang="scss">
@@ -42,28 +48,50 @@
         background: #77B6BA;
         border-radius: 50%;
         display: flex;
+
         justify-content: center;
         align-items: center;
         border:1px solid white;
     }
-    .brand-name{
-        border: 1.5px solid #77B6BA;
-        height: 30px;
+    .brand-wrapper {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0 5px;
-        background-color: white;
-        h1{
-            font-size: 16px;
-            font-family: 'Segoe UI';
-            font-weight: 400;
-            color:#77B6BA;
-            margin: 0;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        margin:3px 0 0 10px ;
+        .brand-name{
             padding: 0;
-            line-height: 1;
-            letter-spacing: 1px;
-        }   
-        margin:0 0 10px 10px ;
+            margin: 0;
+            border: 1.5px solid #77B6BA;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 5px;
+            background-color: white;
+            margin: 2px 0; 
+
+            h1{
+                font-size: 16px;
+                font-family: "Segoe UI";
+                font-weight: 400;
+                color:var(--primary);
+                margin: 0;
+                padding: 0;
+                line-height: 1;
+                letter-spacing: 1px;
+            }
+              
+        }
+    small{
+        padding: 0;
+        margin: 0;
+        margin-left:2px;
+        font-family: "Segoe UI";
+        line-height: 1.4;
+            font-size: 8px;
+            letter-spacing: 2.5px;
+        }
     }
+
 </style>

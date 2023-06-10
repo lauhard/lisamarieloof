@@ -16,6 +16,14 @@
                 Mein Name ist Lisa-Marie Loof und ich freue mich Sie auf meiner
                 Homepage begrüßen zu dürfen.
             </p>
+            <ul>
+                <li>
+                    B.Sc in Psychologie
+                </li>
+                <li>
+                    Diplomierter Hypnosetrainerin
+                </li>
+            </ul>
         </div>
     </div>
 </header>
@@ -38,7 +46,7 @@
         width: auto;
         background-color: var(--background,#fff);
         padding: 5px;
-        // box-shadow: 0px 6px 15px -5px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 6px 15px -5px rgba(0, 0, 0, 0.25);
         .wrapper {
             display: flex;
             flex-direction: column;
@@ -94,10 +102,28 @@
                         text-align: center;
                         letter-spacing: 0.5px;
                     }
-
+                    ul li {
+                        list-style: square;
+                        font-weight: 300;
+                        font-size: 12px;
+                        // font-size: var(--font-size-description, 14px);
+                        // font-size: 0.62rem;
+                        letter-spacing: 0.5px;
+                        margin:0;
+                        padding: 0;
+                        font-weight: 600;
+                        color:var(--primary)
+                    }
+                    ul {
+                        margin:0;
+                        padding: 0;
+                        margin-top:20px;
+                        margin-left:25px;
+                    }
                     /* align-self: center; */
                 }
-        }
+        
+            }
     }
     @media screen and (max-width: 480px) {
         // span{

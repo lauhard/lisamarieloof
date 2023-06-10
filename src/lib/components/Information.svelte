@@ -93,7 +93,7 @@
         width: auto;
         background-color: #ffffff;
         padding: 5px;
-        // box-shadow: 0px 6px 15px -5px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 6px 15px -5px rgba(0, 0, 0, 0.25);
         .wrapper {
             display: flex;
             flex-direction: column;
