@@ -93,21 +93,21 @@ const Navigation = create_ssr_component(($$result, $$props, $$bindings, slots) =
 const app = "";
 const Logo_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: '#logoSvg{width:auto;z-index:100000;display:flex;vertical-align:center}.logo-wrapper.svelte-1rao7iy.svelte-1rao7iy{min-width:220px;display:flex;flex-direction:row;vertical-align:center;align-items:center}.circle.svelte-1rao7iy.svelte-1rao7iy{min-width:70px;width:70px;height:70px;min-height:70px;background:#77B6BA;border-radius:50%;display:flex;justify-content:center;align-items:center;border:1px solid white}.brand-wrapper.svelte-1rao7iy.svelte-1rao7iy{display:flex;flex-direction:column;padding:0;margin:0;margin:-5px 0 0 10px}.brand-wrapper.svelte-1rao7iy .brand-name.svelte-1rao7iy{padding:0;margin:0;border:1.5px solid #77B6BA;height:30px;display:flex;justify-content:center;align-items:center;padding:0 5px;background-color:white;margin:2px 0}.brand-wrapper.svelte-1rao7iy .brand-name h1.svelte-1rao7iy{font-size:16px;font-family:"Segoe UI";font-weight:400;color:var(--primary);margin:0;padding:0;line-height:1;letter-spacing:1px}.brand-wrapper.svelte-1rao7iy small.svelte-1rao7iy{padding:0;margin:0;margin-left:2px;font-family:"Segoe UI";line-height:1.4;font-size:8px;letter-spacing:2.5px}',
+  code: '#logoSvg{width:auto;z-index:100000;display:flex;vertical-align:center}.logo-wrapper.svelte-1k9wt0u.svelte-1k9wt0u{min-width:220px;display:flex;flex-direction:row;vertical-align:center;align-items:center}.circle.svelte-1k9wt0u.svelte-1k9wt0u{min-width:70px;width:70px;height:70px;min-height:70px;background:#77B6BA;border-radius:50%;display:flex;justify-content:center;align-items:center;border:1px solid white}.brand-wrapper.svelte-1k9wt0u.svelte-1k9wt0u{display:flex;flex-direction:column;padding:0;margin:0;margin:2px 0 0 10px}.brand-wrapper.svelte-1k9wt0u .brand-name.svelte-1k9wt0u{padding:0;margin:0;border:1.5px solid #77B6BA;height:30px;display:flex;justify-content:center;align-items:center;padding:0 5px;background-color:white;margin:2px 0}.brand-wrapper.svelte-1k9wt0u .brand-name h1.svelte-1k9wt0u{font-size:16px;font-family:"Segoe UI";font-weight:400;color:var(--primary);margin:0;padding:0;line-height:1;letter-spacing:1px}.brand-wrapper.svelte-1k9wt0u small.svelte-1k9wt0u{padding:0;margin:0;margin-left:1px;font-family:"Segoe UI";line-height:1.4;font-size:10px;letter-spacing:1.8px}small.svelte-1k9wt0u.svelte-1k9wt0u:last-of-type{letter-spacing:2.7px}',
   map: null
 };
 const Logo = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
-  return `<div class="logo logo-wrapper svelte-1rao7iy"><div class="circle svelte-1rao7iy"><div style="display: contents; --leaves-main:#fff; --leaves-overlay:#fff; --tree-color:#fff; --tree-overlay:#fff;">${validate_component(LogoSvg, "LogoSvg").$$render($$result, { height: "50px", animation: true }, {}, {})}</div></div>
-    <div class="brand-wrapper svelte-1rao7iy"><small class="svelte-1rao7iy">B.Sc in Psychologie</small>
-        <div class="brand-name svelte-1rao7iy"><h1 class="svelte-1rao7iy">Lisa-Marie Loof</h1></div>
-        <small class="svelte-1rao7iy">Dipl. Hypnosetrainerin</small></div>
+  return `<div class="logo logo-wrapper svelte-1k9wt0u"><div class="circle svelte-1k9wt0u"><div style="display: contents; --leaves-main:#fff; --leaves-overlay:#fff; --tree-color:#fff; --tree-overlay:#fff;">${validate_component(LogoSvg, "LogoSvg").$$render($$result, { height: "50px", animation: true }, {}, {})}</div></div>
+    <div class="brand-wrapper svelte-1k9wt0u"><small class="svelte-1k9wt0u">Dipl. Hypnosetrainerin</small>
+        <div class="brand-name svelte-1k9wt0u"><h1 class="svelte-1k9wt0u">Lisa-Marie Loof</h1></div>
+        <small class="svelte-1k9wt0u">B.Sc in Psychologie</small></div>
   
 </div>`;
 });
 const _layout_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".navigation{margin-top:5px}.logo{z-index:999;padding-top:10px}.hide.svelte-1qkrsnf.svelte-1qkrsnf{opacity:0;height:0;transition:all 0.2s ease-in-out}.scroll.svelte-1qkrsnf.svelte-1qkrsnf{box-shadow:rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.093) 0px 3px 7px -3px;opacity:1;transition:all 0.5s ease-in-out;transition:all 0.2s ease-in-out;height:85px !important}.content-wrapper.svelte-1qkrsnf.svelte-1qkrsnf{width:100vw;height:80px;display:flex;justify-content:center;align-items:center;background-color:#fff;z-index:999;position:fixed;top:0;transition:all 0.5s ease-in-out}.content-wrapper.svelte-1qkrsnf header.svelte-1qkrsnf{position:absolute;display:flex;justify-content:center;align-items:center;top:0;z-index:999;width:100%;max-width:var(--content-width);justify-self:center;display:flex;flex-direction:row;justify-content:space-between;opacity:1;transition:all 0.5s ease-in-out}.app.svelte-1qkrsnf.svelte-1qkrsnf{width:100%;min-height:100vh;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center}.app.svelte-1qkrsnf main.svelte-1qkrsnf{min-height:100vh;display:flex;flex-direction:column;height:auto;justify-content:space-between;width:100%}@media screen and (max-width: 680px){.app.svelte-1qkrsnf #logoSvg{right:15px}}",
+  code: ".navigation{margin-top:5px}.logo{z-index:999;padding-top:10px}.hide.svelte-obgn7v.svelte-obgn7v{opacity:0;height:0;transition:all 0.2s ease-in-out}.scroll.svelte-obgn7v.svelte-obgn7v{box-shadow:rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.093) 0px 3px 7px -3px;opacity:1;transition:all 0.5s ease-in-out;transition:all 0.2s ease-in-out;background-color:#fff !important;height:85px !important}.content-wrapper.svelte-obgn7v.svelte-obgn7v{width:100vw;height:80px;display:flex;justify-content:center;align-items:center;background-color:#fff;z-index:999;position:fixed;top:0;transition:all 0.5s ease-in-out}.content-wrapper.svelte-obgn7v header.svelte-obgn7v{position:absolute;display:flex;justify-content:center;align-items:center;top:0;z-index:999;width:100%;max-width:var(--content-width);justify-self:center;display:flex;flex-direction:row;justify-content:space-between;opacity:1;transition:all 0.5s ease-in-out}.app.svelte-obgn7v.svelte-obgn7v{width:100%;min-height:100vh;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center}.app.svelte-obgn7v main.svelte-obgn7v{min-height:100vh;height:100%;display:flex;flex-direction:column;justify-content:space-between;width:100%}@media screen and (max-width: 680px){.app.svelte-obgn7v #logoSvg{right:15px}}",
   map: null
 };
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -145,13 +145,13 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 
 
 
-<div class="app svelte-1qkrsnf"><div class="${[
-    "content-wrapper svelte-1qkrsnf",
+<div class="app svelte-obgn7v"><div class="${[
+    "content-wrapper svelte-obgn7v",
     (scrollY > offset && !hide ? "scroll" : "") + " " + (hide === true ? "hide" : "")
-  ].join(" ").trim()}"><header class="svelte-1qkrsnf">${validate_component(Logo, "Logo").$$render($$result, {}, {}, {})}
+  ].join(" ").trim()}"><header class="svelte-obgn7v">${validate_component(Logo, "Logo").$$render($$result, {}, {}, {})}
                 ${validate_component(Navigation, "Navigation").$$render($$result, {}, {}, {})}</header></div>
         
-        <main class="svelte-1qkrsnf">${slots.default ? slots.default({}) : ``}</main></div>`;
+        <main class="svelte-obgn7v">${slots.default ? slots.default({}) : ``}</main></div>`;
 });
 export {
   Layout as default
