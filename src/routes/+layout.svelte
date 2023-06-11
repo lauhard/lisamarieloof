@@ -67,10 +67,8 @@
         z-index: 999;
         padding-top: 10px;
         // background: white !important;
-
         // margin-left: -70px;
     }
-
     .hide {
         opacity: 0;
         height: 0;
@@ -82,10 +80,10 @@
         opacity: 1;
         transition: all 0.5s ease-in-out;
         transition: all .2s ease-in-out;
+        background-color:#fff !important;
         height: 85px !important;
     }
     .content-wrapper {
-        
         width: 100vw;
         height: 80px;
         display: flex;
@@ -96,7 +94,6 @@
         position: fixed;
         top: 0;
         transition: all .5s ease-in-out;
-
         //  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
         //     rgba(0, 0, 0, 0.093) 0px 3px 7px -3px;
         header {
@@ -119,19 +116,8 @@
             transition: all .5s ease-in-out;
         }
     }
-    // :global(#logoSvg){
-    //     position: fixed;
-    //     top:10px;
-    //     left: 20px;
-    //     width: auto;
-    //     height: 47px;
-    //     z-index: 100000;
-    //     display: flex;
-    //     vertical-align: center;
-    // }
     .app {
         width: 100%;
-        // height: 100%;
         min-height: 100vh;
         height: 100%;
         display: flex;
@@ -140,17 +126,13 @@
         align-items: center;
         main {
             // max-width: var(--content-width);
-            // height: 100vh;
-            // background-color: green;
-            // min-height: 100%;
             min-height: 100vh;
+            height: 100%;
+            // height: auto;
             display: flex;
             flex-direction: column;
-            height: auto;
             justify-content: space-between;
-            // background-color: blue;
             width: 100%;
-            // overflow: scroll;
         }
         @media screen and (max-width: 680px) {
             :global(#logoSvg) {

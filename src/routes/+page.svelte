@@ -183,7 +183,7 @@
     }
 
     :global(.scroll-down) {
-        bottom: 90px;
+        bottom: 30px;
         min-width: 50px;
         width: 50px;
         min-height: 50px;
@@ -204,8 +204,8 @@
         height: 650px;
         background-color: var(--primary);
         position: absolute;
-        transform: translatY(22%) !important;
-        top: 22% !important;
+        transform: translatY(10%) !important;
+        bottom: 10% !important;
         .svg-wrapper {
             position: absolute;
             top: 30px;
@@ -216,15 +216,16 @@
 
     .section {
         position: relative;
-        min-height: 100%;
-        // height: 100%; !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        height: auto;
+        min-height: 100vh;
+        height: 100%;
         width: 100%;
         min-width: 100%;
         display: flex;
         align-items: center;
         flex-direction: column;
         box-sizing: border-box;
+        margin: 0;
+        padding: 0;
     }
 
     .content-wrapper {
@@ -234,22 +235,18 @@
         flex-direction: column;
         background: var(--bg-content-wrapper, transparent);
         min-height: 100vh;
-        // height: 100%;
-        height: 100vh;
-        width: 100%; // height: 100vh; !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        height: 100%;
+        width: 100%; 
         max-width: var(--content-width, 1240px);
+        overflow: hidden;
     }
 
     .section-one {
         display: flex;
         align-items: center;
         justify-content: center;
-        // min-height: 100vh;
-        height: 100%;
-        margin: 0px;
-        // min-height: 1000px;
         background-color: var(--bg-section-one);
-        height: 100vh;
+        // min-height: 1000px;
     }
 
     .grid {
@@ -257,10 +254,11 @@
         display: grid;
         gap: var(--grid-gap, 10px);
         background: var(--bg-grid, transparent);
-        margin-top: 80px;
+        padding-top: 80px;
+        // margin-top: 80px;
         width: 100%;
-        min-height: 100vh; /**"""""!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"*/
-        height: 100vh;
+        height: 100%;
+        min-height: 100vh;
     }
 
     .main-grid {
@@ -419,7 +417,7 @@
         }
         .grid {
             height: 100%;
-            margin-bottom: 100px;
+            margin-bottom: 80px;
         }
         .main-grid {
             grid-template-rows: var(--grid-rows-mobile, auto);
