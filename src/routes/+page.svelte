@@ -15,6 +15,7 @@
     import Profile from "$lib/components/Profile.svelte";
     import Information from "$lib/components/Information.svelte";
     import Contact from "$lib/components/Contact.svelte";
+    import Faq from "$lib/components/svgs/FAQ.svelte";
     // import { openMaps, scrollToAnchor } from "$lib/utils";
     // $: vars = `--background-image: url(${profile});`;
     $: loading = false;
@@ -88,7 +89,7 @@
             title="scroll to the next headline"
         >
             <a
-                href="/#home_section_two"
+                href="/#was-ist-hypnose"
                 aria-label="links to section 2"
                 style="padding:0 10px;"
             >
@@ -100,9 +101,10 @@
 
 <section class="section section-two">
     <!-- <span style="visibility:hidden;" id="home_section_two" /> -->
-    <h1 class="decorator" id="home_section_two" >Was ist Hypnose</h1>
 
-    <!-- <div class="content-wrapper">
+    <div class="content-wrapper">
+        <h1 class="decorator" id="was-ist-hypnose">Was ist Hypnose</h1>
+
         <article class="hypnose">
             <div class="hypnose__image">
                 <img src={hypose} alt="" srcset="" />
@@ -145,11 +147,16 @@
                 </p>
             </div>
         </article>
-    </div> -->
+    </div>
 </section>
 
 <section class="section section-three">
-    <h1 class="decorator" id="home_section3">Section3</h1>
+    <div class="content-wrapper">
+        <h1 class="decorator" id="haeufig-gestellte-fragen">
+            Häufig gestellte Fragen
+        </h1>
+        <Faq></Faq>
+    </div>
 </section>
 
 <style lang="scss">
@@ -165,7 +172,7 @@
 
         --grid-columns: 20% 25% 10% 20% auto;
         --grid-rows-desktop: 10% 10% 10% auto;
-        --grid-rows-mobile: 210px 190px 38%;
+        --grid-rows-mobile: 210px 240px 360px auto; //230px
         --grid-template-desktop: "heading heading heading profile profile"
             "heading heading heading profile profile"
             "heading heading heading profile profile"
@@ -183,7 +190,7 @@
     }
 
     :global(.scroll-down) {
-        bottom: 30px;
+        bottom: 35px;
         min-width: 50px;
         width: 50px;
         min-height: 50px;
@@ -204,14 +211,15 @@
         height: 650px;
         background-color: var(--primary);
         position: absolute;
-        transform: translatY(10%) !important;
-        bottom: 10% !important;
+        transform: translatY(22%) !important;
+        top: 22% !important;
         .svg-wrapper {
             position: absolute;
             top: 30px;
             left: 20px;
             width: auto;
         }
+        overflow: hidden;
     }
 
     .section {
@@ -236,7 +244,7 @@
         background: var(--bg-content-wrapper, transparent);
         min-height: 100vh;
         height: 100%;
-        width: 100%; 
+        width: 100%;
         max-width: var(--content-width, 1240px);
         overflow: hidden;
     }
@@ -246,6 +254,7 @@
         align-items: center;
         justify-content: center;
         background-color: var(--bg-section-one);
+        // overflow: hidden;
         // min-height: 1000px;
     }
 
@@ -254,7 +263,7 @@
         display: grid;
         gap: var(--grid-gap, 10px);
         background: var(--bg-grid, transparent);
-        padding-top: 80px;
+        padding-top: 85px;
         // margin-top: 80px;
         width: 100%;
         height: 100%;
@@ -309,6 +318,7 @@
         justify-content: end;
         :global(.profile-card) {
             max-width: 400px;
+            margin-bottom: 30px;
         }
     }
 
@@ -326,25 +336,40 @@
         align-items: start;
         :global(.contact-card) {
             max-width: 400px;
+            // min-height: 360px;
         }
+        margin-bottom: 30px;
+        // min-height: 320px;
     }
 
     .section-two {
+        --header-margin: 50px 0;
+        --header-margin-mobile: 20px 0;
+        --section-height: 100%;
+        --section-min-height: 100%;
+        --content-wrapper-height: 100%;
+        --content-wrapper-min-height: 100%;
+
         background-color: var(--bg-section-two);
-        height: 100vh;
+        height: var(--section-height);
+        min-height: var(--section-height);
+        background-color: #fff;
+        .decorator {
+            margin: var(--header-margin);
+            text-align: center;
+        }
+        // background-color: blue;
         .content-wrapper {
-            align-items: center;
+            height: var(--content-wrapper-height);
+            min-height: var(--content-wrapper-min-height);
             justify-content: center;
-            height: 100vh;
+
             .hypnose {
-                margin: 0;
                 padding: 0;
                 box-shadow: none;
-                height: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: red;
+                margin: 0;
+                padding: 0;
+                border-radius: 0px;
                 .hypnose__image {
                     max-width: 350px;
                     max-height: 350px;
@@ -373,7 +398,7 @@
                         text-align: justify;
                         font-size: 16px;
                         font-weight: 300;
-                        font-family: "Segoe UI";
+                        font-family: var(--font-family, "Segoe UI");
                         color: var(--text);
                     }
                     .text:hover {
@@ -387,7 +412,18 @@
         }
     }
 
-    @media screen and (min-width: 375px) and (max-width: 1093px) {
+    .section-three{
+        --header-margin: 5rem 0 2rem 0;
+        .decorator {
+            margin: var(--header-margin);
+            text-align: center;
+        }
+        .content-wrapper{
+
+        }
+    }
+
+    @media screen and (min-width: 365px) and (max-width: 1093px) {
         .background-svg-banner {
             overflow: hidden;
             width: 100%;
@@ -403,21 +439,16 @@
         :global(.scroll-down) {
             display: none !important;
         }
-        .content-wrapper{
+        .content-wrapper {
             height: 100%;
         }
-        // .section::after {
-        //     font-size: 13px;
-        //     font-family: "Arial";
-        //     content: "device: pixel 5 393 x 851";
-        // }
         .section-one {
             min-height: 100vh;
             height: 100%;
         }
         .grid {
             height: 100%;
-            margin-bottom: 80px;
+            // margin-bottom: 20px;
         }
         .main-grid {
             grid-template-rows: var(--grid-rows-mobile, auto);
@@ -428,14 +459,12 @@
                 max-width: 100%;
             }
         }
-
         .heading-card {
             justify-content: center;
             align-items: center;
             margin: 0px;
             padding: 0px;
         }
-
         .information-card {
             margin: 0;
             padding: 10px 0;
@@ -452,6 +481,37 @@
         .contact-card {
             justify-self: center;
         }
+
+        /**
+        Section 2
+    */
+
+        .section-two {
+            .decorator {
+                margin: var(--header-margin-mobile);
+            }
+            .content-wrapper {
+                padding: 0 10px;
+
+                .hypnose {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .hypnose__image {
+                        margin: 0;
+                        margin-bottom: 10px;
+                        padding: 0;
+                        max-width: 100%;
+                        border: none;
+                        img {
+                            &:hover {
+                                transform: scale(1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     @media screen and (min-width: 1094px) {
@@ -467,85 +527,5 @@
             grid-template-areas: var(--grid-template-desktop, auto);
             grid-template-rows: var(--grid-rows-desktop, auto);
         }
-    }
-
-    @media screen and (max-width: 374px) {
-        //.section::after {
-        //         font-size: 13px;
-        //         font-family: 'Arial';
-        //         content: "device: too small";
-        //     }
-        //     .main-grid{
-        //         grid-template-rows: var(--grid-rows-mobile, auto);
-        //         grid-template-areas: var(--grid-template-mobile, auto);
-        //         background: var(--primary);
-        //     }
-
-        //     .profile-card {
-        //         box-shadow: none !important;
-        //         .profile-description{
-        //             display: none !important;
-        //         }
-        //     }
-        // }
-        // @media screen and (min-width:375px) and (max-width:390px) {
-        //     .section::after {
-        //         font-size: 13px;
-        //         font-family: 'Arial';
-        //         content: "device: i-phone SE 375 x 667";
-        //     }
-        //     .main-grid{
-        //         grid-template-rows: var(--grid-rows-mobile, auto);
-        //         grid-template-areas: var(--grid-template-mobile, auto);
-        //         background: var(--primary);
-        //     }
-        //     .profile-card {
-        //         box-shadow: none !important;
-        //         top:50px;
-        //         .profile-img{
-        //             border-radius: 50%;
-        //             height:200px;
-        //             width:200px;
-        //             background-color: var(--primary);
-        //             img {
-        //                 height: 350px;
-        //                 object-fit: cover;
-        //                 object-position: -50px -15px;
-        //             }
-        //         }
-        //         .profile-description{
-        //             display: none !important;
-        //         }
-        //     }
-        // }
-        // @media screen and (min-width:390px) and (max-width:393px) {
-        //     .section::after {
-        //         font-size: 13px;
-        //         font-family: 'Arial';
-        //         content: "device: i-phone 12 pro 390 x 844";
-        //     }
-        //     .main-grid{
-        //         grid-template-rows: var(--grid-rows-mobile, auto);
-        //         grid-template-areas: var(--grid-template-mobile, auto);
-        //         background: var(--primary);
-        //     }
-        //     .profile-card {
-        //         box-shadow: none !important;
-        //         top:50px;
-        //         .profile-img{
-        //             border-radius: 50%;
-        //             height:200px;
-        //             width:200px;
-        //             background-color: var(--primary);
-        //             img {
-        //                 height: 350px;
-        //                 object-fit: cover;
-        //                 object-position: -50px -15px;
-        //             }
-        //         }
-        //         .profile-description{
-        //             display: none !important;
-        //         }
-        //     }
     }
 </style>

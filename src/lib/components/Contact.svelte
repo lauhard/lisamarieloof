@@ -94,7 +94,7 @@
         }
     }
 
-    @media screen and (min-width: 375px) and (max-width: 1093px) {
+    @media screen and (min-width: 365px) and (max-width: 1093px) {
         // .contact {
         //     .wrapper {
         //     //    width: 100%;

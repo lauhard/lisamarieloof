@@ -27,6 +27,8 @@
     --background: #ffffff !important;
     --text: #4A4A4A !important;
     --primary: #77B6BA !important;
+
+    --attention:#378D93;
     // --primary: #2a9ebb !important;
     --primary-hover: #77b5bac8 !important;
 
@@ -112,15 +114,15 @@ html {
         }
 
         h1.decorator::before {
-            border-bottom-width: 5px;
+            border-bottom-width: 3px;
             width: 5rem;
             height: 5px;
-            border-radius: 5px;
-            margin-top: 2.6rem;
+            border-radius: 3px;
+            margin-top: 2.9rem;
         }
 
         h2.decorator::before {
-            border-bottom-width: 4.5px;
+            border-bottom-width: 3px;
             width: 4rem;
             height: 4.5px;
             border-radius: 4.5px;
@@ -128,7 +130,7 @@ html {
         }
 
         h3.decorator::before {
-            border-bottom-width: 3.5px;
+            border-bottom-width: 3px;
             width: 3rem;
             height: 3.5px;
             border-radius: 4px;

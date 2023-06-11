@@ -4,17 +4,28 @@
     export let title = "scroll down";
 
     const dispatch = createEventDispatcher();
+    $: scrollY = 0;
+    $: hide = false;
+    $: if (scrollY > 20) {
+        hide = true;
+    } else {
+        hide = false;
+    }
 </script>
+<svelte:window bind:scrollY />
 
-<button on:click={(e)=>dispatch("action",e)}
-    type="button"
-    title="{title}"
-    aria-label="auto"
-    aria-live="polite"
-    class="base {classNames}"
->
-    <slot></slot>
-</button>
+
+{#if !hide}
+    <button on:click={(e)=>dispatch("action",e)}
+        type="button"
+        title="{title}"
+        aria-label="auto"
+        aria-live="polite"
+        class="base {classNames}"
+    >
+        <slot></slot>
+    </button>
+{/if}
 <style lang="scss">
     .base {
         margin: 0;

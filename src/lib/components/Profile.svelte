@@ -31,8 +31,8 @@
 <style lang="scss">
     .profile {
         --font-size-name:20px;
-        --font-size-greeter:15px;
-        --font-size-description:14px;
+        --font-size-greeter:16px;
+        --font-size-description:15px;
         --background:#fff;
         
         // position: absolute;
@@ -89,10 +89,10 @@
                     .greeter {
                         text-align: center;
                         margin-top: 20px;
-                        font-weight: 300;
+                        font-weight: 400;
                         font-size: var(--font-size-greeter, 15px);
                         text-transform: uppercase;
-                        letter-spacing: 2px;
+                        // letter-spacing: 2px;
                     }
                     .description {
                         width: 100%;
@@ -105,14 +105,14 @@
                     ul li {
                         list-style: square;
                         font-weight: 300;
-                        font-size: 12px;
+                        font-size: 14px;
                         // font-size: var(--font-size-description, 14px);
                         // font-size: 0.62rem;
                         letter-spacing: 0.5px;
                         margin:0;
                         padding: 0;
-                        font-weight: 600;
-                        color:var(--primary)
+                        font-weight: 500;
+                        color:var(--attention)
                     }
                     ul {
                         margin:0;
@@ -148,7 +148,7 @@
         //     }
         // }
     }
-    @media screen and (min-width: 375px) and (max-width: 1093px) {
+    @media screen and (min-width: 365px) and (max-width: 1093px) {
         .profile {
             box-shadow: none;
             // background: #fff;

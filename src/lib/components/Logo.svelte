@@ -15,12 +15,12 @@
         ></LogoSvg>
     </div>
     <div class="brand-wrapper">
-        <small>B.Sc in Psychologie</small>
+        <small>Dipl. Hypnosetrainerin</small>
         <div class="brand-name">
             <h1>Lisa-Marie Loof</h1>
            
         </div>
-        <small>Dipl. Hypnosetrainerin</small>
+        <small>B.Sc in Psychologie</small>
     </div>
   
 </div>
@@ -58,7 +58,7 @@
         flex-direction: column;
         padding: 0;
         margin: 0;
-        margin:-5px 0 0 10px ;
+        margin:2px 0 0 10px ;
         .brand-name{
             padding: 0;
             margin: 0;
@@ -86,12 +86,17 @@
     small{
         padding: 0;
         margin: 0;
-        margin-left:2px;
+        margin-left:1px;
         font-family: "Segoe UI";
         line-height: 1.4;
-            font-size: 8px;
-            letter-spacing: 2.5px;
+            font-size: 10px;
+            letter-spacing: 1.8px;
         }
+       
     }
+    small:last-of-type{
+        letter-spacing: 2.7px;
+    }
+    
 
 </style>
