@@ -2,7 +2,7 @@ import type { PageServerLoad } from "./$types";
 import { validateFormData } from "$lib/zod/helper/forms";
 import type { Actions } from "@sveltejs/kit";
 import nodemailer from 'nodemailer';
-import { GMAIL_KEY } from "$env/static/private";
+import { GMAIL_KEY, HOSTINGER_MAIL, POSTMARK_USERNAME } from "$env/static/private";
 // import postmark  from 'postmark';
 
 
@@ -30,11 +30,24 @@ export const actions: Actions = {
             //     port: 587,
             //     secure: false,
             //     auth: {
-            //         user: `${USERNAME}`,
-            //         pass: `${USERNAME}`,
+            //         user: `${POSTMARK_USERNAME}`,
+            //         pass: `${POSTMARK_USERNAME}`,
             //       },
 
             // });
+
+            const transporter = nodemailer.createTransport({
+                service:'smtp.hostinger.com',
+                port: 587,
+                secure: false,
+                auth: {
+                    user: 'praxis@lisaloof.com',
+                    pass: `${HOSTINGER_MAIL}`,
+                    },
+
+            });
+
+            
             
             // const transporter = nodemailer.createTransport({
             //     service:'gmail',
@@ -52,23 +65,28 @@ export const actions: Actions = {
             //     praxis@lisaloof.com
             //     `,
             // };
-            const transporter = nodemailer.createTransport({
-                service: 'gmail',
-            
-                auth: {
-                    user: 'lauhard.andreas@gmail.com',
-                    pass: `${GMAIL_KEY}`
-                }
-            });
+            // const transporter = nodemailer.createTransport({
+            //     service: 'gmail',
+            //     auth: {
+            //         user: 'lauhard.andreas@gmail.com',
+            //         pass: `${GMAIL_KEY}`
+            //     }
+            // });
             
             
             
             const options = {
                 from: 'lauhard.andreas@gmail.com',
-                to: 'lauhard.andreas@gmail.com',
+                to: 'lisamarieloof@gmail.com',
                 subject: 'hello world',
                 text: `
-                praxis@lisaloof.com
+                Email: ${formdata['email']}
+                Telefon: ${formdata['phone']}
+                Terminanfrage: Kostenloses Erstgespräch
+                Paket: Rauchentwöhnung
+                Bitte um Rückkruf: ja
+                Anmerkung:
+                liebe dich
                 `,
             };
             const info = await transporter.sendMail(options);
