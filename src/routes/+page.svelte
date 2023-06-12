@@ -414,12 +414,21 @@
 
     .section-three{
         --header-margin: 5rem 0 2rem 0;
+        --content-wrapper-height: auto;
+        --content-wrapper-min-height: auto;
+        --section-height: 100%;
+        --section-min-height: 100%;
+
+        height: var(--section-height);
+        min-height: var(--section-height);
         .decorator {
             margin: var(--header-margin);
             text-align: center;
         }
         .content-wrapper{
-
+            height: var(--content-wrapper-height);
+            min-height: var(--content-wrapper-min-height);
+            justify-content: center;
         }
     }
 

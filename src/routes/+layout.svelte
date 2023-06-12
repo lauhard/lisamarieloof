@@ -6,6 +6,7 @@
     import { onMount } from "svelte";
     import Logo from "$lib/components/Logo.svelte";
     import Header from "$lib/components/svgs/Header.svelte";
+    import Footer from "$lib/components/Footer.svelte";
     export let data: LayoutData;
     onMount(async () => {});
     let oldScroll: number | undefined = undefined;
@@ -55,7 +56,9 @@
         <!-- content here -->
         <main>
             <slot />
+
         </main>
+       <Footer></Footer>
     </div>
 {/key}
 
@@ -133,6 +136,7 @@
             flex-direction: column;
             justify-content: space-between;
             width: 100%;
+            margin-bottom: 10rem;
         }
         @media screen and (max-width: 680px) {
             :global(#logoSvg) {
