@@ -8,9 +8,9 @@
     import ArrowDownSvg from "$lib/components/svgs/ArrowDownSvg.svelte";
     import LogoSvg from "$lib/components/svgs/LogoSvg.svelte";
     import AlertSvg from "$lib/components/svgs/AlertSvg.svelte";
-    import hypose from "$lib/images/wendeltreppe.jpg";
+    import hypose from "$lib/images/wendeltreppe-min.webp";
     // import { ObserveProps, observer } from "$lib/actions/observer";
-    import profileImage from "$lib/images/profileImage.webp";
+    import profileImage from "$lib/images/lisa-min.webp";
 
     import Profile from "$lib/components/Profile.svelte";
     import Information from "$lib/components/Information.svelte";
