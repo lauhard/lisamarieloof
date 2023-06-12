@@ -7,6 +7,10 @@
     import Logo from "$lib/components/Logo.svelte";
     import Header from "$lib/components/svgs/Header.svelte";
     import Footer from "$lib/components/Footer.svelte";
+    import { dev } from '$app/environment';
+    import { inject } from '@vercel/analytics';
+    
+    inject({ mode: dev ? 'development' : 'production' });
     export let data: LayoutData;
     onMount(async () => {});
     let oldScroll: number | undefined = undefined;

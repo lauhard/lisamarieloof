@@ -148,7 +148,7 @@
         //     }
         // }
     }
-    @media screen and (min-width: 365px) and (max-width: 1093px) {
+    @media screen and (min-width: 319px) and (max-width: 1093px) {
         .profile {
             box-shadow: none;
             // background: #fff;

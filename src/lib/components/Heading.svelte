@@ -74,7 +74,7 @@
         align-self: flex-start;
         border-radius: 5px;
     }
-    @media screen and (min-width: 365px) and (max-width: 1093px) {
+    @media screen and (min-width: 319px) and (max-width: 1093px) {
     //     span{
     //     font-family: var(--font-family, "Segoe UI");
     //     font-style: normal;
