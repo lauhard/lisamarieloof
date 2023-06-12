@@ -4,7 +4,7 @@ const phoneRegex = new RegExp(
     /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/
   );
 
-export const bookmarkSchema = z.object({
+export const contactSchema = z.object({
     lastName: z.string({
         required_error: "Nachname ist ein Pflichtfeld",
         invalid_type_error: "Nachname darf keine Zahlen beinhalten",
@@ -18,5 +18,5 @@ export const bookmarkSchema = z.object({
     }).email({ message: "Keine gültige Emailadresse" }).min(5, {message: "Minimum 5 Zeichen"}),
     phone: z.string({
         required_error: "Telefon ist ein Pflichtfeld",
-    }).regex(phoneRegex, 'Telefonnummer nicht gültig'),
+    }).regex(phoneRegex, 'Telefonnummer nicht gültig')
 })

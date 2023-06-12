@@ -1,5 +1,5 @@
-import { bookmarkSchema } from "$lib/zod/schemas/bookmarkSchema";
-import type { Bookmark } from "../types/bookmark";
+import { contactSchema } from "$lib/zod/schemas/contactSchema";
+import type { Contact } from "../types/contact";
 interface ZODField {
     [key: string]:string
 }
@@ -9,11 +9,11 @@ export const validate = (e:Event)=> {
     const value = (e?.currentTarget as HTMLFormElement).value;
     const fieldObj:ZODField={};
     fieldObj[id]=value;
-    const res = bookmarkSchema.safeParse(fieldObj)
+    const res = contactSchema.safeParse(fieldObj)
     let fieldErrors:Array<string>| undefined 
     if (!res.success) {
         const formattedError= res.error.format();
-        fieldErrors = formattedError[id as keyof Bookmark ]?._errors
+        fieldErrors = formattedError[id as keyof Contact ]?._errors
         console.log("fieldErrors",fieldErrors)
         if(fieldErrors) {
             (e?.currentTarget as HTMLFormElement).setAttribute("aria-invalid", "true")
@@ -24,8 +24,7 @@ export const validate = (e:Event)=> {
     return fieldErrors?.toString()
 }
 
-export const validateFormData = (formdata:any) =>{
-    const validationResponse = bookmarkSchema.safeParse(formdata);
+export const validateFormData = (validationResponse:any) =>{
     const response={
         success:false,
         error:{},
