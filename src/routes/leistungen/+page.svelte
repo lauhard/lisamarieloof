@@ -1,9 +1,9 @@
 <script lang="ts">
-    import rauchfrei from "$lib/images/rauchfrei.jpg";
-    import digitaldetox from "$lib/images/digitaldetox.jpg";
-    import pruefungsangst from "$lib/images/pruefungsangst.jpg";
-    import selbstwert from "$lib/images/selbstwert.jpg";
-    import tiefenentspannung from "$lib/images/tiefenentspannung.jpg";
+    import rauchfrei from "$lib/images/rauchfrei-min.webp";
+    import digitaldetox from "$lib/images/digitaldetox-min.webp";
+    import pruefungsangst from "$lib/images/pruefungsangst-min.webp";
+    import selbstwert from "$lib/images/selbstwert-min.webp";
+    import tiefenentspannung from "$lib/images/tiefenentspannung-min.webp";
 </script>
 
 <svelte:head>
