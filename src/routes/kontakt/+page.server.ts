@@ -2,8 +2,9 @@ import type { PageServerLoad } from "./$types";
 import { validateFormData } from "$lib/zod/helper/forms";
 import type { Actions, Config } from "@sveltejs/kit";
 import nodemailer from 'nodemailer';
+import { GMAIL_KEY } from "$env/static/private";
 // import postmark  from 'postmark';
-import { POSTMARK_USERNAME, GMAIL_KEY } from "$env/static/private";
+
 
 // export const config: Config = {
 //     runtime: 'edge'
