@@ -37,12 +37,12 @@
         <div class="block">
             <input id="id" type="{action==='update'?'text':'hidden'}" name="id" readonly  />
             <label for="url"> Nachname
-                <input type="text" id="lastname" name="lastname" placeholder="" required on:input={(e)=>{lastnameError=validate(e)}}/>
-                <FormError {form} field="lastname" error={lastnameError} />
+                <input type="text" id="lastName" name="lastName" placeholder="" required on:input={(e)=>{lastnameError=validate(e)}}/>
+                <FormError {form} field="lastName" error={lastnameError} />
             </label>
             <label for="name"> Vorname
-                <input type="text" id="firstname" name="firstname" placeholder="" required on:input={(e)=>{firstnameError=validate(e)}}/>
-                <FormError {form} field="firstname" error={firstnameError} />
+                <input type="text" id="firstName" name="firstName" placeholder="" required on:input={(e)=>{firstnameError=validate(e)}}/>
+                <FormError {form} field="firstName" error={firstnameError} />
             </label>
             <label for="name"> Email
                 <input type="text" id="email" name="email" placeholder="" required on:input={(e)=>{emailError=validate(e)}}/>
