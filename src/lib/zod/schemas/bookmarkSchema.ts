@@ -5,11 +5,11 @@ const phoneRegex = new RegExp(
   );
 
 export const bookmarkSchema = z.object({
-    lastname: z.string({
+    lastName: z.string({
         required_error: "Nachname ist ein Pflichtfeld",
         invalid_type_error: "Nachname darf keine Zahlen beinhalten",
     }).min(2,{ message: "Geben Sie mindesten 2 Zeichen ein" }),
-    firstname: z.string({
+    firstName: z.string({
         required_error: "Nachname ist ein Pflichtfeld",
         invalid_type_error: "Nachname darf keine Zahlen beinhalten",
     }).min(2,{ message: "Geben Sie mindesten 2 Zeichen ein" }),

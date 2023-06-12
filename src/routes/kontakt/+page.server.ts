@@ -1,12 +1,16 @@
 import type { PageServerLoad } from "./$types";
 import { validateFormData } from "$lib/zod/helper/forms";
-import type { Actions } from "@sveltejs/kit";
+import type { Actions, Config } from "@sveltejs/kit";
 import nodemailer from 'nodemailer';
-import postmark  from 'postmark';
-import { USERNAME } from "$env/static/private";
+// import postmark  from 'postmark';
+import { POSTMARK_USERNAME, GMAIL_KEY } from "$env/static/private";
+
+// export const config: Config = {
+//     runtime: 'edge'
+// };
 
 export const load: PageServerLoad = async (event) => {
-    console.log("loading bookmarks with prisma client...")
+    console.log("loading PageServerLoad USERNAME",GMAIL_KEY)
     
 }
 
@@ -21,21 +25,28 @@ export const actions: Actions = {
         }
         if (!validationResponse.success) response.zodError = validationResponse.error;
         else {
+            // const transporter = nodemailer.createTransport({
+            //     service:'smtp.postmarkapp.com',
+            //     port: 587,
+            //     secure: false,
+            //     auth: {
+            //         user: `${USERNAME}`,
+            //         pass: `${USERNAME}`,
+            //       },
+
+            // });
+            
             const transporter = nodemailer.createTransport({
-                service:'smtp.postmarkapp.com',
-                port: 587,
-                secure: false,
+                service:'gmail',
                 auth: {
-                    user: `${USERNAME}`,
-                    pass: `${USERNAME}`,
-                  },
+                    user: 'lauhard.andreas@gmail.com',
+                    pass: `${GMAIL_KEY}`,
+                    },
 
             });
-            
-            
             const mailOptions = {
                 from: 'praxis@lisaloof.com',
-                to: 'lauhard.andreas@gmail.com', // Change this to your desired email address
+                to: 'lauhard.dev@gmail.com', // Change this to your desired email address
                 subject: 'New Contact Form Submission',
                 text: `
                 praxis@lisaloof.com
@@ -43,8 +54,8 @@ export const actions: Actions = {
             };
             const info = await transporter.sendMail(mailOptions);
             console.log(info);
-            // const client = new postmark.ServerClient("004c29a8-5c5d-47ce-90bb-f8d6f4795927");
 
+            // const client = new postmark.ServerClient(`${POSTMARK_USERNAME}`);
             // client.sendEmail({
             //     "From": "praxis@lisaloof.com",
             //     "To": "praxis@lisaloof.com",
