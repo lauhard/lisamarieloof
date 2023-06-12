@@ -11,8 +11,7 @@ import { GMAIL_KEY } from "$env/static/private";
 // };
 
 export const load: PageServerLoad = async (event) => {
-    console.log("loading PageServerLoad USERNAME",GMAIL_KEY)
-    
+    return {}    
 }
 
 export const actions: Actions = {
@@ -37,23 +36,42 @@ export const actions: Actions = {
 
             // });
             
+            // const transporter = nodemailer.createTransport({
+            //     service:'gmail',
+            //     auth: {
+            //         user: 'lauhard.andreas@gmail.com',
+            //         pass: `${GMAIL_KEY}`,
+            //         },
+
+            // });
+            // const mailOptions = {
+            //     from: 'praxis@lisaloof.com',
+            //     to: 'lauhard.dev@gmail.com', // Change this to your desired email address
+            //     subject: 'New Contact Form Submission',
+            //     text: `
+            //     praxis@lisaloof.com
+            //     `,
+            // };
             const transporter = nodemailer.createTransport({
-                service:'gmail',
+                service: 'gmail',
+            
                 auth: {
                     user: 'lauhard.andreas@gmail.com',
-                    pass: `${GMAIL_KEY}`,
-                    },
-
+                    pass: `${GMAIL_KEY}`
+                }
             });
-            const mailOptions = {
-                from: 'praxis@lisaloof.com',
-                to: 'lauhard.dev@gmail.com', // Change this to your desired email address
-                subject: 'New Contact Form Submission',
+            
+            
+            
+            const options = {
+                from: 'lauhard.andreas@gmail.com',
+                to: 'lauhard.andreas@gmail.com',
+                subject: 'hello world',
                 text: `
                 praxis@lisaloof.com
                 `,
             };
-            const info = await transporter.sendMail(mailOptions);
+            const info = await transporter.sendMail(options);
             console.log(info);
 
             // const client = new postmark.ServerClient(`${POSTMARK_USERNAME}`);
