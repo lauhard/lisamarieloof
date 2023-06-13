@@ -81,7 +81,7 @@
         .wrapper{
             margin: 0;
             width: auto;
-
+            background: red;
         }
         span{
             font-size: 26px;
