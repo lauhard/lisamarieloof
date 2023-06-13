@@ -61,7 +61,6 @@
         }
         .subheading {
             line-height: 1.2rem;
-            // line-height:30px;
             font-size: 0.72rem;
             letter-spacing: 0.206rem;
         }
@@ -88,8 +87,7 @@
                     width: auto;
                 }
                 .line-1 {
-                    // font-size: auto;
-                    // line-height: 18px;
+                   
                 }
                 .line-2 {
                     .hypnose {
@@ -99,12 +97,8 @@
                 }
                 .subheading, .line-1 {
                     line-height: 1.2rem;
-                    // line-height:30px;
                     font-size: 0.68rem;
-                    // font-size: 10px;
                     letter-spacing: 0.15rem;
-
-                    // letter-spacing: 0.206rem;
                 }
                 .subheading{
                 }

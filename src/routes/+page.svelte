@@ -172,7 +172,7 @@
 
         --grid-columns: 20% 25% 10% 20% auto;
         --grid-rows-desktop: 10% 10% 10% auto;
-        --grid-rows-mobile: 210px 240px 360px auto; //230px
+        --grid-rows-mobile: 210px 240px 380px auto; //230px
         --grid-template-desktop: "heading heading heading profile profile"
             "heading heading heading profile profile"
             "heading heading heading profile profile"
@@ -309,7 +309,6 @@
         display: flex;
         justify-content: start;
         align-items: center;
-        // margin-left: 70px;
     }
 
     .profile-card {
@@ -317,7 +316,7 @@
         align-items: center;
         justify-content: end;
         :global(.profile-card) {
-            max-width: 400px;
+            max-width: 450px;
             margin-bottom: 30px;
         }
     }
@@ -335,7 +334,7 @@
         justify-content: end;
         align-items: start;
         :global(.contact-card) {
-            max-width: 400px;
+            max-width: 450px;
             // min-height: 360px;
         }
         margin-bottom: 30px;

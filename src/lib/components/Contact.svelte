@@ -78,7 +78,7 @@
             }
             .contact-buttons {
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
                 .cta {
@@ -94,23 +94,25 @@
         }
     }
 
-    @media screen and (min-width: 365px) and (max-width: 1093px) {
-        // .contact {
-        //     .wrapper {
-        //     //    width: 100%;
+    @media screen and (max-width: 440px)  {
+        .contact {
+            width: 100% !important;
 
-        //         .contact-buttons {
-        //             background: #fff;
-        //             display: flex;
-        //             flex-direction: column;
-        //             justify-content: space-between;
-        //             align-items: center;
-        //             // width: 100%;
-        //             .cta {
-        //                 width: 250px;
-        //             }
-        //         }
-        //     }
-        // }
+            .wrapper {
+                width: 100% !important;
+
+                .contact-buttons {
+                    // background: #fff;
+                    // display: flex;
+                    flex-direction: column;
+                    // justify-content: space-between;
+                    // align-items: center;
+                    // width: 100%;
+                    // .cta {
+                    //     width: 250px;
+                    // }
+                }
+            }
+        }
     }
 </style>
