@@ -25,10 +25,8 @@
         color: var(--text);
         margin: 0;
         padding: 0;
-        
     }
     .heading {
-       
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -43,7 +41,6 @@
         // width: 22.5rem;
     }
     .wrapper {
-      
         display: flex;
         box-sizing: border-box;
         flex-direction: column;
@@ -78,42 +75,38 @@
         align-self: flex-start;
         border-radius: 5px;
     }
-    @media screen and (max-width:420px) {
-        .wrapper{
+    @media screen and (max-width: 420px) {
+        .wrapper {
             margin: 0;
-            width: auto;
             width: 100%;
-            max-width: 100%;
-            background: red;
         }
-        span{
+        span {
             font-size: 26px;
             line-height: auto;
             width: auto;
         }
         .heading {
-            width: auto;
+            width: 100%;
             margin: 0px;
             .line-1 {
-            font-size: auto;
-            // line-height: 18px;
-        }
-        .line-2 {
-            .hypnose {
-                color: var(--text);
-                color: var(--secondary);
+                font-size: auto;
+                // line-height: 18px;
+            }
+            .line-2 {
+                .hypnose {
+                    color: var(--text);
+                    color: var(--secondary);
+                }
+            }
+            .subheading {
+                line-height: 1.5rem;
+                // line-height:30px;
+                font-size: 0.65rem;
+                // font-size: 10px;
+                letter-spacing: 0.15rem;
+
+                // letter-spacing: 0.206rem;
             }
         }
-        .subheading {
-            line-height: 1.5rem;
-            // line-height:30px;
-            font-size: 0.65rem;
-            // font-size: 10px;
-            letter-spacing: 0.15rem;
-
-            // letter-spacing: 0.206rem;
-        }
-        }
     }
-
 </style>
