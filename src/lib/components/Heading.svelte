@@ -25,6 +25,7 @@
         color: var(--text);
         margin: 0;
         padding: 0;
+        
     }
     .heading {
        
@@ -77,7 +78,7 @@
         align-self: flex-start;
         border-radius: 5px;
     }
-    @media screen and (max-width:390px) {
+    @media screen and (max-width:420px) {
         .wrapper{
             margin: 0;
             width: auto;
