@@ -1,5 +1,4 @@
 @import url(./lib/css/pico/pico.css);
-@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 
 *,
 *::before,
@@ -12,14 +11,15 @@
 :root {
     --font-body:
         Arial,
-        -apple-system,
-        BlinkMacSystemFont,
-        Oxygen,
+        // -apple-system,
+        // BlinkMacSystemFont,
+        // Oxygen,
         Ubuntu,
-        Cantarell,
+        // Cantarell,
         'Open Sans',
-        'Helvetica Neue',
-        'Poiret One',
+        // 'Helvetica Neue',
+        // 'Poiret One',
+        'Segoe UI',
         sans-serif;
 
     --content-width: 1240px;
