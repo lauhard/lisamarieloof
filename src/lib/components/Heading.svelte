@@ -23,6 +23,7 @@
         letter-spacing: 0.13rem;
         text-transform: uppercase;
         color: var(--text);
+        background: red;
         margin: 0;
         padding: 0;
     }
