@@ -23,7 +23,6 @@
         letter-spacing: 0.13rem;
         text-transform: uppercase;
         color: var(--text);
-        background: red;
         margin: 0;
         padding: 0;
     }
@@ -40,7 +39,7 @@
         white-space: nowrap;
         border: 5px solid white;
         // box-shadow: 0px 6px 15px -5px rgba(0, 0, 0, 0.25);
-        width: 22.5rem;
+        // width: 22.5rem;
     }
     .wrapper {
       
