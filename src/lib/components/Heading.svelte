@@ -77,10 +77,12 @@
         align-self: flex-start;
         border-radius: 5px;
     }
-    @media screen and (max-width:380px) {
+    @media screen and (max-width:390px) {
         .wrapper{
             margin: 0;
             width: auto;
+            width: 100%;
+            max-width: 100%;
             background: red;
         }
         span{
