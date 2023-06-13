@@ -77,7 +77,7 @@
         align-self: flex-start;
         border-radius: 5px;
     }
-    @media screen and (max-width:375px) {
+    @media screen and (max-width:380px) {
         .wrapper{
             margin: 0;
             width: auto;
