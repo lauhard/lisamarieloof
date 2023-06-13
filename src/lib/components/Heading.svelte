@@ -18,7 +18,7 @@
         font-style: normal;
         font-weight: 300;
         font-size: 1.86rem;
-        line-height: 1.86rem;
+        line-height: 2rem;
         width: 100%;
         letter-spacing: 0.13rem;
         text-transform: uppercase;
@@ -60,7 +60,7 @@
             }
         }
         .subheading {
-            // line-height: 1.72rem;
+            line-height: 1.2rem;
             // line-height:30px;
             font-size: 0.72rem;
             letter-spacing: 0.206rem;
@@ -68,6 +68,7 @@
     }
     .separator {
         margin: 0;
+        margin-top: 5px;
         padding: 0;
         background-color: var(--secondary);
         width: 12.9rem;
@@ -76,36 +77,37 @@
         border-radius: 5px;
     }
     @media screen and (max-width: 420px) {
-        .wrapper {
-            margin: 0;
-            width: 100%;
-        }
-        span {
-            font-size: 26px;
-            line-height: auto;
-            width: auto;
-        }
         .heading {
-            width: 100%;
-            margin: 0px;
-            .line-1 {
-                font-size: auto;
-                // line-height: 18px;
-            }
-            .line-2 {
-                .hypnose {
-                    color: var(--text);
-                    color: var(--secondary);
+            width: auto;
+            margin: 0;
+            .wrapper {
+                margin: 0;
+                width: 100%;
+                span {
+                    font-size: 26px;
+                    width: auto;
                 }
-            }
-            .subheading {
-                line-height: 1.5rem;
-                // line-height:30px;
-                font-size: 0.65rem;
-                // font-size: 10px;
-                letter-spacing: 0.15rem;
+                .line-1 {
+                    // font-size: auto;
+                    // line-height: 18px;
+                }
+                .line-2 {
+                    .hypnose {
+                        color: var(--text);
+                        color: var(--secondary);
+                    }
+                }
+                .subheading, .line-1 {
+                    line-height: 1.2rem;
+                    // line-height:30px;
+                    font-size: 0.68rem;
+                    // font-size: 10px;
+                    letter-spacing: 0.15rem;
 
-                // letter-spacing: 0.206rem;
+                    // letter-spacing: 0.206rem;
+                }
+                .subheading{
+                }
             }
         }
     }
