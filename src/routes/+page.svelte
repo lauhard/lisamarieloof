@@ -1,5 +1,5 @@
 <script>
-    import Heading from "$lib/components/Heading.svelte";
+    import Headline from "$lib/components/Headline.svelte";
     // import Image from "$lib/components/Image.svelte";
     // import LogoSvg from "$lib/components/LogoSvg.svelte";
     // import Section from "$lib/components/Section.svelte";
@@ -15,7 +15,7 @@
     import Profile from "$lib/components/Profile.svelte";
     import Information from "$lib/components/Information.svelte";
     import Contact from "$lib/components/Contact.svelte";
-    import Faq from "$lib/components/svgs/FAQ.svelte";
+    import Faq from "$lib/components/FAQ.svelte";
     // import { openMaps, scrollToAnchor } from "$lib/utils";
     // $: vars = `--background-image: url(${profile});`;
     $: loading = false;
@@ -64,7 +64,7 @@
         <div class="content grid main-grid">
             <div class="grid-cell heading">
                 <div class="heading-card">
-                    <Heading className="heading-desktop" />
+                    <Headline className="heading-desktop" />
                 </div>
             </div>
             <div class="grid-cell profile">
@@ -103,7 +103,17 @@
     <!-- <span style="visibility:hidden;" id="home_section_two" /> -->
 
     <div class="content-wrapper">
-        <h1 class="decorator" id="was-ist-hypnose">Was ist Hypnose</h1>
+        <p>
+            Während Ihrer Zeit für Hypnose und Weiterentwicklung soll es Ihnen
+            in gemeinsamer Zusammenarbeit ermöglicht werden, Ihre ganz eigenen
+            Erfahrungen mit Hypnose zu machen und diese zu erleben. Ihren
+            Themen, den entstehenden Gefühlen und Gedanken wird der Raum und die
+            Zeit gegeben zu wirken. Ich möchte Sie einladen und dazu anleiten,
+            Ihre eigenen Ressourcen und Selbstheilungskräfte zu mobilisieren, um
+            an Ihren Themen zu arbeiten. Unser gemeinsamer Fokus wird auf dem
+            lösungs- und ressourcenorientierten Arbeiten liegen.
+        </p>
+        <h2 class="decorator" id="was-ist-hypnose">Was ist Hypnose</h2>
 
         <article class="hypnose">
             <div class="hypnose__image">
@@ -476,7 +486,6 @@
         .information-card {
             margin: 0;
             padding: 10px 0;
-            // justify-self: center;
             justify-content: center;
             align-items: center;
             .catchphrases {

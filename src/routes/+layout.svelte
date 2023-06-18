@@ -5,7 +5,7 @@
     import "../app.css";
     import { onMount } from "svelte";
     import Logo from "$lib/components/Logo.svelte";
-    import Header from "$lib/components/svgs/Header.svelte";
+    import Header from "$lib/components/Header.svelte";
     import Footer from "$lib/components/Footer.svelte";
     import { dev } from '$app/environment';
     import { inject } from '@vercel/analytics';

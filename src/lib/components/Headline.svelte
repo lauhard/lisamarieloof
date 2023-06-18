@@ -7,8 +7,8 @@
         <span class="line-1">Ihre Zeit</span>
         <span class="line-2">für <span class="hypnose">Hypnose</span> &</span>
         <span class="line-3">Weiterentwicklung</span>
-        <span class="subheading">Entdecken Sie die Kraft von Hypnose</span>
-        <div class="separator" />
+        <!-- <span class="subheading">Entdecken Sie die Kraft von Hypnose</span> -->
+        <!-- <div class="separator" /> -->
     </h1>
 </header>
 
@@ -86,9 +86,6 @@
                     font-size: 26px;
                     width: auto;
                 }
-                .line-1 {
-                   
-                }
                 .line-2 {
                     .hypnose {
                         color: var(--text);
@@ -99,8 +96,6 @@
                     line-height: 1.2rem;
                     font-size: 0.68rem;
                     letter-spacing: 0.15rem;
-                }
-                .subheading{
                 }
             }
         }

@@ -2,8 +2,7 @@
 	import LogoSvg from '$lib/components/svgs/LogoSvg.svelte';
 
 </script>
-
-<div class="logo logo-wrapper">
+<a href="/" class="logo logo-wrapper">
     <div class="circle">
         <LogoSvg
             height="50px"
@@ -18,13 +17,10 @@
         <small>Dipl. Hypnosetrainerin</small>
         <div class="brand-name">
             <h1>Lisa-Marie Loof</h1>
-           
         </div>
         <small>B.Sc in Psychologie</small>
     </div>
-  
-</div>
-
+</a>
 <style lang="scss">
     :global(#logoSvg){
         width: auto;
@@ -38,6 +34,9 @@
         flex-direction: row;
         vertical-align: center;
         align-items: center;
+        font-weight: 400;
+        font-family: 'Segoe UI';
+        color:var(--text);
     }
 
     .circle{
@@ -54,6 +53,7 @@
         border:1px solid white;
     }
     .brand-wrapper {
+      
         display: flex;
         flex-direction: column;
         padding: 0;

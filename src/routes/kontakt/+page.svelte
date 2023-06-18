@@ -4,7 +4,7 @@
     import type { ActionData, PageServerData } from "./$types";
     import { validate } from "$lib/zod/helper/forms.js";
     import Dropdown from '$lib/components/Dropdown.svelte';
-    import Checkbox from '$lib/components/svgs/Checkbox.svelte';
+    import Checkbox from '$lib/components/Checkbox.svelte';
     let action = "add";
     let leistungen:string | undefined="";
     let lastnameError:string | undefined="";

@@ -97,20 +97,10 @@
     @media screen and (max-width: 440px)  {
         .contact {
             width: 100% !important;
-
             .wrapper {
                 width: 100% !important;
-
                 .contact-buttons {
-                    // background: #fff;
-                    // display: flex;
                     flex-direction: column;
-                    // justify-content: space-between;
-                    // align-items: center;
-                    // width: 100%;
-                    // .cta {
-                    //     width: 250px;
-                    // }
                 }
             }
         }
