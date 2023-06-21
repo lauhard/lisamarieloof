@@ -1,7 +1,7 @@
 <script>
-	import checkmark from '$lib/svg/checkmark.svg';
-	import mail from '$lib/svg/mail-solid.svg';
-	import tel from '$lib/svg/telephone.svg';
+    import checkmark from "$lib/svg/checkmark.svg";
+    import mail from "$lib/svg/mail-solid.svg";
+    import tel from "$lib/svg/telephone.svg";
     import Headline from "$lib/components/Headline.svelte";
     // import Image from "$lib/components/Image.svelte";
     // import LogoSvg from "$lib/components/LogoSvg.svelte";
@@ -70,7 +70,6 @@
                 <Headline />
             </div>
             <div class="information-wrapper">
-                <!-- <h1>Lisa Marie Loof</h1> -->
                 <Information />
             </div>
         </div>
@@ -80,36 +79,6 @@
                 <img src={profileImage} alt="" srcset="" />
             </div>
         </div>
-        <!-- <Headline /> -->
-
-        <!-- <div class="profile-image-wrapper">
-                <img src={profileImage} alt="" srcset="" />
-            </div> -->
-        <!-- <span style="visibility:hidden;" id="home_section_one" /> -->
-        <!-- <div class="content grid main-grid"> -->
-        <!-- <div class="grid-cell heading">
-                <div class="heading-card">
-                    <Headline className="heading-desktop" />
-                </div>
-            </div>
-            <div class="grid-cell profile">
-                <div class="profile-card">
-                    <Profile {profileImage} className="profile-card" />
-                </div>
-            </div>
-            <div class="grid-cell information">
-                <div class="information-card">
-                    <Information />
-                </div>
-            </div>
-            <div class="grid-cell contact">
-                <div class="contact-card">
-                    <Contact className="contact-card" />
-                </div>
-            </div> -->
-
-        <!-- </div> -->
-
         <RoundButton
             classNames="hover scroll-down"
             title="scroll to the next headline"
@@ -133,42 +102,75 @@
             <h1 class="welcome">Herzlich Willkommen</h1>
 
             <div class="welcome-text">
-                <p class="intro">Während Ihrer Zeit für Hypnose und Weiterentwicklung soll Ihnen in gemeinsamer Zusammenarbeit folgendes ermöglicht werden:</p>
-                <br>
+                <p class="intro">
+                    Während Ihrer Zeit für Hypnose und Weiterentwicklung soll
+                    Ihnen in gemeinsamer Zusammenarbeit folgendes ermöglicht
+                    werden:
+                </p>
+                <br />
                 <div class="line">
-                    <img alt="self-Logo" src="{checkmark}" width="30px" height="auto">
-                    <p> Ihre ganz eigenen Erfahrungen mit Hypnose zu machen und diese zu erleben.
+                    <img
+                        alt="self-Logo"
+                        src={checkmark}
+                        width="30px"
+                        height="auto"
+                    />
+                    <p>
+                        Ihre ganz eigenen Erfahrungen mit Hypnose zu machen und
+                        diese zu erleben.
                     </p>
                 </div>
                 <div class="line">
-                    <img alt="self-Logo" src="{checkmark}" width="30px" height="auto"> 
-                    <p>Ihren Themen, den entstehenden Gefühlen und Gedanken wird der Raum und die
-                        Zeit gegeben zu wirken.</p>
+                    <img
+                        alt="self-Logo"
+                        src={checkmark}
+                        width="30px"
+                        height="auto"
+                    />
+                    <p>
+                        Ihren Themen, den entstehenden Gefühlen und Gedanken
+                        wird der Raum und die Zeit gegeben zu wirken.
+                    </p>
                 </div>
                 <div class="line">
-                    <img alt="self-Logo" src="{checkmark}" width="30px" height="auto"> 
-                    <p> Ihre eigenen Ressourcen und Selbstheilungskräfte zu mobilisieren, um
-                        an Ihren Themen zu arbeiten.</p>
+                    <img
+                        alt="self-Logo"
+                        src={checkmark}
+                        width="30px"
+                        height="auto"
+                    />
+                    <p>
+                        Ihre eigenen Ressourcen und Selbstheilungskräfte zu
+                        mobilisieren, um an Ihren Themen zu arbeiten.
+                    </p>
                 </div>
                 <div class="line">
-                    <img alt="self-Logo" src="{checkmark}" width="30px" height="auto"> 
-                    <p>  Unser gemeinsamer Fokus wird auf dem
-                        lösungs- und ressourcenorientierten Arbeiten liegen.</p>
+                    <img
+                        alt="self-Logo"
+                        src={checkmark}
+                        width="30px"
+                        height="auto"
+                    />
+                    <p>
+                        Unser gemeinsamer Fokus wird auf dem lösungs- und
+                        ressourcenorientierten Arbeiten liegen.
+                    </p>
                 </div>
             </div>
         </div>
-        
+
         <div class="contact">
             <p>
-                Sie können Termine gerne telefonisch oder über E-Mail vereinbaren
+                Sie können Termine gerne telefonisch oder über E-Mail
+                vereinbaren.
             </p>
-    
+
             <div class="contact-buttons">
                 <a class="cta" type="button" href="tel:+4369919048032">
                     <img alt="svg icon" src={tel} width="26" height="26" />
                     +43 69919048032
                 </a>
-    
+
                 <a class="cta" type="button" href="/kontakt">
                     <img alt="svg icon" src={mail} width="26" height="26" />
                     Kontakformular
@@ -186,8 +188,8 @@
                 </div>
                 <div class="image map">
                     <p>
-                        Meine Praxis ist in der Feldgasse 34A 9020 in der
-                        Klagenfurter-Altstadt
+                        Meine Praxis befindet sich in der Feldgasse 34A 9020 im Zentrum von Klagenfurt.
+                    
                     </p>
                     <a
                         class="cta"
@@ -199,7 +201,6 @@
                 <!-- <div class="image"></div> -->
             </div>
         </div>
-
 
         <div class="hypnose-wrapper">
             <h2 class="decorator">Was ist Hypnose</h2>
@@ -253,9 +254,9 @@
 
 <section class="section section-three">
     <div class="content-wrapper">
-        <h1 class="decorator" id="haeufig-gestellte-fragen">
+        <h2 class="decorator" id="haeufig-gestellte-fragen">
             Häufig gestellte Fragen
-        </h1>
+        </h2>
         <Faq />
     </div>
 </section>
@@ -338,6 +339,32 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
+    }
+
+    .cta {
+        input[type="text"],
+        input[type="button"] {
+            -webkit-appearance: none;
+            -webkit-border-radius: 0;
+            border-style: none;
+        }
+        background-color: var(--secondary);
+        font-family: var(--font-family, "Segoe UI");
+        box-sizing: border-box;
+
+        width: 250px;
+        height: auto;
+        padding: 13px 20px;
+
+        font-style: normal;
+        font-weight: 300;
+        font-size: 0.8rem;
+        font-size: 15px;
+        line-height: 18px;
+        color: var(--text);
+        /* identical to box height */
+        text-align: center;
+        margin-bottom: 10px;
     }
 
     .content-wrapper {
@@ -429,115 +456,6 @@
         }
     }
 
-    // .grid {
-    //     box-sizing: border-box;
-    //     display: grid;
-    //     gap: var(--grid-gap, 10px);
-    //     background: var(--bg-grid, transparent);
-    //     padding-top: 85px;
-    //     // margin-top: 80px;
-    //     width: 100%;
-    //     height: 100%;
-    //     min-height: 100vh;
-    // }
-
-    // .main-grid {
-    //     grid-template-columns: var(--grid-columns);
-    //     grid-template-rows: var(--grid-rows-desktop, auto);
-    //     grid-template-areas: var(--grid-template-desktop);
-    // }
-
-    // .grid-cell {
-    //     position: relative;
-    //     box-sizing: border-box;
-    //     background: white;
-    //     display: grid;
-    //     height: 100%;
-    //     width: 100%;
-    //     margin: 0;
-    //     padding: 0;
-    // }
-
-    // .heading {
-    //     grid-area: heading;
-    //     background-color: var(--bg-heading);
-    // }
-
-    // .profile {
-    //     grid-area: profile;
-    //     background-color: var(--bg-profile);
-    // }
-
-    // .information {
-    //     grid-area: information;
-    //     background-color: var(--bg-information);
-    // }
-
-    // .contact {
-    //     grid-area: contact;
-    //     background-color: var(--bg-contact);
-    // }
-
-    // .heading-card {
-    //     display: flex;
-    //     justify-content: start;
-    //     align-items: center;
-    // }
-
-    // .profile-card {
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: end;
-    //     :global(.profile-card) {
-    //         max-width: 450px;
-    //         margin-bottom: 30px;
-    //     }
-    // }
-
-    // .information-card {
-    //     display: flex;
-    //     justify-content: left;
-    //     align-items: start;
-    //     margin-top: 3rem;
-    //     // margin-left: 70px;
-    // }
-
-    // .contact-card {
-    //     display: flex;
-    //     justify-content: end;
-    //     align-items: start;
-    //     :global(.contact-card) {
-    //         max-width: 450px;
-    //         // min-height: 360px;
-    //     }
-    //     margin-bottom: 30px;
-    //     // min-height: 320px;
-    // }
-    .cta {
-        input[type="text"],
-        input[type="button"] {
-            -webkit-appearance: none;
-            -webkit-border-radius: 0;
-            border-style: none;
-        }
-        background-color: var(--secondary);
-        font-family: var(--font-family, "Segoe UI");
-        box-sizing: border-box;
-
-        width: 250px;
-        height: auto;
-        padding: 13px 20px;
-
-        font-style: normal;
-        font-weight: 300;
-        font-size: 15px;
-        line-height: 18px;
-        color: var(--text);
-        /* identical to box height */
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
     .section-two {
         --header-margin: 10px 0;
         --header-margin-mobile: 20px 0;
@@ -562,114 +480,131 @@
             min-height: var(--content-wrapper-min-height);
             justify-content: center;
             max-width: 100%;
-
             .greeter {
                 margin: 0 auto;
                 max-width: var(--content-width);
                 width: 100%;
-                height: 450px;
-
+                height: auto;
+                margin-bottom: 50px;
                 .welcome {
                     width: 100%;
                     text-align: center;
                     margin-bottom: 10px;
-                    color:var(--text);
+                    color: var(--text);
                 }
-                .line{
+                .line {
                     display: flex;
                     flex-direction: row;
-                    p{
+                    //    background-color: red;
+                    max-width: 1000px;
+                    margin: 0 auto;
+
+                    p {
                         line-height: 1.9rem;
                         font-weight: 300;
-                        font-family: var(--font-family,"Segoe UI");
-                        color:var(--text);
+                        font-family: var(--font-family, "Segoe UI");
+                        color: var(--text);
                         font-size: 1rem;
+                        font-size: 18px;
                     }
-                    img{
+                    img {
                         padding: 10px 10px;
                         height: 100%;
                         width: 50px;
                     }
                 }
-                .intro{
+                .intro {
                     line-height: 1.9rem;
                     font-weight: 400;
-                    font-family: var(--font-family,"Segoe UI");
-                    color:var(--text);
+                    font-family: var(--font-family, "Segoe UI");
+                    color: var(--text);
                     font-size: 1.1rem;
+                    font-size: 24px;
                     text-align: center;
-                    // text-align: center;
                 }
-
             }
 
             .contact {
                 background-color: var(--primary);
                 max-width: var(--content-width);
                 flex-direction: column;
-                width: 50%;
+                width: 600px;
                 margin: 0 auto;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                // padding: 50px 0;
-                height: 300px;
+                height: 350px;
                 margin-top: 50px;
                 margin-bottom: 45px;
-                p{
+                p {
                     margin-bottom: 30px;
                     font-size: 1rem;
+                    font-size: 18px;
+
                     font-weight: 500;
-                    font-family: var(--font-family,"Segoe UI");
+                    font-weight: 300;
+                    text-align: center;
+                    padding: 20px;
+                    font-family: var(--font-family, "Segoe UI");
                     color: #fff;
-                    
                 }
-                .contact-buttons{
+                .contact-buttons {
                     display: flex;
                     flex-direction: column;
                 }
             }
 
             .grid {
-                // padding: 100px;
                 max-width: var(--content-width);
                 // width: 100%;
                 height: auto;
-                // grid-template-columns: repeat(2, minmax(50px, 1fr)) ;
-                grid-auto-rows: minmax(100px, 375px);
+                grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+                grid-auto-rows: minmax(100px, 400px);
                 gap: 40px;
-                
             }
             .praxis {
                 width: var(--content-width);
                 margin: 0 auto;
                 .image {
-                    background-color: var(--primary);
-                    min-height: 350px;
-                    &:nth-of-type(2){
-                        z-index: 500;
+                    // background-color: var(--primary);
+                    height: 100%;
+                    // overflow: hidden;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        // object-fit: contain;
                     }
                 }
                 .map {
                     grid-column-start: 1;
                     grid-column-end: 3;
-                    width: 50%;
+                    width: 600px;
                     margin: 0 auto;
                     display: flex;
                     flex-direction: column;
                     padding: 20px;
                     justify-content: center;
-                    height: 100%;
-                    z-index: 1;
-                    
+                    height: 350px;
                     align-items: center;
+                    background-color: var(--primary);
                     p {
-                        text-align: center;
+                        // text-align: center;
+                        // margin-bottom: 30px;
+                        // color: #fff;
+                        // font-family: var(--font-family, "Segoe UI");
+                        // font-size: 1rem;
+                        // font-size: 18px;
+                        // font-weight: 300;
                         margin-bottom: 30px;
-                        color: #fff;
-                        font-family: var(--font-family, "Segoe UI");
                         font-size: 1rem;
+                        font-size: 18px;
+
+                        font-weight: 500;
                         font-weight: 300;
+                        text-align: center;
+                        padding: 20px;
+                        font-family: var(--font-family, "Segoe UI");
+                        color: #fff;
                     }
                     a {
                         padding: 20px;
@@ -677,30 +612,28 @@
                     }
                 }
             }
-
             .hypnose-wrapper {
-                margin-top: 5rem;
+                margin-top: 4rem;
                 padding: 0;
                 max-width: 100%;
                 width: 100%;
                 background-color: var(--primary-hover);
-               display: flex;
-               flex-direction: column;
-               align-items: center;
-               .decorator{
-                color: #fff;
-                // margin-top: 50px;
-               }
-               .decorator::before{
-                    border-color:var(--secondary) !important;
-               }
-
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .decorator {
+                    // color: #fff;
+                    margin-top: 1.5rem;
+                }
+                .decorator::before {
+                }
                 .hypnose {
                     width: var(--content-width);
                     // background-color: var(--primary-hover);
                     background-color: transparent;
                     box-shadow: none;
                     padding: 0;
+                    margin: 20px 0 80px 0;
                     border-radius: 0px;
                     .hypnose__image {
                         max-width: 350px;
@@ -709,9 +642,9 @@
                         margin-bottom: 10px;
                         float: left;
                         overflow: hidden;
-                        border: solid 1px #fff;
+                        // border: solid 1px #fff;
                         box-sizing: border-box;
-                        padding: 10px;
+                        // padding: 10px;
                         img {
                             overflow: hidden;
                             transition: all 0.3s ease-in-out;
@@ -726,25 +659,16 @@
                     }
                     .hypnose__text {
                         width: 100%;
-                        // margin-bottom: .5rem;
-
+                        // margin-bottom: 0.5rem;
                         p {
                             text-align: justify;
-                            font-size: .9rem;
-                            // font-size: 16px;
+                            font-size: 0.9rem;
+                            font-size: 1rem;
+                            font-size: 18px;
                             font-weight: 300;
                             font-family: var(--font-family, "Segoe UI");
                             color: var(--text);
-                            
-                            // color:#fff;
-
                         }
-                        // .text:hover {
-                        //     background: var(--primary-hover);
-                        //     padding: 15px;
-                        //     transition: all 0.3s ease-in-out;
-                        //     padding: 30px;
-                        // }
                     }
                 }
             }
@@ -752,19 +676,20 @@
     }
 
     .section-three {
-        --header-margin: 5rem 0 2rem 0;
+        --header-margin: 2rem 0 2rem 0;
         --content-wrapper-height: auto;
         --content-wrapper-min-height: auto;
         --section-height: 100%;
         --section-min-height: 100%;
 
-        height: var(--section-height);
+        height: auto;
         min-height: var(--section-height);
         .decorator {
-            margin: var(--header-margin);
             text-align: center;
+            margin-bottom: 2rem;
         }
         .content-wrapper {
+            margin-top: 5rem;
             height: var(--content-wrapper-height);
             min-height: var(--content-wrapper-min-height);
             justify-content: center;

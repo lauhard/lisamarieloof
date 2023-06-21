@@ -34,7 +34,7 @@
         },
         {
             id: 6,
-            question: "Zahlt die Krankkasse eine Hypnosesitzung?",
+            question: "Zahlt die Krankenkasse eine Hypnosesitzung?",
             answer: "Die gesetzlichen Krankenkassen übernehmen die Kosten nicht.  Ob die privaten Krankenkassen die Kosten übernehmen, sollten Sie vorab mit Ihrer Krankenkasse abklären. ",
         },
     ];

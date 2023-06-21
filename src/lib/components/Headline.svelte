@@ -7,8 +7,8 @@
         <span class="line-1">Ihre Zeit</span>
         <span class="line-2">für <span class="hypnose">Hypnose</span> &</span>
         <span class="line-3">Weiterentwicklung</span>
-        <span class="subheading">Entdecken Sie die Kraft von Hypnose</span> 
-        <div class="separator" />
+        <!-- <span class="subheading">Entdecken Sie die Kraft von Hypnose</span> 
+        <div class="separator" /> -->
     </h1>
 </header>
 
