@@ -1,5 +1,6 @@
 <script lang="ts">
     import AlertSvg from "./svgs/AlertSvg.svelte";
+    import checkmark from "$lib/svg/checkmark.svg";
 
     export let className = "";
 </script>
@@ -113,13 +114,15 @@
                 // height: 150px;
                 gap: 10px;
                 span {
+                    font-family: 'Open Sans', sans-serif;
                     font-weight: 700;
                     color: #378d93;
+                   
                 }
                 .catchphrase {
                     font-weight: 300;
-                    font-size: 16px;
-                    // letter-spacing: .06rem;
+                    font-size: 0.8rem;
+                    letter-spacing: .06rem;
                 }
             }
         }

@@ -45,7 +45,7 @@
         height: auto;
         width: auto;
         background-color: var(--background,#fff);
-        padding: 5px;
+        padding: 6px;
         // box-shadow: 0px 6px 15px -5px rgba(0, 0, 0, 0.25);
         .wrapper {
             display: flex;
@@ -54,6 +54,7 @@
             align-items: center;
             justify-content: center;
             box-sizing:border-box;
+            border:2px solid var(--primary);
 
             .profile-img {
                 width: 220px;

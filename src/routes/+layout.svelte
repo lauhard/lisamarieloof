@@ -14,7 +14,7 @@
     export let data: LayoutData;
     onMount(async () => {});
     let oldScroll: number | undefined = undefined;
-    export const offset = 50;
+    export const offset = 400;
     $: scrollY = 0;
     $: innerWidth = 0;
     $: hide = false;
@@ -22,7 +22,7 @@
         if (oldScroll === undefined) {
             oldScroll = scrollY;
         }
-        if (oldScroll < scrollY) {
+        if (oldScroll < scrollY && scrollY > offset) {
             hide = true;
         } else {
             hide = false;
@@ -44,14 +44,13 @@
 <!-- in:fade={{ duration: 150, delay: 150 }} out:fly={{ duration: 150, x: 100 }} -->
 <!-- in:fade={{ duration: 150, delay: 100 }} out:fade={{ delay:100, duration:150}} -->
 <svelte:window bind:scrollY bind:innerWidth />
-
 {#key data.currentRoute}
     <div
         class="app"
         in:fade={{ duration: 250, delay: 10 }}
         out:fade={{ delay: 10, duration: 250 }}
     >
-        <div class="content-wrapper" class:scroll={scrollY > offset && !hide} class:hide={hide === true}>
+        <div class="content-wrapper" class:scroll={!hide && scrollY>0} class:hide={hide === true}>
             <header>
                 <Logo />
                 <Navigation />
