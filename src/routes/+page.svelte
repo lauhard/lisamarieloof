@@ -823,7 +823,9 @@
         .background-svg-banner{
             bottom: 0px;
             height: 100dvh;
+            height: 100vh;
             max-height: 100dvh;
+            max-height: 100vh;
             .svg-wrapper {
                 height: 100px !important;
                 position: absolute;
