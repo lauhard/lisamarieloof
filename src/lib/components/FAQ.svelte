@@ -56,6 +56,7 @@
     .faqs {
         width: 100%;
         height: auto;
+
     }
     summary {
         font-size: var(--font-size-question, 18px);

@@ -49,147 +49,155 @@
 
 <!-- content here -->
 <!-- #d7c88e2e -->
-<section class="section section-one">
-    <div class="background-svg-banner">
-        <div class="svg-wrapper">
-            <LogoSvg
-                className="background-svg"
-                height="1000px"
-                animation={false}
-                --leaves-main="#f0f0f01a"
-                --leaves-overlay="#f0f0f01a"
-                --tree-color="#f0f0f01a"
-                --tree-overlay="#f0f0f01a"
-                --svg-stroke-width="0px"
-            />
-        </div>
+<div class="background-svg-banner">
+    <div class="svg-wrapper">
+        <LogoSvg
+            className="background-svg"
+            height="1000px"
+            animation={false}
+            --leaves-main="#f0f0f01a"
+            --leaves-overlay="#f0f0f01a"
+            --tree-color="#f0f0f01a"
+            --tree-overlay="#f0f0f01a"
+            --svg-stroke-width="0px"
+        />
     </div>
-    <div class="content-wrapper">
-        <div class="left-side">
+</div>
+<div class="section">
+    <RoundButton
+        classNames="hover scroll-down"
+        title="scroll to the next headline"
+    >
+        <a
+            href="/#willkommen"
+            aria-label="links to section 2"
+            style="padding:0 10px;"
+        >
+            <ArrowDownSvg width="20px" height="30px" />
+        </a>
+    </RoundButton>
+   
+    <div class="grid">
+        <div class="cell cell-headline">
             <div class="headline-wrapper">
-                <Headline />
+                <Headline className="heading" />
             </div>
             <div class="information-wrapper">
-                <Information />
+                <Information className="information" />
             </div>
         </div>
-
-        <div class="right-side">
+        <div class="cell cell-profile">
             <div class="profile-image-wrapper">
-                <img src={profileImage} alt="" srcset="" />
+                <img
+                    class="profile-image"
+                    src={profileImage}
+                    alt=""
+                    srcset=""
+                />
             </div>
         </div>
-        <RoundButton
-            classNames="hover scroll-down"
-            title="scroll to the next headline"
-        >
-            <a
-                href="/#was-ist-hypnose"
-                aria-label="links to section 2"
-                style="padding:0 10px;"
-            >
-                <ArrowDownSvg width="20px" height="30px" />
-            </a>
-        </RoundButton>
-    </div>
-</section>
-
-<section class="section section-two">
-    <span style="visibility:hidden;" id="was-ist-hypnose" />
-
-    <div class="content-wrapper">
-        <div class="greeter">
-            <h1 class="welcome">Herzlich Willkommen</h1>
-
-            <div class="welcome-text">
-                <p class="intro">
-                    Während Ihrer Zeit für Hypnose und Weiterentwicklung soll
-                    Ihnen in gemeinsamer Zusammenarbeit folgendes ermöglicht
-                    werden:
-                </p>
-                <br />
-                <div class="line">
-                    <img
-                        alt="self-Logo"
-                        src={checkmark}
-                        width="30px"
-                        height="auto"
-                    />
-                    <p>
-                        Ihre ganz eigenen Erfahrungen mit Hypnose zu machen und
-                        diese zu erleben.
+        <div class="cell cell-greeter">
+            <div class="greeter-wrapper">
+                <span style="visibility:hidden;" id="willkommen" />
+                <h1 class="welcome">Herzlich Willkommen</h1>
+                <div class="welcome-text">
+                    <p class="intro">
+                        Während Ihrer Zeit für Hypnose und Weiterentwicklung
+                        soll Ihnen in gemeinsamer Zusammenarbeit Folgendes
+                        ermöglicht werden
                     </p>
-                </div>
-                <div class="line">
-                    <img
-                        alt="self-Logo"
-                        src={checkmark}
-                        width="30px"
-                        height="auto"
-                    />
-                    <p>
-                        Ihren Themen, den entstehenden Gefühlen und Gedanken
-                        wird der Raum und die Zeit gegeben zu wirken.
-                    </p>
-                </div>
-                <div class="line">
-                    <img
-                        alt="self-Logo"
-                        src={checkmark}
-                        width="30px"
-                        height="auto"
-                    />
-                    <p>
-                        Ihre eigenen Ressourcen und Selbstheilungskräfte zu
-                        mobilisieren, um an Ihren Themen zu arbeiten.
-                    </p>
-                </div>
-                <div class="line">
-                    <img
-                        alt="self-Logo"
-                        src={checkmark}
-                        width="30px"
-                        height="auto"
-                    />
-                    <p>
-                        Unser gemeinsamer Fokus wird auf dem lösungs- und
-                        ressourcenorientierten Arbeiten liegen.
-                    </p>
+                    <br />
+                    <div class="line">
+                        <img
+                            alt="self-Logo"
+                            src={checkmark}
+                            width="30px"
+                            height="auto"
+                        />
+                        <p>
+                            Ihre ganz eigenen Erfahrungen mit Hypnose zu machen
+                            und diese zu erleben.
+                        </p>
+                    </div>
+                    <div class="line">
+                        <img
+                            alt="self-Logo"
+                            src={checkmark}
+                            width="30px"
+                            height="auto"
+                        />
+                        <p>
+                            Ihren Themen, den entstehenden Gefühlen und Gedanken
+                            wird der Raum und die Zeit gegeben zu wirken.
+                        </p>
+                    </div>
+                    <div class="line">
+                        <img
+                            alt="self-Logo"
+                            src={checkmark}
+                            width="30px"
+                            height="auto"
+                        />
+                        <p>
+                            Ihre eigenen Ressourcen und Selbstheilungskräfte zu
+                            mobilisieren, um an Ihren Themen zu arbeiten.
+                        </p>
+                    </div>
+                    <div class="line">
+                        <img
+                            alt="self-Logo"
+                            src={checkmark}
+                            width="30px"
+                            height="auto"
+                        />
+                        <p>
+                            Unser gemeinsamer Fokus wird auf dem lösungs- und
+                            ressourcenorientierten Arbeiten liegen.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="cell cell-praxis">
+            <div class="subgrid-praxis praxis-wrapper">
+                <div class="subgrid-cell contact">
+                    <p>
+                        Sie können Termine gerne telefonisch oder über E-Mail
+                        vereinbaren.
+                    </p>
 
-        <div class="contact">
-            <p>
-                Sie können Termine gerne telefonisch oder über E-Mail
-                vereinbaren.
-            </p>
+                    <div class="contact-buttons">
+                        <a class="cta" type="button" href="tel:+4369919048032">
+                            <img
+                                alt="svg icon"
+                                src={tel}
+                                width="26"
+                                height="26"
+                            />
+                            +43 69919048032
+                        </a>
 
-            <div class="contact-buttons">
-                <a class="cta" type="button" href="tel:+4369919048032">
-                    <img alt="svg icon" src={tel} width="26" height="26" />
-                    +43 69919048032
-                </a>
-
-                <a class="cta" type="button" href="/kontakt">
-                    <img alt="svg icon" src={mail} width="26" height="26" />
-                    Kontakformular
-                </a>
-            </div>
-        </div>
-
-        <div class="praxis-wrapper">
-            <div class="grid praxis">
-                <div class="image image-onse">
+                        <a class="cta" type="button" href="/kontakt">
+                            <img
+                                alt="svg icon"
+                                src={mail}
+                                width="26"
+                                height="26"
+                            />
+                            Kontakformular
+                        </a>
+                    </div>
+                </div>
+                <div class="subgrid-cell image">
                     <img src={praxis1} alt="" srcset="" />
                 </div>
-                <div class="image image-two">
+                <div class="subgrid-cell image">
                     <img src={praxis2} alt="" srcset="" />
                 </div>
-                <div class="image map">
+                <div class="subgrid-cell map">
                     <p>
-                        Meine Praxis befindet sich in der Feldgasse 34A 9020 im Zentrum von Klagenfurt.
-                    
+                        Meine Praxis befindet sich in der Feldgasse 34A 9020 im
+                        Zentrum von Klagenfurt.
                     </p>
                     <a
                         class="cta"
@@ -198,149 +206,73 @@
                         rel="noopener noreferrer">Karte öffnen</a
                     >
                 </div>
-                <!-- <div class="image"></div> -->
             </div>
         </div>
-
-        <div class="hypnose-wrapper">
-            <h2 class="decorator">Was ist Hypnose</h2>
-            <article class="hypnose">
-                <div class="hypnose__image">
-                    <img src={hypose} alt="" srcset="" />
-                </div>
-                <div class="hypnose__text">
-                    <p>
-                        Zur einfacheren Einordnung lässt sich das menschliche
-                        Bewusstsein grundsätzlich in zwei Bewusstseinsstadien
-                        unterteilen. Das Bewusstsein und das Unterbewusstsein.
-                        Das Bewusstsein ist beispielsweise für das rationale
-                        Lösen von Aufgaben zuständig oder das Treffen bewusster
-                        Entscheidungen. Dieser bewusste Anteil beträgt nur ca.
-                        10 % unserer gesamt möglichen Leistungen. Das bedeutet
-                        im Umkehrschluss, wir Menschen besitzen viel mehr
-                        Potenzial, welches ungenutzt bleibt und sich im
-                        Untergrund auf unser Bewusstsein auswirkt, ohne, dass
-                        wir es bemerken.
-                    </p>
-                    <br />
-                    <p>
-                        In der Hypnose arbeiten wir mit dem Unterbewusstsein,
-                        während der kritische Faktor des Bewusstseins in den
-                        Hintergrund gerät. Dadurch gelangen wir an Inhalte, die
-                        uns im Wachzustand nicht zur Verfügung stehen, wir
-                        können sie abrufen und mit ihnen arbeiten. Der Fokus
-                        wendet sich nach innen, man erlangt Zugang zu seinen
-                        Gedanken und Gefühlen. Das ermöglicht es tiefgreifende
-                        Veränderungsprozesse auszulösen, welche intrinsische und
-                        nachhaltige Auswirkungen auf uns haben. Es sollen innere
-                        Selbstheilungskräfte und unbewusste Ressourcen gestärkt
-                        werden.
-                    </p>
-                    <br />
-                    <p>
-                        Darüber hinaus ist uns Menschen der Hypnotische Zustand
-                        nicht fremd, wir erleben ihn täglich, wenn wir
-                        beispielsweise ein gutes Buch lesen oder einen Film
-                        schauen und vollständig in diese Welten eintauchen und
-                        alles um uns herum ausblenden. Ebenso befinden wir uns
-                        kurz vor dem Einschlafen oder direkt nach dem Aufwachen
-                        in einem Zustand, der der Hypnose ähnelt.
-                    </p>
-                </div>
-            </article>
+        <div class="cell cell-hypnose">
+            <div class="hypnose-wrapper">
+                <h2 class="decorator">Was ist Hypnose</h2>
+                <article class="hypnose">
+                    <div class="hypnose__image">
+                        <img src={hypose} alt="" srcset="" />
+                    </div>
+                    <div class="hypnose__text">
+                        <p>
+                            Zur einfacheren Einordnung lässt sich das
+                            menschliche Bewusstsein grundsätzlich in zwei
+                            Bewusstseinsstadien unterteilen. Das Bewusstsein und
+                            das Unterbewusstsein. Das Bewusstsein ist
+                            beispielsweise für das rationale Lösen von Aufgaben
+                            zuständig oder das Treffen bewusster Entscheidungen.
+                            Dieser bewusste Anteil beträgt nur ca. 10 % unserer
+                            gesamt möglichen Leistungen. Das bedeutet im
+                            Umkehrschluss, wir Menschen besitzen viel mehr
+                            Potenzial, welches ungenutzt bleibt und sich im
+                            Untergrund auf unser Bewusstsein auswirkt, ohne,
+                            dass wir es bemerken.
+                        </p>
+                        <br />
+                        <p>
+                            In der Hypnose arbeiten wir mit dem
+                            Unterbewusstsein, während der kritische Faktor des
+                            Bewusstseins in den Hintergrund gerät. Dadurch
+                            gelangen wir an Inhalte, die uns im Wachzustand
+                            nicht zur Verfügung stehen, wir können sie abrufen
+                            und mit ihnen arbeiten. Der Fokus wendet sich nach
+                            innen, man erlangt Zugang zu seinen Gedanken und
+                            Gefühlen. Das ermöglicht es tiefgreifende
+                            Veränderungsprozesse auszulösen, welche intrinsische
+                            und nachhaltige Auswirkungen auf uns haben. Es
+                            sollen innere Selbstheilungskräfte und unbewusste
+                            Ressourcen gestärkt werden.
+                        </p>
+                        <br />
+                        <p>
+                            Darüber hinaus ist uns Menschen der Hypnotische
+                            Zustand nicht fremd, wir erleben ihn täglich, wenn
+                            wir beispielsweise ein gutes Buch lesen oder einen
+                            Film schauen und vollständig in diese Welten
+                            eintauchen und alles um uns herum ausblenden. Ebenso
+                            befinden wir uns kurz vor dem Einschlafen oder
+                            direkt nach dem Aufwachen in einem Zustand, der der
+                            Hypnose ähnelt.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="cell cell-faq">
+            <div class="faq-wrapper">
+                <h2 class="decorator" id="haeufig-gestellte-fragen">
+                    Häufig gestellte Fragen
+                </h2>
+                <Faq classNames="faq"/>
+            </div>
         </div>
     </div>
-</section>
-
-<section class="section section-three">
-    <div class="content-wrapper">
-        <h2 class="decorator" id="haeufig-gestellte-fragen">
-            Häufig gestellte Fragen
-        </h2>
-        <Faq />
-    </div>
-</section>
+    
+</div>
 
 <style lang="scss">
-    :root {
-        // --bg-grid: #37cf2ce2;
-        // --bg-content-wrapper: #c3ff80;
-        // --bg-heading: red;
-        // --bg-profile: green;
-        // --bg-information: blue;
-        // --bg-contact: orange;
-        // --bg-section-one: gray;
-        // --bg-section-two: red;
-
-        // --grid-columns: 20% 25% 10% 20% auto;
-        // --grid-rows-desktop: 10% 10% 10% auto;
-        // --grid-rows-mobile: 210px 240px 380px auto; //230px
-        // --grid-template-desktop: "heading heading heading profile profile"
-        //     "heading heading heading profile profile"
-        //     "heading heading heading profile profile"
-        //     "information information information profile profile"
-        //     "information information information contact contact"
-        //     "information information information contact contact"
-        //     "information information information contact contact";
-
-        // --grid-template-mobile: "profile profile profile profile profile"
-        //     "heading heading heading heading heading"
-        //     "information information information information information"
-        //     "contact contact contact contact contact";
-
-        // --grid-gap: 10px;
-    }
-
-    :global(.scroll-down) {
-        bottom: 35px;
-        min-width: 50px;
-        width: 50px;
-        min-height: 50px;
-        height: 50px;
-        border-radius: 50%;
-        position: absolute;
-        border: 1px solid white;
-        left: calc(50% - 22.5px);
-        background: var(--secondary);
-        &:hover {
-            background: var(--secondary-hover) !important;
-        }
-    }
-
-    .background-svg-banner {
-        overflow: hidden;
-        width: 100%;
-        height: 65%;
-        background-color: var(--primary);
-        position: absolute;
-        transform: translatY(10%) !important;
-        bottom: 10% !important;
-        overflow: hidden;
-
-        .svg-wrapper {
-            position: absolute;
-            top: 30px;
-            left: 100px;
-            height: 100%;
-            width: 100%;
-            width: auto;
-        }
-    }
-
-    .section {
-        position: relative;
-        min-height: 100vh;
-        height: 100%;
-        width: 100%;
-        min-width: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-
     .cta {
         input[type="text"],
         input[type="button"] {
@@ -351,11 +283,9 @@
         background-color: var(--secondary);
         font-family: var(--font-family, "Segoe UI");
         box-sizing: border-box;
-
         width: 250px;
         height: auto;
         padding: 13px 20px;
-
         font-style: normal;
         font-weight: 300;
         font-size: 0.8rem;
@@ -366,438 +296,446 @@
         text-align: center;
         margin-bottom: 10px;
     }
-
-    .content-wrapper {
-        box-sizing: border-box;
-        display: flex;
+    
+    .section {
+        --section-min-height: 100vh;
+        --section-height: 100%;
+        --section-width: 100%;
+        --section-margin: 90px 0 0 0;
+        --section-padding: 0 0 0 0;
+        // --bg-section: red;
+        height: var(--section-height);
+        min-height: var(--section-min-height);
+        width: var(--section-width);
+        margin: var(--section-margin);
+        padding: var(--section-padding);
+        background-color: var(--bg-section);
         position: relative;
-        flex-direction: column;
-        background: var(--bg-content-wrapper, transparent);
-        min-height: 100vh;
-        height: 100%;
+        :global(.scroll-down) {
+            top:80vh;
+            min-width: 50px;
+            width: 50px;
+            min-height: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: absolute ;
+            border: 1px solid white;
+            left: calc(50% - 22.5px);
+            background: var(--secondary);
+            z-index: 9999;
+            &:hover {
+                background: var(--secondary-hover) !important;
+            }
+        }
+    }
+    .background-svg-banner {
+        overflow: hidden;
         width: 100%;
-        max-width: var(--content-width, 1240px);
+        height:  1200px;
+        max-height: 66vh;
+        background-color: var(--primary);
+        position: absolute;
+        // transform: translatY(10%);
+        bottom: 10%;
+
+        .svg-wrapper {
+            // position: absolute;
+            top: 30px;
+            left: 100px;
+            height: 100%;
+            width: 100%;
+            width: auto;
+        }
+    }
+    .grid {
+        // --bg-grid: #cf2ccce2;
+        // --bg-grid-cell: #00ffc8;
+        // --bg-current-cell: red;
+
+        --grid-columns-desktop: repeat(2, 50vw, 50vw);
+        // --grid-columns-desktop:repeat(auto-fill, minmax(400px, 1fr));
+        --grid-rows-desktop: auto;
+        --grid-rows-mobile: 210px 240px 380px auto;
+        --grid-template-desktop: "heading heading image image"
+            "heading heading image image";
+
+        --grid-template-mobile: "";
+
+        // --grid-gap: 10px;
+        --grid-height: auto;
+        --grid-min-height: 100dvh;
+        --grid-padding: 10px 0 0 0;
+        --grid-width: 100%;
+
+        padding: var(--grid-padding);
+        background-color: var(--bg-grid);
+        min-height: var(--grid-min-height);
+        height: var(--grid-height);
+        width: var(--grid-width);
+
+        grid-gap: var(--grid-gap);
+        grid-template-columns: var(--grid-columns-desktop);
+        grid-template-rows: var(--grid-rows-desktop);
+
+        box-sizing: border-box;
         overflow: hidden;
     }
-
-    .section-one {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: var(--bg-section-one);
-        height: 100%;
-
+    .cell {
+        background-color: var(--bg-grid-cell, transparent);
+        margin: 0;
+        padding: 0;
+        height: auto;
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
         overflow: hidden;
-        // min-height: 1000px;
-        .content-wrapper {
-            display: flex;
-            flex-direction: row;
+    }
+    .cell:nth-of-type(1),
+    .cell:nth-of-type(2) {
+        grid-column: span 2;
+        max-height: 100vh;
+        height: calc(100vh - 100px);
+    }
+    .cell:nth-of-type(1) {
+       display: flex;
+       flex-direction: column;
+       justify-content: space-around;
+       width: 60vw;
+    //    background-color: blueviolet;
+    }
+    .cell:nth-of-type(2) {
+        display: flex;
+        height: calc(100vh - 111px);
+        width: 40vw;
+    //    background-color: gold;
+    }
+    .cell:nth-of-type(3) {
+        grid-column: auto / span 4;
+        height: auto;
+    }
+    .cell:nth-of-type(4) {
+        grid-column: auto / span 4;
+        height: auto;
+        background-color: var(--bg-current-cell, transparent);
+        width: 100vw;
+    }
+    .cell:nth-of-type(5),
+    .cell:nth-of-type(6) {
+        grid-column: auto / span 4;
+        height: auto;
+        width: 100vw;
+    }
+    .cell:nth-of-type(6) {
+        margin-top: 4rem;
+    }
+    .headline-wrapper,
+    .information-wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+        width: 100%;
+    }
+    .headline-wrapper {
+    //    background-color: blue;
+        :global(.heading) {
+            position: absolute;
+            top: 35%;
+            transform: translateY(-55%);
+        }
+    }
+    .information-wrapper {
+        // background-color: gold;
+        :global(.information) {
+            position: absolute;
+            bottom: 45%;
+            // left: 10%;
+        }
+    }
+    .profile-image-wrapper {
+        position: absolute;
+        display: flex;
+        // flex-direction: column;
+        justify-content: start;
+        align-items: end;
+        // width: 80%;
+        height: 92%;
+        bottom: 10%;
+        // left: 10%;
+        overflow: hidden;
+        max-width: 100%;
+        width: 100%;
+        // background-color: #00ffc8;
+        img {
             position: relative;
             height: 100%;
-            overflow: visible;
-            min-height: 100vh;
-            .left-side {
-                min-width: 50%;
-                width: 50%;
-                display: flex;
-                flex-direction: column;
-                .headline-wrapper {
-                    position: relative;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: row;
-                    height: 50%;
-                    width: 100%;
-                    :global(.heading) {
-                        position: absolute;
-                        top: 55%;
-                        transform: translateY(-55%);
-                    }
-                }
-                .information-wrapper {
-                    height: 50%;
-                    position: relative;
-                    display: flex;
-                    height: auto;
-                    :global(.information) {
-                        position: absolute;
-                        bottom: 50%;
-                        transform: translateY(50%);
-                    }
-                }
-            }
+            width: auto;
+            max-height: 830px;
+            min-height: 65%;
 
-            .right-side {
-                position: relative;
-                min-height: 100vh;
-                height: 100%;
-                height: 100vh;
-                width: 50%;
-                overflow: visible;
-                .profile-image-wrapper {
-                    position: absolute;
-                    bottom: 10%;
-                    right: -3rem;
-                    width: 100%;
-                    height: 80%;
-                    overflow: hidden;
-                    img {
-                        width: auto;
-                        height: 100%;
-                        min-height: 650px;
-                        object-fit: cover;
-                        object-position: 0px center;
-                        // overflow: hidden;
-                    }
-                }
-                position: relative;
-            }
+            object-fit: cover;
+            object-position: 0px center;
+            overflow: hidden;
         }
     }
-
-    .section-two {
-        --header-margin: 10px 0;
-        --header-margin-mobile: 20px 0;
-        --section-height: 100%;
-        --section-min-height: 100%;
-        --content-wrapper-height: 100%;
-        --content-wrapper-min-height: 100%;
-
-        background-color: var(--bg-section-two);
-        height: var(--section-height);
-        min-height: var(--section-height);
-        // background-color: #a81e1e;
-
-        .decorator {
-            margin: var(--header-margin);
+    .greeter-wrapper {
+        margin: 0 auto;
+        max-width: var(--content-width);
+        width: 100%;
+        height: auto;
+        margin-bottom: 50px;
+        .welcome {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+        .line {
+            display: flex;
+            flex-direction: row;
+            max-width: 1000px;
+            margin: 0 auto;
+            p {
+                line-height: 1.9rem;
+                font-weight: 300;
+                font-family: var(--font-family, "Segoe UI");
+                color: var(--text);
+                font-size: 1rem;
+                font-size: 18px;
+            }
+            img {
+                padding: 10px 10px;
+                height: 100%;
+                width: 50px;
+            }
+        }
+        .intro {
+            line-height: 1.9rem;
+            font-weight: 400;
+            font-family: var(--font-family, "Segoe UI");
+            color: var(--text);
+            font-size: 1.1rem;
+            font-size: 24px;
             text-align: center;
         }
-
-        // background-color: blue;
-        .content-wrapper {
-            height: var(--content-wrapper-height);
-            min-height: var(--content-wrapper-min-height);
-            justify-content: center;
-            max-width: 100%;
-            .greeter {
-                margin: 0 auto;
-                max-width: var(--content-width);
+    }
+    .subgrid-praxis {
+        display: grid;
+        position: relative;
+        max-width: var(--content-width);
+        height: auto;
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+        grid-auto-rows: minmax(100px, 435px);
+        gap: 40px;
+        width: var(--content-width);
+        margin: 0 auto;
+        .image {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            img {
                 width: 100%;
-                height: auto;
-                margin-bottom: 50px;
-                .welcome {
-                    width: 100%;
-                    text-align: center;
-                    margin-bottom: 10px;
-                    color: var(--text);
-                }
-                .line {
-                    display: flex;
-                    flex-direction: row;
-                    //    background-color: red;
-                    max-width: 1000px;
-                    margin: 0 auto;
+                object-fit: cover;
+            }
+        }
 
-                    p {
-                        line-height: 1.9rem;
-                        font-weight: 300;
-                        font-family: var(--font-family, "Segoe UI");
-                        color: var(--text);
-                        font-size: 1rem;
-                        font-size: 18px;
-                    }
-                    img {
-                        padding: 10px 10px;
-                        height: 100%;
-                        width: 50px;
-                    }
-                }
-                .intro {
-                    line-height: 1.9rem;
-                    font-weight: 400;
-                    font-family: var(--font-family, "Segoe UI");
-                    color: var(--text);
-                    font-size: 1.1rem;
-                    font-size: 24px;
-                    text-align: center;
+        .contact,
+        .map {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            justify-content: center;
+            box-sizing: border-box;
+            height: 80%;
+            align-items: center;
+            background-color: var(--primary);
+            p {
+                margin-bottom: 30px;
+                font-size: 1rem;
+                font-size: 18px;
+
+                font-weight: 500;
+                font-weight: 300;
+                text-align: center;
+                padding: 20px;
+                font-family: var(--font-family, "Segoe UI");
+                color: #fff;
+            }
+            a {
+                padding: 20px;
+                text-transform: uppercase;
+            }
+        }
+        .contact{
+            bottom: 0px;
+            margin-top: 7%;
+        }
+    }
+    .hypnose-wrapper {
+        padding: 0;
+        max-width: 100%;
+        width: 100%;
+        background-color: var(--primary-hover);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .decorator {
+            // color: #fff;
+            margin-top: 1.5rem;
+        }
+        .decorator::before {
+        }
+        .hypnose {
+            width: var(--content-width);
+            background-color: transparent;
+            box-shadow: none;
+            padding: 0;
+            border-radius: 0px;
+            .hypnose__image {
+                max-width: 350px;
+                max-height: 350px;
+                margin-right: 30px;
+                margin-bottom: 10px;
+                float: left;
+                overflow: hidden;
+                box-sizing: border-box;
+                img {
+                    overflow: hidden;
+                    transition: all 0.3s ease-in-out;
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
                 }
             }
-
-            .contact {
-                background-color: var(--primary);
-                max-width: var(--content-width);
-                flex-direction: column;
-                width: 600px;
-                margin: 0 auto;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 350px;
-                margin-top: 50px;
-                margin-bottom: 45px;
+            .hypnose__text {
+                width: 100%;
                 p {
-                    margin-bottom: 30px;
+                    text-align: justify;
+                    font-size: 0.9rem;
                     font-size: 1rem;
                     font-size: 18px;
-
-                    font-weight: 500;
                     font-weight: 300;
-                    text-align: center;
-                    padding: 20px;
                     font-family: var(--font-family, "Segoe UI");
-                    color: #fff;
-                }
-                .contact-buttons {
-                    display: flex;
-                    flex-direction: column;
-                }
-            }
-
-            .grid {
-                max-width: var(--content-width);
-                // width: 100%;
-                height: auto;
-                grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-                grid-auto-rows: minmax(100px, 400px);
-                gap: 40px;
-            }
-            .praxis {
-                width: var(--content-width);
-                margin: 0 auto;
-                .image {
-                    // background-color: var(--primary);
-                    height: 100%;
-                    // overflow: hidden;
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        // object-fit: contain;
-                    }
-                }
-                .map {
-                    grid-column-start: 1;
-                    grid-column-end: 3;
-                    width: 600px;
-                    margin: 0 auto;
-                    display: flex;
-                    flex-direction: column;
-                    padding: 20px;
-                    justify-content: center;
-                    height: 350px;
-                    align-items: center;
-                    background-color: var(--primary);
-                    p {
-                        // text-align: center;
-                        // margin-bottom: 30px;
-                        // color: #fff;
-                        // font-family: var(--font-family, "Segoe UI");
-                        // font-size: 1rem;
-                        // font-size: 18px;
-                        // font-weight: 300;
-                        margin-bottom: 30px;
-                        font-size: 1rem;
-                        font-size: 18px;
-
-                        font-weight: 500;
-                        font-weight: 300;
-                        text-align: center;
-                        padding: 20px;
-                        font-family: var(--font-family, "Segoe UI");
-                        color: #fff;
-                    }
-                    a {
-                        padding: 20px;
-                        text-transform: uppercase;
-                    }
-                }
-            }
-            .hypnose-wrapper {
-                margin-top: 4rem;
-                padding: 0;
-                max-width: 100%;
-                width: 100%;
-                background-color: var(--primary-hover);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                .decorator {
-                    // color: #fff;
-                    margin-top: 1.5rem;
-                }
-                .decorator::before {
-                }
-                .hypnose {
-                    width: var(--content-width);
-                    // background-color: var(--primary-hover);
-                    background-color: transparent;
-                    box-shadow: none;
-                    padding: 0;
-                    margin: 20px 0 80px 0;
-                    border-radius: 0px;
-                    .hypnose__image {
-                        max-width: 350px;
-                        max-height: 350px;
-                        margin-right: 30px;
-                        margin-bottom: 10px;
-                        float: left;
-                        overflow: hidden;
-                        // border: solid 1px #fff;
-                        box-sizing: border-box;
-                        // padding: 10px;
-                        img {
-                            overflow: hidden;
-                            transition: all 0.3s ease-in-out;
-                            object-fit: cover;
-                            height: 100%;
-                            width: 100%;
-                            &:hover {
-                                transform: scale(1.2);
-                                transition: all 0.3s ease-in-out;
-                            }
-                        }
-                    }
-                    .hypnose__text {
-                        width: 100%;
-                        // margin-bottom: 0.5rem;
-                        p {
-                            text-align: justify;
-                            font-size: 0.9rem;
-                            font-size: 1rem;
-                            font-size: 18px;
-                            font-weight: 300;
-                            font-family: var(--font-family, "Segoe UI");
-                            color: var(--text);
-                        }
-                    }
+                    color: var(--text);
                 }
             }
         }
     }
-
-    .section-three {
-        --header-margin: 2rem 0 2rem 0;
-        --content-wrapper-height: auto;
-        --content-wrapper-min-height: auto;
-        --section-height: 100%;
-        --section-min-height: 100%;
-
-        height: auto;
-        min-height: var(--section-height);
+    .faq-wrapper {
+        position: relative;
         .decorator {
+            // color: #fff;
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
-        .content-wrapper {
-            margin-top: 5rem;
-            height: var(--content-wrapper-height);
-            min-height: var(--content-wrapper-min-height);
-            justify-content: center;
+        .decorator::before {
+        }
+       
+        max-width: var(--content-width);
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+        min-height: 440px;
+        display: flex;
+        flex-direction: column;
+       
+    }
+
+    @media screen and (max-width: 1460px) {
+        .grid {
+            .cell:nth-of-type(2) {
+                background-color: rgb(132, 0, 255);
+                .profile-image-wrapper {
+                    width: 100%;
+                    img {
+                    }
+                }
+            }
         }
     }
 
-    // @media screen and (min-width: 319px) and (max-width: 1093px) {
-    //     .background-svg-banner {
-    //         overflow: hidden;
-    //         width: 100%;
-    //         height: 800px;
-    //         background-color: var(--primary);
-    //         position: absolute;
-    //         transform: translatY(16.5%) !important;
-    //         top: 16.5% !important;
-    //         :global(.background-svg) {
-    //             height: 1200px;
-    //         }
-    //     }
-    //     :global(.scroll-down) {
-    //         display: none !important;
-    //     }
-    //     .content-wrapper {
-    //         height: 100%;
-    //     }
-    //     .section-one {
-    //         min-height: 100vh;
-    //         height: 100%;
-    //     }
-    //     .grid {
-    //         height: 100%;
-    //         // margin-bottom: 20px;
-    //     }
-    //     .main-grid {
-    //         grid-template-rows: var(--grid-rows-mobile, auto);
-    //         grid-template-areas: var(--grid-template-mobile, auto);
-    //     }
-    //     .profile-card {
-    //         :global(.profile-card) {
-    //             max-width: 100%;
-    //         }
-    //     }
-    //     .heading-card {
-    //         justify-content: center;
-    //         align-items: center;
-    //         margin: 0px;
-    //         padding: 0px;
-    //     }
-    //     .information-card {
-    //         margin: 0;
-    //         padding: 10px 0;
-    //         justify-content: center;
-    //         align-items: center;
-    //         .catchphrases {
-    //             align-items: center;
-    //             .catchphrase {
-    //                 text-align: center;
-    //             }
-    //         }
-    //     }
-    //     .contact-card {
-    //         justify-self: center;
-    //     }
+    @media screen and (max-width: 1200px) {
+        .grid {
+            .cell:nth-of-type(1),
+            .cell:nth-of-type(2) {
+                grid-column: auto / span 4;
+                width: 100vw;
+                background-color: red;
 
-    //     /**
-    //     Section 2
-    // */
+            }
+            .cell:nth-of-type(1) {
+                background-color: rgb(0, 255, 255);
 
-    //     .section-two {
-    //         .decorator {
-    //             margin: var(--header-margin-mobile);
-    //         }
-    //         .content-wrapper {
-    //             padding: 0 10px;
+                height: 700px;
+            }
+            .cell:nth-of-type(2) {
+                height: auto;
+                max-height: 100%;
+                height: 600px;
+                min-height: 400px;
 
-    //             .hypnose {
-    //                 display: flex;
-    //                 flex-direction: column;
-    //                 align-items: center;
-    //                 .hypnose__image {
-    //                     margin: 0;
-    //                     margin-bottom: 10px;
-    //                     padding: 0;
-    //                     max-width: 100%;
-    //                     border: none;
-    //                     img {
-    //                         &:hover {
-    //                             transform: scale(1);
-    //                         }
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
+                .profile-image-wrapper {
+                    position: relative;
+                    justify-content: center;
+                    align-items: start;
+                    background-color: #00ffc8;
+                    bottom: 0;
+                    left: 0;
+                    height: auto;
 
-    // @media screen and (min-width: 1094px) {
-    //     // .section::after {
-    //     //     font-size: 13px;
-    //     //     font-family: "Arial";
-    //     //     content: "device: i dont care...";
-    //     // }
-    //     .section-one {
-    //         // height: 100vh;
-    //     }
-    //     .main-grid {
-    //         grid-template-areas: var(--grid-template-desktop, auto);
-    //         grid-template-rows: var(--grid-rows-desktop, auto);
-    //     }
-    // }
+                    img {
+                        position: relative;
+                        width: 100%;
+                        max-width: 600px;
+
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        .grid {
+            .cell:nth-of-type(2) {
+                background-color: rgb(255, 0, 230);
+                .profile-image-wrapper {
+                    width: 100%;
+                    img {
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .grid {
+            .cell:nth-of-type(2) {
+                background-color: rgb(255, 221, 0);
+                .profile-image-wrapper {
+                    width: 100%;
+                    img {
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 380px) {
+        .grid {
+            .cell:nth-of-type(2) {
+                background-color: rgb(72, 255, 0);
+                .profile-image-wrapper {
+                    width: 100%;
+                    img {
+                    }
+                }
+            }
+        }
+    }
 </style>
