@@ -825,9 +825,11 @@
             height: 100dvh;
             height: 100vh;
             max-height: 100dvh;
-            max-height: 100vh;
+            // max-height: 100vh;
             .svg-wrapper {
                 height: 100px !important;
+                max-height: 100vh;
+
                 position: absolute;
                 top: 10%;
                 left: 50%;
