@@ -772,8 +772,8 @@
     @media screen and (max-width: 992px) {
         .background-svg-banner{
             bottom: 0px;
-            height: 100vh;
-            max-height: 100vh;
+            height: 100dvh;
+            max-height: 100dvh;
             .svg-wrapper {
                 height: 100px !important;
                 position: absolute;
@@ -795,7 +795,7 @@
                 margin-top: 60px;
                 min-height: 200px;
                 order:1;
-                width: 100vw;
+                width: 100dvw;
                 justify-content: center;
                 .profile-image-wrapper {
                     position: relative;
@@ -822,8 +822,8 @@
     @media screen and (max-width: 576px) {
         .background-svg-banner{
             bottom: 0px;
-            height: 100vh;
-            max-height: 100vh;
+            height: 100dvh;
+            max-height: 100dvh;
             .svg-wrapper {
                 height: 100px !important;
                 position: absolute;
@@ -845,7 +845,7 @@
                 margin-top: 60px;
                 min-height: 200px;
                 order:1;
-                width: 100vw;
+                width: 100dvw;
                 justify-content: center;
                 .profile-image-wrapper {
                     position: relative;
@@ -855,7 +855,7 @@
                     max-height: 350px;
                     width: 350px;
                     max-width: 350px;
-                    background-color: white ;
+                    background-color: rgb(184, 212, 6) ;
                     border: 5px solid var(--primary);
                     border-radius: 50%;
                     img {
@@ -871,8 +871,8 @@
     @media screen and (max-width: 380px) {
         .background-svg-banner{
             bottom: 0px;
-            height: 100vh;
-            max-height: 100vh;
+            height: 100dvh;
+            max-height: 100dvh;
             .svg-wrapper {
                 height: 100px !important;
                 position: absolute;
@@ -893,7 +893,7 @@
                 // margin-top: 5rem;
                 min-height: 200px;
                 order:1;
-                width: 100vw;
+                width: 100dvw;
                 justify-content: center;
                 .profile-image-wrapper {
                     position: relative;
@@ -904,6 +904,53 @@
                     width: 250px;
                     max-width: 250px;
                     background-color: rgb(131, 16, 16) ;
+                    border: 5px solid var(--primary);
+                    border-radius: 50%;
+                    img {
+                        position: relative;
+                        width: 100%;
+                        max-width: 600px;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 360px) and (min-width: 300px) {
+        .background-svg-banner{
+            bottom: 0px;
+            height: 100dvh;
+            max-height: 100dvh;
+            .svg-wrapper {
+                height: 100px !important;
+                position: absolute;
+                top:0%;
+                left: 50%;
+                transform: translateX(-50%);
+                :global(.background-svg){
+                    width: 380px !important;
+                }
+             
+            }
+        }
+        .grid {
+            .cell:nth-of-type(2) {
+                max-height: 100%;
+                height: 300px;
+                margin-top: 60px;
+                // margin-top: 5rem;
+                min-height: 200px;
+                order:1;
+                width: 100dvw;
+                justify-content: center;
+                .profile-image-wrapper {
+                    position: relative;
+                    bottom: 0;
+                    left: 0;
+                    height:250px;
+                    max-height: 250px;
+                    width: 250px;
+                    max-width: 250px;
+                    background-color: rgb(16, 131, 43) ;
                     border: 5px solid var(--primary);
                     border-radius: 50%;
                     img {
