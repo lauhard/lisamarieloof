@@ -673,8 +673,11 @@
     @media screen and (max-width: 1200px) {
         .background-svg-banner{
             bottom: 0px;
+            height: 100dvh;
+            height: 100%;
             height: 100vh;
-            max-height: 100vh;
+            max-height: 100dvh;
+            max-height: 100%;
             .svg-wrapper {
                 height: 100px !important;
                 position: absolute;
@@ -707,6 +710,7 @@
                 min-height: 200px;
                 order:1;
                 width: 100vw;
+                width: 100dvw;
                 // background-color: red;
                 justify-content: center;
 
@@ -773,7 +777,10 @@
         .background-svg-banner{
             bottom: 0px;
             height: 100dvh;
+            height: 100%;
+            height: 100vh;
             max-height: 100dvh;
+            max-height: 100%;
             .svg-wrapper {
                 height: 100px !important;
                 position: absolute;
@@ -861,8 +868,9 @@
                     max-height: 350px;
                     width: 350px;
                     max-width: 350px;
-                    background-color: rgb(184, 212, 6) ;
-                    border: 5px solid var(--primary);
+                    // background-color: rgb(184, 212, 6) ;
+                    background-color: var(--primary) ;
+                    border: 5px solid white;
                     border-radius: 50%;
                     img {
                         position: relative;
@@ -878,7 +886,10 @@
         .background-svg-banner{
             bottom: 0px;
             height: 100dvh;
+            height: 100%;
+            height: 100vh;
             max-height: 100dvh;
+            max-height: 100%;
             .svg-wrapper {
                 height: 100px !important;
                 position: absolute;
@@ -888,7 +899,6 @@
                 :global(.background-svg){
                     width: 380px !important;
                 }
-             
             }
         }
         .grid {
