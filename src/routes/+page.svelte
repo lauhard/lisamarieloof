@@ -402,23 +402,28 @@
         flex-direction: column;
         justify-content: space-around;
         width: 60vw;
+        order:1;
+
         //    background-color: blueviolet;
     }
     .cell:nth-of-type(2) {
         display: flex;
         height: calc(100vh - 111px);
         width: 40vw;
+        order:2;
         //    background-color: gold;
     }
     .cell:nth-of-type(3) {
         grid-column: auto / span 4;
         height: auto;
+        order: 3;
     }
     .cell:nth-of-type(4) {
         grid-column: auto / span 4;
         height: 100%;
         background-color: var(--bg-current-cell, transparent);
         width: 100vw;
+        order: 4;
     }
     .cell:nth-of-type(5),
     .cell:nth-of-type(6) {
@@ -426,8 +431,13 @@
         height: auto;
         width: 100vw;
     }
+    .cell:nth-of-type(5) {
+        // margin-top: 4rem;
+        order: 5;
+    }
     .cell:nth-of-type(6) {
         // margin-top: 4rem;
+        order: 6;
     }
     .headline-wrapper,
     .information-wrapper {
@@ -661,36 +671,73 @@
     }
 
     @media screen and (max-width: 1200px) {
+        .background-svg-banner{
+            bottom: 0px;
+            height: 100vh;
+            max-height: 100vh;
+            .svg-wrapper {
+                height: 100px !important;
+                position: absolute;
+                top: 10%;
+                left: 50%;
+                transform: translateX(-50%);
+                :global(.background-svg){
+                    height: 960px !important;
+                }
+             
+            }
+        }
         .grid {
+            grid-row-gap: 0px;
             .cell:nth-of-type(1),
             .cell:nth-of-type(2) {
                 grid-column: auto / span 4;
                 width: 100vw;
+                
             }
             .cell:nth-of-type(1) {
                 height: 700px;
+                order:2;
+                // background-color: rebeccapurple;
             }
             .cell:nth-of-type(2) {
-                height: auto;
                 max-height: 100%;
-                height: 600px;
-                min-height: 400px;
+                height: 500px;
+                margin-top: 90px;
+                min-height: 200px;
+                order:1;
+                width: 100vw;
+                // background-color: red;
+                justify-content: center;
 
                 .profile-image-wrapper {
                     position: relative;
-                    justify-content: center;
-                    align-items: start;
+                   
                     bottom: 0;
                     left: 0;
-                    height: auto;
+                    height:450px;
+                    max-height: 450px;
+                    width: 450px;
+                    max-width: 450px;
+                    background-color: rgb(255, 255, 255) ;
+                    border: 5px solid var(--primary);
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
 
                     img {
+                        justify-self: center;
                         position: relative;
-                        width: 100%;
+                        width: 90%;
                         max-width: 600px;
                     }
                 }
             }
+
+            .cell-greeter{
+                // background: red;
+            }
+           
             .subgrid-praxis {
                 display: grid;
                 position: relative;
@@ -732,16 +779,53 @@
                     }
                 }
             }
+          
         }
     }
 
     @media screen and (max-width: 576px) {
+        .background-svg-banner{
+            bottom: 0px;
+            height: 100vh;
+            max-height: 100vh;
+            .svg-wrapper {
+                height: 100px !important;
+                position: absolute;
+                top: 10%;
+                left: 50%;
+                transform: translateX(-50%);
+                :global(.background-svg){
+                    height: 700px !important;
+                }
+             
+            }
+        }
         .grid {
             .cell:nth-of-type(2) {
-                // background-color: rgb(255, 221, 0);
+                max-height: 100%;
+                height: 350px;
+                margin-top: 12%;
+                margin-top: 5rem;
+                margin-top: 60px;
+                min-height: 200px;
+                order:1;
+                width: 100vw;
+                justify-content: center;
                 .profile-image-wrapper {
-                    width: 100%;
+                    position: relative;
+                    bottom: 0;
+                    left: 0;
+                    height:350px;
+                    max-height: 350px;
+                    width: 350px;
+                    max-width: 350px;
+                    background-color: white ;
+                    border: 5px solid var(--primary);
+                    border-radius: 50%;
                     img {
+                        position: relative;
+                        width: 100%;
+                        max-width: 600px;
                     }
                 }
             }
@@ -749,12 +833,47 @@
     }
 
     @media screen and (max-width: 380px) {
+        .background-svg-banner{
+            bottom: 0px;
+            height: 100vh;
+            max-height: 100vh;
+            .svg-wrapper {
+                height: 100px !important;
+                position: absolute;
+                top: 11%;
+                left: 50%;
+                transform: translateX(-50%);
+                :global(.background-svg){
+                    height: 520px !important;
+                }
+             
+            }
+        }
         .grid {
             .cell:nth-of-type(2) {
-                // background-color: rgb(72, 255, 0);
+                max-height: 100%;
+                height: 300px;
+                margin-top: 60px;
+                // margin-top: 5rem;
+                min-height: 200px;
+                order:1;
+                width: 100vw;
+                justify-content: center;
                 .profile-image-wrapper {
-                    width: 100%;
+                    position: relative;
+                    bottom: 0;
+                    left: 0;
+                    height:250px;
+                    max-height: 250px;
+                    width: 250px;
+                    max-width: 250px;
+                    background-color: white ;
+                    border: 5px solid var(--primary);
+                    border-radius: 50%;
                     img {
+                        position: relative;
+                        width: 100%;
+                        max-width: 600px;
                     }
                 }
             }
