@@ -831,7 +831,7 @@
                 left: 50%;
                 transform: translateX(-50%);
                 :global(.background-svg){
-                    height: 700px !important;
+                    width: 700px !important;
                 }
              
             }
@@ -876,11 +876,11 @@
             .svg-wrapper {
                 height: 100px !important;
                 position: absolute;
-                top: 11%;
+                top:0%;
                 left: 50%;
                 transform: translateX(-50%);
                 :global(.background-svg){
-                    height: 520px !important;
+                    width: 380px !important;
                 }
              
             }
