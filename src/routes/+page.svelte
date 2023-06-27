@@ -770,12 +770,48 @@
     }
 
     @media screen and (max-width: 992px) {
+        .background-svg-banner{
+            bottom: 0px;
+            height: 100vh;
+            max-height: 100vh;
+            .svg-wrapper {
+                height: 100px !important;
+                position: absolute;
+                top: 10%;
+                left: 50%;
+                transform: translateX(-50%);
+                :global(.background-svg){
+                    height: 700px !important;
+                }
+             
+            }
+        }
         .grid {
             .cell:nth-of-type(2) {
-                // background-color: rgb(255, 0, 230);
+                max-height: 100%;
+                height: 350px;
+                margin-top: 12%;
+                margin-top: 5rem;
+                margin-top: 60px;
+                min-height: 200px;
+                order:1;
+                width: 100vw;
+                justify-content: center;
                 .profile-image-wrapper {
-                    width: 100%;
+                    position: relative;
+                    bottom: 0;
+                    left: 0;
+                    height:350px;
+                    max-height: 350px;
+                    width: 350px;
+                    max-width: 350px;
+                    background-color: white ;
+                    border: 5px solid var(--primary);
+                    border-radius: 50%;
                     img {
+                        position: relative;
+                        width: 100%;
+                        max-width: 600px;
                     }
                 }
             }
