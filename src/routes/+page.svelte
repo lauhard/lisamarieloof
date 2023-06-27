@@ -53,7 +53,7 @@
     <div class="svg-wrapper">
         <LogoSvg
             className="background-svg"
-            height="1000px"
+            height="1500px"
             animation={false}
             --leaves-main="#f0f0f01a"
             --leaves-overlay="#f0f0f01a"
@@ -76,7 +76,7 @@
             <ArrowDownSvg width="20px" height="30px" />
         </a>
     </RoundButton>
-   
+
     <div class="grid">
         <div class="cell cell-headline">
             <div class="headline-wrapper">
@@ -265,11 +265,10 @@
                 <h2 class="decorator" id="haeufig-gestellte-fragen">
                     Häufig gestellte Fragen
                 </h2>
-                <Faq classNames="faq"/>
+                <Faq classNames="faq" />
             </div>
         </div>
     </div>
-    
 </div>
 
 <style lang="scss">
@@ -296,7 +295,7 @@
         text-align: center;
         margin-bottom: 10px;
     }
-    
+
     .section {
         --section-min-height: 100vh;
         --section-height: 100%;
@@ -312,13 +311,13 @@
         background-color: var(--bg-section);
         position: relative;
         :global(.scroll-down) {
-            top:80vh;
+            top: 80vh;
             min-width: 50px;
             width: 50px;
             min-height: 50px;
             height: 50px;
             border-radius: 50%;
-            position: absolute ;
+            position: absolute;
             border: 1px solid white;
             left: calc(50% - 22.5px);
             background: var(--secondary);
@@ -331,20 +330,20 @@
     .background-svg-banner {
         overflow: hidden;
         width: 100%;
-        height:  1200px;
-        max-height: 66vh;
+        height: 660px;
+        max-height: 64.5vh;
         background-color: var(--primary);
         position: absolute;
         // transform: translatY(10%);
         bottom: 10%;
 
         .svg-wrapper {
-            // position: absolute;
-            top: 30px;
-            left: 100px;
-            height: 100%;
-            width: 100%;
-            width: auto;
+            position: absolute;
+            // top: 250px;
+            left: 140px;
+            // height: 100%;
+            // width: 100%;
+            // width: auto;
         }
     }
     .grid {
@@ -362,6 +361,7 @@
         --grid-template-mobile: "";
 
         // --grid-gap: 10px;
+        --grid-row-gap: 4rem;
         --grid-height: auto;
         --grid-min-height: 100dvh;
         --grid-padding: 10px 0 0 0;
@@ -373,7 +373,8 @@
         height: var(--grid-height);
         width: var(--grid-width);
 
-        grid-gap: var(--grid-gap);
+        grid-gap: var(--grid-gap,0px);
+        grid-row-gap: var(--grid-row-gap,0px);
         grid-template-columns: var(--grid-columns-desktop);
         grid-template-rows: var(--grid-rows-desktop);
 
@@ -397,17 +398,17 @@
         height: calc(100vh - 100px);
     }
     .cell:nth-of-type(1) {
-       display: flex;
-       flex-direction: column;
-       justify-content: space-around;
-       width: 60vw;
-    //    background-color: blueviolet;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 60vw;
+        //    background-color: blueviolet;
     }
     .cell:nth-of-type(2) {
         display: flex;
         height: calc(100vh - 111px);
         width: 40vw;
-    //    background-color: gold;
+        //    background-color: gold;
     }
     .cell:nth-of-type(3) {
         grid-column: auto / span 4;
@@ -415,7 +416,7 @@
     }
     .cell:nth-of-type(4) {
         grid-column: auto / span 4;
-        height: auto;
+        height: 100%;
         background-color: var(--bg-current-cell, transparent);
         width: 100vw;
     }
@@ -426,7 +427,7 @@
         width: 100vw;
     }
     .cell:nth-of-type(6) {
-        margin-top: 4rem;
+        // margin-top: 4rem;
     }
     .headline-wrapper,
     .information-wrapper {
@@ -439,7 +440,7 @@
         width: 100%;
     }
     .headline-wrapper {
-    //    background-color: blue;
+        //    background-color: blue;
         :global(.heading) {
             position: absolute;
             top: 35%;
@@ -527,14 +528,18 @@
         max-width: var(--content-width);
         height: auto;
         grid-template-columns: repeat(2, minmax(100px, 1fr));
-        grid-auto-rows: minmax(100px, 435px);
-        gap: 40px;
+        grid-auto-rows: minmax(100px, auto);
+        grid-row-gap: 40px;
         width: var(--content-width);
         margin: 0 auto;
+        box-sizing: border-box;
+        justify-content: end;
+        position: relative;
         .image {
             height: 100%;
             width: 100%;
             overflow: hidden;
+            padding: 0 20px;
             img {
                 width: 100%;
                 object-fit: cover;
@@ -546,14 +551,14 @@
             grid-column-start: 1;
             grid-column-end: 4;
             width: 600px;
-            margin: 0 auto;
+            height: 300px;
             display: flex;
             flex-direction: column;
             padding: 20px;
             justify-content: center;
             box-sizing: border-box;
-            height: 80%;
             align-items: center;
+            justify-self: center;
             background-color: var(--primary);
             p {
                 margin-bottom: 30px;
@@ -571,10 +576,6 @@
                 padding: 20px;
                 text-transform: uppercase;
             }
-        }
-        .contact{
-            bottom: 0px;
-            margin-top: 7%;
         }
     }
     .hypnose-wrapper {
@@ -636,7 +637,7 @@
         }
         .decorator::before {
         }
-       
+
         max-width: var(--content-width);
         width: 100%;
         margin: 0 auto;
@@ -644,13 +645,12 @@
         min-height: 440px;
         display: flex;
         flex-direction: column;
-       
     }
 
     @media screen and (max-width: 1460px) {
         .grid {
             .cell:nth-of-type(2) {
-                background-color: rgb(132, 0, 255);
+                // background-color: rgb(132, 0, 255);
                 .profile-image-wrapper {
                     width: 100%;
                     img {
@@ -666,12 +666,8 @@
             .cell:nth-of-type(2) {
                 grid-column: auto / span 4;
                 width: 100vw;
-                background-color: red;
-
             }
             .cell:nth-of-type(1) {
-                background-color: rgb(0, 255, 255);
-
                 height: 700px;
             }
             .cell:nth-of-type(2) {
@@ -684,7 +680,6 @@
                     position: relative;
                     justify-content: center;
                     align-items: start;
-                    background-color: #00ffc8;
                     bottom: 0;
                     left: 0;
                     height: auto;
@@ -693,8 +688,35 @@
                         position: relative;
                         width: 100%;
                         max-width: 600px;
-
                     }
+                }
+            }
+            .subgrid-praxis {
+                display: grid;
+                position: relative;
+                max-width: 100vw;
+                height: auto;
+
+                grid-template-columns: repeat(2, minmax(100px, 1fr));
+                .image {
+                    justify-self: center;
+                    grid-column-start: 1;
+                    grid-column-end: 4;
+                    height: 100%;
+                    max-width: 800px;
+                    max-height:400px;
+                    width: 100%;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        justify-self: center;
+                        object-fit: contain;
+                        // object-position: 0px -50px;
+                    }
+                }
+                .contact, .map{
+                    max-width:760px;
+                    width: 100%;
                 }
             }
         }
@@ -703,7 +725,7 @@
     @media screen and (max-width: 992px) {
         .grid {
             .cell:nth-of-type(2) {
-                background-color: rgb(255, 0, 230);
+                // background-color: rgb(255, 0, 230);
                 .profile-image-wrapper {
                     width: 100%;
                     img {
@@ -716,7 +738,7 @@
     @media screen and (max-width: 576px) {
         .grid {
             .cell:nth-of-type(2) {
-                background-color: rgb(255, 221, 0);
+                // background-color: rgb(255, 221, 0);
                 .profile-image-wrapper {
                     width: 100%;
                     img {
@@ -729,7 +751,7 @@
     @media screen and (max-width: 380px) {
         .grid {
             .cell:nth-of-type(2) {
-                background-color: rgb(72, 255, 0);
+                // background-color: rgb(72, 255, 0);
                 .profile-image-wrapper {
                     width: 100%;
                     img {
