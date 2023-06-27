@@ -903,7 +903,7 @@
                     max-height: 250px;
                     width: 250px;
                     max-width: 250px;
-                    background-color: white ;
+                    background-color: rgb(131, 16, 16) ;
                     border: 5px solid var(--primary);
                     border-radius: 50%;
                     img {
