@@ -767,9 +767,11 @@
                 }
             }
             .faq-wrapper {
+                margin-top: 50px;
                 padding: 0 20px;
             }
             .hypnose-wrapper {
+                margin-top: 50px;
                 padding: 0 20px;
                 box-sizing: border-box;
             }
@@ -867,6 +869,14 @@
                     border-radius: 50%;
                 }
             }
+            .cell:nth-of-type(1) {
+                // background-color: red;
+                .information-wrapper{
+                    margin-top: 150px;
+                    // background-color: green;
+                }
+            }
+
             .subgrid-praxis {
                 .contact{
                     .contact-buttons{
@@ -876,10 +886,34 @@
                         align-items: center;
                     }
                 }
+                
             }
         }
     }
-
+    @media screen and (max-width: 450px) {
+       
+        .grid {
+            .hypnose-wrapper {
+               
+                padding: 0 20px;
+                box-sizing: border-box;
+                .hypnose__image {
+                    max-width: 100%;
+                    width: 100%;
+                    max-height: 350px;
+                    margin-right: 30px;
+                    
+                }
+            }
+            .cell:nth-of-type(1) {
+                // background-color: red;
+                .information-wrapper{
+                    margin-top: 150px;
+                    // background-color: green;
+                }
+            }
+        }
+    }
     @media screen and (max-width: 380px) {
         .background-svg-banner {
             bottom: 0px;
