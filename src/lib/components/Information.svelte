@@ -70,8 +70,8 @@
         box-sizing: border-box;
 
         width: 250px;
-        height: auto;
-        padding: 13px 20px;
+        height: 58px;
+        padding:  20px;
 
         font-style: normal;
         font-weight: 300;
@@ -101,6 +101,7 @@
             align-items: center;
             justify-content: center;
             box-sizing: border-box;
+            margin: 10px;
 
             .catchphrases {
                 position: relative;

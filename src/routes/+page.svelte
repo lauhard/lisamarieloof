@@ -284,7 +284,8 @@
         box-sizing: border-box;
         width: 250px;
         height: auto;
-        padding: 13px 20px;
+        height: 58px;
+        padding:  20px;
         font-style: normal;
         font-weight: 300;
         font-size: 0.8rem;
@@ -334,16 +335,10 @@
         max-height: 64.5vh;
         background-color: var(--primary);
         position: absolute;
-        // transform: translatY(10%);
         bottom: 10%;
-
         .svg-wrapper {
             position: absolute;
-            // top: 250px;
             left: 140px;
-            // height: 100%;
-            // width: 100%;
-            // width: auto;
         }
     }
     .grid {
@@ -403,7 +398,6 @@
         justify-content: space-around;
         width: 60vw;
         order: 1;
-
         //    background-color: blueviolet;
     }
     .cell:nth-of-type(2) {
@@ -415,7 +409,9 @@
     }
     .cell:nth-of-type(3) {
         grid-column: auto / span 4;
-        height: auto;
+        height:auto;
+        // background-color: #0ba945;
+        // margin-bottom: 40px;
         order: 3;
     }
     .cell:nth-of-type(4) {
@@ -432,11 +428,9 @@
         width: 100vw;
     }
     .cell:nth-of-type(5) {
-        // margin-top: 4rem;
         order: 5;
     }
     .cell:nth-of-type(6) {
-        // margin-top: 4rem;
         order: 6;
     }
     .headline-wrapper,
@@ -462,19 +456,15 @@
         :global(.information) {
             position: absolute;
             bottom: 45%;
-            // left: 10%;
         }
     }
     .profile-image-wrapper {
         position: absolute;
         display: flex;
-        // flex-direction: column;
         justify-content: start;
         align-items: end;
-        // width: 80%;
         height: 92%;
         bottom: 10%;
-        // left: 10%;
         overflow: hidden;
         max-width: 100%;
         width: 100%;
@@ -485,7 +475,6 @@
             width: auto;
             max-height: 830px;
             min-height: 65%;
-
             object-fit: cover;
             object-position: 0px center;
             overflow: hidden;
@@ -496,6 +485,7 @@
         max-width: var(--content-width);
         width: 100%;
         height: auto;
+        // background-color: red;
         margin-bottom: 50px;
         .welcome {
             width: 100%;
@@ -583,8 +573,14 @@
                 color: #fff;
             }
             a {
-                padding: 20px;
                 text-transform: uppercase;
+                justify-self: center;
+            }
+            img{
+                height: 20px;
+                margin: 0;
+                margin-right: 5px;
+                padding: 0;
             }
         }
     }
@@ -603,7 +599,8 @@
         .decorator::before {
         }
         .hypnose {
-            width: var(--content-width);
+            max-width: var(--content-width);
+            width: 100%;
             background-color: transparent;
             box-shadow: none;
             padding: 0;
@@ -715,7 +712,6 @@
                 width: 100dvw;
                 // background-color: red;
                 justify-content: center;
-
                 .profile-image-wrapper {
                     position: relative;
                     bottom: 0;
@@ -729,7 +725,6 @@
                     border-radius: 50%;
                     display: flex;
                     justify-content: center;
-
                     img {
                         justify-self: center;
                         position: relative;
@@ -739,19 +734,15 @@
                     }
                 }
             }
-
             .cell-greeter {
-                // background: red;
                 padding: 0 20px;
-                margin-top: -80px;
+                margin-top: -100px;
             }
-
             .subgrid-praxis {
                 display: grid;
                 position: relative;
                 max-width: 100vw;
                 height: auto;
-
                 grid-template-columns: repeat(2, minmax(100px, 1fr));
                 .image {
                     justify-self: center;
@@ -777,6 +768,10 @@
             }
             .faq-wrapper {
                 padding: 0 20px;
+            }
+            .hypnose-wrapper {
+                padding: 0 20px;
+                box-sizing: border-box;
             }
         }
     }
