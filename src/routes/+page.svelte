@@ -49,16 +49,18 @@
 
 <!-- content here -->
 <!-- #d7c88e2e -->
+<!--  -->
+<!-- f0f0f01a -->
 <div class="background-svg-banner">
     <div class="svg-wrapper">
         <LogoSvg
             className="background-svg"
-            height="1500px"
+            height="1000px"
             animation={false}
-            --leaves-main="#f0f0f01a"
-            --leaves-overlay="#f0f0f01a"
-            --tree-color="#f0f0f01a"
-            --tree-overlay="#f0f0f01a"
+            --leaves-main="#f0f0f035"
+            --leaves-overlay="#f0f0f035"
+            --tree-color="#f0f0f035" 
+            --tree-overlay="#f0f0f035"
             --svg-stroke-width="0px"
         />
     </div>
@@ -272,32 +274,10 @@
 </div>
 
 <style lang="scss">
-    .cta {
-        input[type="text"],
-        input[type="button"] {
-            -webkit-appearance: none;
-            -webkit-border-radius: 0;
-            border-style: none;
-        }
-        background-color: var(--secondary);
-        font-family: var(--font-family, "Segoe UI");
-        box-sizing: border-box;
-        width: 250px;
-        height: auto;
-        height: 58px;
-        padding: 20px;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 0.8rem;
-        font-size: 15px;
-        line-height: 18px;
-        color: var(--text);
-        /* identical to box height */
-        text-align: center;
-        margin-bottom: 10px;
-    }
+    
 
     .section {
+        color:#f0f0f035;
         --section-min-height: 100vh;
         --section-height: 100%;
         --section-width: 100%;
@@ -338,7 +318,8 @@
         bottom: 10%;
         .svg-wrapper {
             position: absolute;
-            left: 140px;
+            left: -200px;
+            top: 300px;
         }
     }
     .grid {
@@ -584,12 +565,6 @@
             a {
                 text-transform: uppercase;
                 justify-self: center;
-            }
-            img {
-                height: 20px;
-                margin: 0;
-                margin-right: 5px;
-                padding: 0;
             }
         }
     }

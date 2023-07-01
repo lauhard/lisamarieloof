@@ -58,30 +58,6 @@
         stroke: #fff !important;
         stroke-width: 0px;
     }
-    
-    .cta {
-        input[type=text], input[type=button] {
-            -webkit-appearance: none;
-            -webkit-border-radius: 0;
-            border-style: none;
-        }
-        background-color: var(--secondary);
-        font-family: var(--font-family, "Segoe UI");
-        box-sizing: border-box;
-
-        width: 250px;
-        height: 58px;
-        padding:  20px;
-
-        font-style: normal;
-        font-weight: 300;
-        font-size: 15px;
-        line-height: 18px;
-        color: var(--text);
-        /* identical to box height */
-        text-align: center;
-        margin-bottom: 10px;
-    }
     .Information {
         position: relative;
         display: flex;

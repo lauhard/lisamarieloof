@@ -28,7 +28,7 @@
   --primary-hover: #77b5bac8 !important;
   --secondary: #c4b26a !important;
   --white: #fff !important;
-  --secondary-hover: #c4b26a9e !important;
+  --secondary-hover: #cea917 !important;
   --svg-icon-fill: #060000;
   --svg-icon-stroke: #060000;
   --font-family: "Open Sans";
@@ -42,6 +42,48 @@
 .svg-icons {
   stroke: var(--svg-icon-stroke);
   fill: var(--svg-icon-fill);
+}
+
+.cta {
+  background-color: var(--secondary);
+  font-family: var(--font-family, "Segoe UI");
+  box-sizing: border-box;
+  width: 250px;
+  height: auto;
+  height: 58px;
+  padding: 20px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.8rem;
+  font-size: 15px;
+  line-height: 18px;
+  color: var(--text);
+  /* identical to box height */
+  text-align: center;
+  margin-bottom: 10px;
+}
+.cta input[type=text],
+.cta input[type=button] {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-style: none;
+}
+.cta img {
+  height: 20px;
+  margin: 0;
+  margin-right: 5px;
+  padding: 0;
+  margin-top: -3px;
+}
+.cta img:hover {
+  cursor: pointer;
+}
+.cta:hover {
+  background-color: var(--secondary-hover);
+  color: #fff;
+}
+.cta:hover a {
+  color: var(--text);
 }
 
 html {
@@ -128,19 +170,6 @@ html body a {
   text-decoration: none;
   list-style: none;
   font-weight: 300;
-}
-html body a:hover,
-html body a:active,
-html body a:focus,
-html body a:focus:focus-within,
-html body a:visited,
-html body a:target,
-html body a:focus:focus-visible {
-  outline: none;
-  list-style: none;
-  background-color: transparent !important;
-  transition: none !important;
-  border: none !important;
 }
 html body p {
   margin: 0;

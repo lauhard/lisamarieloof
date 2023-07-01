@@ -34,7 +34,7 @@
 
     --secondary: #c4b26a !important;
     --white: #fff !important;
-    --secondary-hover: #c4b26a9e !important;
+    --secondary-hover: #cea917 !important;
 
     --svg-icon-fill: #060000;
     --svg-icon-stroke: #060000;
@@ -50,6 +50,48 @@
 .svg-icons {
     stroke: var(--svg-icon-stroke);
     fill: var(--svg-icon-fill);
+}
+
+.cta {
+    input[type="text"],
+    input[type="button"] {
+        -webkit-appearance: none;
+        -webkit-border-radius: 0;
+        border-style: none;
+    }
+    background-color: var(--secondary);
+    font-family: var(--font-family, "Segoe UI");
+    box-sizing: border-box;
+    width: 250px;
+    height: auto;
+    height: 58px;
+    padding: 20px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.8rem;
+    font-size: 15px;
+    line-height: 18px;
+    color: var(--text);
+    /* identical to box height */
+    text-align: center;
+    margin-bottom: 10px;
+    img {
+        height: 20px;
+        margin: 0;
+        margin-right: 5px;
+        padding: 0;
+        margin-top: -3px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &:hover {
+        background-color: var(--secondary-hover) ;
+        color: #fff;
+        a{
+            color: var(--text);
+        }
+    }
 }
 
 html {
@@ -146,19 +188,19 @@ html {
             font-weight: 300;
         }
 
-        a:hover,
-        a:active,
-        a:focus,
-        a:focus:focus-within,
-        a:visited,
-        a:target,
-        a:focus:focus-visible {
-            outline: none;
-            list-style: none;
-            background-color: transparent !important;
-            transition: none !important;
-            border: none !important;
-        }
+        // a:hover,
+        // a:active,
+        // a:focus,
+        // a:focus:focus-within,
+        // a:visited,
+        // a:target,
+        // a:focus:focus-visible {
+        //     outline: none;
+        //     list-style: none;
+        //     background-color: transparent ;
+        //     transition: none !important;
+        //     border: none !important;
+        // }
 
         p {
             margin: 0;
