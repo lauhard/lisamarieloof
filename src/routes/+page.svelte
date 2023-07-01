@@ -277,7 +277,6 @@
     
 
     .section {
-        color:#f0f0f035;
         --section-min-height: 100vh;
         --section-height: 100%;
         --section-width: 100%;
