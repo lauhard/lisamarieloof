@@ -384,9 +384,6 @@
         width: 100%;
         box-sizing: border-box;
         position: relative;
-        // overflow: hidden;
-
-        // min-height: 600px;
         min-height: auto;
     }
     .cell:nth-of-type(1),
@@ -402,8 +399,7 @@
         width: 60dvw;
         width: 60vw;
         order: 1;
-        // background-color: blueviolet;
-        min-height: 750px;
+        min-height: 700px;
     }
     .cell:nth-of-type(2) {
         display: flex;
@@ -411,14 +407,12 @@
         width: 40dvw;
         width: 40vw;
         order: 2;
-        // background-color: gold;
         min-height: 600px;
     }
     .cell:nth-of-type(3) {
         grid-column: auto / span 4;
         height: auto;
         min-height: 100%;
-        // background-color: #0ba945;
         order: 3;
     }
     .cell:nth-of-type(4) {
@@ -429,7 +423,6 @@
         max-width: 100dvw;
         max-width: 100vw;
         min-height: 100%;
-        // background-color: purple;
         order: 4;
     }
     .cell:nth-of-type(5),
@@ -458,8 +451,6 @@
     .headline-wrapper {
         min-height: 200px;
         height: 33vh;
-
-        // background-color: red;
         justify-content: end;
         :global(.heading) {
             // position: absolute;
@@ -468,11 +459,10 @@
         }
     }
     .information-wrapper {
+
         height: 100%;
-        // background-color: red;
         justify-content: start;
         padding-top: 7%;
-        // height: 650px;
         :global(.information) {
             // position: absolute;
             // bottom: 45%;
@@ -483,18 +473,17 @@
         display: flex;
         justify-content: start;
         align-items: end;
-        height: 92%;
+        height: 88%;
         bottom: 10%;
         overflow: hidden;
         max-width: 100%;
         width: 100%;
-        // background-color: #00ffc8;
         img {
             position: relative;
             height: 100%;
             width: auto;
             max-height: 830px;
-            min-height: 65%;
+            min-height: 60%;
             object-fit: cover;
             object-position: 0px center;
             overflow: hidden;
@@ -505,8 +494,7 @@
         max-width: var(--content-width);
         width: 100%;
         height: auto;
-        // background-color: red;
-        // margin-bottom: 50px;
+        margin-top: -5rem;
         .welcome {
             width: 100%;
             text-align: center;
@@ -567,7 +555,6 @@
                 object-fit: cover;
             }
         }
-
         .contact,
         .map {
             grid-column-start: 1;
@@ -615,7 +602,6 @@
         flex-direction: column;
         align-items: center;
         .decorator {
-            // color: #fff;
             margin-top: 1.5rem;
         }
         .decorator::before {
@@ -660,7 +646,6 @@
     .faq-wrapper {
         position: relative;
         .decorator {
-            // color: #fff;
             text-align: center;
             margin-bottom: 3rem;
         }
@@ -679,12 +664,12 @@
     @media screen and (max-width: 1460px) {
         .grid {
             .cell:nth-of-type(2) {
-                // background-color: rgb(132, 0, 255);
                 .profile-image-wrapper {
                     width: 100%;
-                    img {
-                    }
                 }
+            }
+            .greeter-wrapper{
+                margin-top: 0rem;
             }
         }
     }
@@ -708,8 +693,7 @@
                 }
             }
         }
-        .section {
-        }
+      
         .grid {
             grid-row-gap: 40px;
             .cell:nth-of-type(1),
@@ -718,36 +702,28 @@
                 width: 100vw;
             }
             .cell:nth-of-type(1) {
-                // background-color: red;
                 height: auto;
                 min-height: 500px;
-
                 justify-content: start;
                 order: 2;
                 .information-wrapper {
-                    // background-color: green;
                     padding-top: 0%;
                     height: auto;
-
-                    // min-height: 400px;
                 }
                 .headline-wrapper {
                     background-color: var(--primary);
                     height: 250px;
                     min-height: auto;
-
                     display: flex;
                     flex-direction: column;
                     justify-content: start;
                     align-items: center;
                     align-self: center;
                 }
-                // background-color: rebeccapurple;
             }
             .cell:nth-of-type(2) {
                 max-height: 100%;
                 height: 500px;
-
                 margin-top: 90px;
                 min-height: 200px;
                 order: 1;
@@ -776,15 +752,9 @@
                     }
                 }
             }
-            // .cell-greeter {
-            //     // padding: 0 20px;
-            // }
             .cell-greeter {
                 min-height: 100%;
                 height: auto;
-                // background-color: red;
-                // margin-top: -50px;
-
                 .greeter-wrapper {
                     margin: 30px 0 30px 0;
                     min-height: 100%;
@@ -812,7 +782,6 @@
                         justify-self: center;
                         object-fit: contain;
                         min-height: 100%;
-                        // object-position: 0px -50px;
                     }
                 }
                 .contact,
@@ -847,7 +816,6 @@
                 min-height: 1000px;
                 height: 100%;
                 bottom: 0;
-
                 .grid {
                     min-height: 100%;
                     height: 100%;
@@ -913,7 +881,6 @@
                 min-height: 1000px;
                 height: 100%;
                 bottom: 0;
-
                 .grid {
                     min-height: 100%;
                     height: 100%;
@@ -930,7 +897,6 @@
             height: 100vh;
             max-height: 100dvh;
             max-height: 100%;
-            // max-height: 100vh;
             .svg-wrapper {
                 height: 100px !important;
                 max-height: 100vh;
@@ -964,19 +930,10 @@
                     max-height: 350px;
                     width: 350px;
                     max-width: 350px;
-                    // background-color: rgb(184, 212, 6) ;
                     border: 5px solid var(--primary);
                     border-radius: 50%;
                 }
             }
-            .cell:nth-of-type(1) {
-                // background-color: red;
-                .information-wrapper {
-                    // margin-top: 150px;
-                    // background-color: green;
-                }
-            }
-
             .subgrid-praxis {
                 .contact {
                     .contact-buttons {
@@ -1015,7 +972,6 @@
                 max-height: 100%;
                 height: 300px;
                 margin-top: 60px;
-                // margin-top: 5rem;
                 min-height: 200px;
                 order: 1;
                 width: 100dvw;
@@ -1028,7 +984,6 @@
                     max-height: 250px;
                     width: 250px;
                     max-width: 250px;
-                    // background-color: rgb(131, 16, 16) ;
                     border: 5px solid var(--primary);
                     border-radius: 50%;
                 }
@@ -1048,12 +1003,6 @@
                     width: 100%;
                     max-height: 350px;
                     margin-right: 30px;
-                }
-            }
-            .cell:nth-of-type(1) {
-                // background-color: red;
-                .information-wrapper {
-                    // background-color: green;
                 }
             }
         }
@@ -1083,7 +1032,6 @@
                 max-height: 100%;
                 height: 300px;
                 margin-top: 60px;
-                // margin-top: 5rem;
                 min-height: 200px;
                 order: 1;
                 width: 100dvw;
@@ -1096,7 +1044,6 @@
                     max-height: 250px;
                     width: 250px;
                     max-width: 250px;
-                    // background-color: rgb(131, 16, 16) ;
                     border: 5px solid var(--primary);
                     border-radius: 50%;
                 }
@@ -1104,8 +1051,6 @@
             .subgrid-praxis {
                 grid-auto-rows: minmax(100px, 300px);
                 grid-row-gap: 20px;
-                .subgrid-cell {
-                }
             }
         }
     }
@@ -1130,7 +1075,6 @@
                 max-height: 100%;
                 height: 300px;
                 margin-top: 60px;
-                // margin-top: 5rem;
                 min-height: 200px;
                 order: 1;
                 width: 100dvw;
@@ -1143,7 +1087,6 @@
                     max-height: 250px;
                     width: 250px;
                     max-width: 250px;
-                    // background-color: rgb(16, 131, 43) ;
                     border: 5px solid var(--primary);
                     border-radius: 50%;
                 }
