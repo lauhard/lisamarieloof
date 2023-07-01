@@ -458,6 +458,7 @@
     .headline-wrapper {
         min-height: 200px;
         height: 33vh;
+
         // background-color: red;
         justify-content: end;
         :global(.heading) {
@@ -470,7 +471,7 @@
         height: 100%;
         // background-color: red;
         justify-content: start;
-        padding-top: 6%;
+        padding-top: 7%;
         // height: 650px;
         :global(.information) {
             // position: absolute;

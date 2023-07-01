@@ -126,6 +126,7 @@
                     color: var(--text);
                     font-size: 1rem;
                     font-size: 18px;
+                    text-align: justify;
                     // letter-spacing: .06rem;
                 }
             }
