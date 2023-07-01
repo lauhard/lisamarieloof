@@ -113,7 +113,7 @@
                 // background-color: #ffffff;
                 padding:30px;
                 // height: 150px;
-                gap: 10px;
+                gap: 1.2rem;
                 span {
                     font-family: 'Open Sans', sans-serif;
                     font-weight: 700;
@@ -122,8 +122,11 @@
                 }
                 .catchphrase {
                     font-weight: 300;
-                    font-size: 0.8rem;
-                    letter-spacing: .06rem;
+                    font-family: var(--font-family, "Segoe UI");
+                    color: var(--text);
+                    font-size: 1rem;
+                    font-size: 18px;
+                    // letter-spacing: .06rem;
                 }
             }
         }
