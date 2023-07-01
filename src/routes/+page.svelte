@@ -384,7 +384,10 @@
         width: 100%;
         box-sizing: border-box;
         position: relative;
-        overflow: hidden;
+        // overflow: hidden;
+       
+        // min-height: 600px;
+        min-height: auto;
     }
     .cell:nth-of-type(1),
     .cell:nth-of-type(2) {
@@ -395,34 +398,45 @@
     .cell:nth-of-type(1) {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
+        width: 60dvw;
         width: 60vw;
         order: 1;
-        //    background-color: blueviolet;
+        // background-color: blueviolet;
+        min-height: 750px;
+
     }
     .cell:nth-of-type(2) {
         display: flex;
         height: calc(100vh - 111px);
+        width: 40dvw;
         width: 40vw;
         order: 2;
-        //    background-color: gold;
+        // background-color: gold;
+        min-height: 600px;
+
     }
     .cell:nth-of-type(3) {
         grid-column: auto / span 4;
         height:auto;
+        min-height: 100%;
         // background-color: #0ba945;
-        // margin-bottom: 40px;
         order: 3;
     }
     .cell:nth-of-type(4) {
         grid-column: auto / span 4;
         height: 100%;
         background-color: var(--bg-current-cell, transparent);
-        width: 100vw;
+        width: 100%;
+        max-width: 100dvw;
+        max-width: 100vw;
+        min-height: 100%;
+        // background-color: purple;
         order: 4;
     }
     .cell:nth-of-type(5),
     .cell:nth-of-type(6) {
+        display: flex;
         grid-column: auto / span 4;
         height: auto;
         width: 100vw;
@@ -438,24 +452,31 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         height: 50%;
         width: 100%;
+
     }
     .headline-wrapper {
-        //    background-color: blue;
+        min-height: 200px;
+        height: 33vh;
+        justify-content: end;
         :global(.heading) {
-            position: absolute;
-            top: 35%;
-            transform: translateY(-55%);
+            // position: absolute;
+            // top: 35%;
+            // transform: translateY(-55%);
         }
     }
     .information-wrapper {
-        // background-color: gold;
+        height: 100%;
+        // background-color: red;
+        justify-content: start;
+        padding-top: 10%;
+        // height: 650px;
         :global(.information) {
-            position: absolute;
-            bottom: 45%;
+            // position: absolute;
+            // bottom: 45%;
         }
     }
     .profile-image-wrapper {
@@ -486,7 +507,7 @@
         width: 100%;
         height: auto;
         // background-color: red;
-        margin-bottom: 50px;
+        // margin-bottom: 50px;
         .welcome {
             width: 100%;
             text-align: center;
@@ -527,6 +548,7 @@
         position: relative;
         max-width: var(--content-width);
         height: auto;
+        min-height:100%;
         grid-template-columns: repeat(2, minmax(100px, 1fr));
         grid-auto-rows: minmax(100px, auto);
         grid-row-gap: 40px;
@@ -538,6 +560,7 @@
         .image {
             height: 100%;
             width: 100%;
+            min-height: 300px;
             overflow: hidden;
             padding: 0 20px;
             img {
@@ -689,28 +712,50 @@
         .section {
         }
         .grid {
-            grid-row-gap: 0px;
+            grid-row-gap: 40px;
             .cell:nth-of-type(1),
             .cell:nth-of-type(2) {
                 grid-column: auto / span 4;
                 width: 100vw;
+
             }
             .cell:nth-of-type(1) {
-                height: 700px;
+                // background-color: red;
+                height: auto;
+                min-height: 500px;
+
+                justify-content:start;
                 order: 2;
                 .information-wrapper {
+                    // background-color: green;
+                    padding-top: 0%;
+                    height: auto;
+
+                // min-height: 400px;
+
+                }
+                .headline-wrapper {
+                    background-color: var(--primary);
+                    height: 250px;
+                    min-height: auto;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    align-items: center;
+                    align-self: center;
                 }
                 // background-color: rebeccapurple;
             }
             .cell:nth-of-type(2) {
                 max-height: 100%;
                 height: 500px;
+                
                 margin-top: 90px;
                 min-height: 200px;
                 order: 1;
                 width: 100vw;
                 width: 100dvw;
-                // background-color: red;
                 justify-content: center;
                 .profile-image-wrapper {
                     position: relative;
@@ -734,15 +779,26 @@
                     }
                 }
             }
-            .cell-greeter {
-                padding: 0 20px;
-                margin-top: -100px;
+            // .cell-greeter {
+            //     // padding: 0 20px;
+            // }
+            .cell-greeter{
+                min-height: 100%;
+                height: auto;
+                // background-color: red;
+                // margin-top: -50px;
+               
+                .greeter-wrapper{
+                    margin: 30px 0 30px 0;
+                    min-height: 100%;
+                }
             }
             .subgrid-praxis {
                 display: grid;
                 position: relative;
                 max-width: 100vw;
                 height: auto;
+                min-height: 100%;
                 grid-template-columns: repeat(2, minmax(100px, 1fr));
                 .image {
                     justify-self: center;
@@ -752,17 +808,21 @@
                     max-width: 800px;
                     max-height: 400px;
                     width: 100%;
+                    min-height: auto;
                     overflow: hidden;
                     img {
                         width: 100%;
                         justify-self: center;
                         object-fit: contain;
+                        min-height: 100%;
                         // object-position: 0px -50px;
                     }
                 }
                 .contact,
                 .map {
                     max-width: 760px;
+                    height:auto;
+                    min-height: auto;
                     width: 100%;
                 }
             }
@@ -820,6 +880,8 @@
                     border-radius: 50%;
                 }
             }
+           
+         
         }
     }
 
@@ -872,10 +934,11 @@
             .cell:nth-of-type(1) {
                 // background-color: red;
                 .information-wrapper{
-                    margin-top: 150px;
+                    // margin-top: 150px;
                     // background-color: green;
                 }
             }
+           
 
             .subgrid-praxis {
                 .contact{
@@ -893,6 +956,9 @@
     @media screen and (max-width: 450px) {
        
         .grid {
+            .headline-wrapper{
+                background-color: var(--primary);
+            }
             .hypnose-wrapper {
                
                 padding: 0 20px;
@@ -908,7 +974,6 @@
             .cell:nth-of-type(1) {
                 // background-color: red;
                 .information-wrapper{
-                    margin-top: 150px;
                     // background-color: green;
                 }
             }
@@ -934,6 +999,7 @@
             }
         }
         .grid {
+            height: 100%;
             .cell:nth-of-type(2) {
                 max-height: 100%;
                 height: 300px;
@@ -954,6 +1020,13 @@
                     // background-color: rgb(131, 16, 16) ;
                     border: 5px solid var(--primary);
                     border-radius: 50%;
+                }
+            }
+            .subgrid-praxis{
+                grid-auto-rows: minmax(100px, 300px);
+                grid-row-gap: 20px;
+                .subgrid-cell{
+                    
                 }
             }
         }
