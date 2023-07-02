@@ -280,7 +280,6 @@
         max-width: var(--content-width, 1240px);
         // overflow: hidden;
         // background-color: green;
-
         padding: 100px 20px 0 20px;
     }
     .service-image {

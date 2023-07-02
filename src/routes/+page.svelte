@@ -492,6 +492,7 @@
         width: 100%;
         height: auto;
         margin-top: -4rem;
+        padding: 0 1rem;
         .welcome {
             width: 100%;
             text-align: center;
