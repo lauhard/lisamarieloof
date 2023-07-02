@@ -1,5 +1,6 @@
 <script>
     import leistungen from "$lib/images/leistungen.jpg";
+    import cert from "$lib/images/cert.png";
 </script>
 
 <div class="section">
@@ -17,21 +18,17 @@
         <div class="cell about-me">
             <h2>Herzlich Willkommen</h2>
             <p>
-                Ich freue mich sehr über Ihr Interesse und begrüße Sie auf meiner
-                Homepage. Mein Name ist Lisa-Marie Loof, ich bin diplomierte
-                Hypnose-Trainerin und studiere an der Alpen-Adria Universität in
-                Klagenfurt. Ich habe dort 2020 meinen Bachelor of Science in
-                Psychologie erlangt und bin gerade dabei, meinen Master of
-                Science in Psychologie abzuschießen.Ich
+                Ich freue mich sehr über Ihr Interesse und begrüße Sie auf
+                meiner Homepage. Mein Name ist Lisa-Marie Loof, ich bin
+                diplomierte Hypnose-Trainerin und studiere an der Alpen-Adria
+                Universität in Klagenfurt. Ich habe dort 2020 meinen Bachelor of
+                Science in Psychologie erlangt und bin gerade dabei, meinen
+                Master of Science in Psychologie abzuschießen.Ich
             </p>
             <p>Während meines Studiums haben Themen wie</p>
             <ul>
-                <li class="text">
-                    das Unterbewusstsein
-                </li>
-                <li class="text">
-                    Persönlichkeitsentwicklung
-                </li>
+                <li class="text">das Unterbewusstsein</li>
+                <li class="text">Persönlichkeitsentwicklung</li>
                 <li class="text">
                     Ressourcenaktivierung & Lösungsorientierung
                 </li>
@@ -39,15 +36,26 @@
                     Ausschöpfung des eigenen ungenutzten Potenzials
                 </li>
             </ul>
-            <p >
-                mein Interesse geweckt und ich habe erkannt, dass sich all diese wichtigen Konstrukte unter anderem in der Arbeit mit Hypnose wiederfinden. 
-Mein Interesse für Hypnose entstand schon in meiner Jugend und hat mich seitdem nicht mehr wirklich losgelassen.  Die Kombination meines Studiums der Psychologie und der Entscheidung die Ausbildung zur diplomierten Hypnose-Trainerin zu machen waren somit ein „Perfect Match“.
-Ich sehe mein Arbeiten als einen Kooperationsprozess zwischen meinen Klienten*innen und mir, der es Ihnen ermöglicht, in einen Zustand der Lern- und Aufmerksamkeitsfähigkeit zu gelangen, um ressourcen- und lösungsorientiert zu arbeiten. 
+            <p>
+                mein Interesse geweckt und ich habe erkannt, dass sich all diese
+                wichtigen Konstrukte unter anderem in der Arbeit mit Hypnose
+                wiederfinden. Mein Interesse für Hypnose entstand schon in
+                meiner Jugend und hat mich seitdem nicht mehr wirklich
+                losgelassen. Die Kombination meines Studiums der Psychologie und
+                der Entscheidung die Ausbildung zur diplomierten
+                Hypnose-Trainerin zu machen waren somit ein „Perfect Match“. Ich
+                sehe mein Arbeiten als einen Kooperationsprozess zwischen meinen
+                Klienten*innen und mir, der es Ihnen ermöglicht, in einen
+                Zustand der Lern- und Aufmerksamkeitsfähigkeit zu gelangen, um
+                ressourcen- und lösungsorientiert zu arbeiten.
             </p>
+        </div>
+        <div class="cell certificates">
+            
+            <img src={cert} alt="" srcset="" width="100%" height="300px" />
         </div>
     </div>
 </div>
-
 
 <style lang="scss">
     .section {
@@ -142,20 +150,36 @@ Ich sehe mein Arbeiten als einen Kooperationsprozess zwischen meinen Klienten*in
     .about-me {
         padding: 0 1rem;
 
-        h2{
+        h2 {
             text-align: center;
         }
         max-width: var(--content-width);
         justify-self: center;
         // background-color: red;
-        ul{
+        ul {
             margin-top: 1rem;
             padding-left: 1rem;
-            li{
+            li {
+               
                 list-style-type: circle;
                 font-weight: 400;
-            
             }
+        }
+    }
+    .certificates {
+        max-width: var(--content-width);
+        justify-self: center;
+        height: 300px;
+        display: grid;
+        img{
+            width:30%;
+            min-width: 320px;
+            height: auto;
+            object-fit: cover;
+            object-position: 0px -80px;
+            object-position: center;
+            overflow: hidden;
+            justify-self: center;
         }
     }
 </style>
