@@ -245,9 +245,9 @@
     p {
         // flex: 1 1 auto;
         width: 100%;
-        font-family: var(--font-family, "Segoe UI");
-        font-size: var(--font-size-standard, 16px);
-        font-weight: var(--font-weight-standard, 300);
+        // font-family: var(--font-family, "Segoe UI");
+        // font-size: var(--font-size-standard, 16px);
+        // font-weight: var(--font-weight-standard, 300);
     }
     .section {
         position: relative;

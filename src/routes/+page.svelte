@@ -55,7 +55,7 @@
     <div class="svg-wrapper">
         <LogoSvg
             className="background-svg"
-            height="1000px"
+            height="80vh"
             animation={false}
             --leaves-main="#f0f0f035"
             --leaves-overlay="#f0f0f035"
@@ -310,15 +310,20 @@
     .background-svg-banner {
         overflow: hidden;
         width: 100%;
-        height: 660px;
-        max-height: 64.5vh;
+        // height: 660px;
+        // max-height: 64.5vh;
         background-color: var(--primary);
         position: absolute;
         bottom: 10%;
+        bottom: 10vh;
+        height: 100vh;
+        max-height: 64vh;
+        min-height: 300px;
+        // height: 800px;
         .svg-wrapper {
             position: absolute;
-            left: -200px;
-            top: 300px;
+            left: -15vw;
+            bottom: -50vh;
         }
     }
     .grid {
@@ -339,7 +344,7 @@
         --grid-row-gap: 4rem;
         --grid-height: auto;
         --grid-min-height: 100dvh;
-        --grid-padding: 10px 0 0 0;
+        // --grid-padding: 10px 0 0 0;
         --grid-width: 100%;
 
         padding: var(--grid-padding);
@@ -370,7 +375,7 @@
     .cell:nth-of-type(2) {
         grid-column: span 2;
         max-height: 100vh;
-        height: calc(100vh - 100px);
+        height: calc(100vh - 150px);
     }
     .cell:nth-of-type(1) {
         display: flex;
@@ -383,11 +388,15 @@
     }
     .cell:nth-of-type(2) {
         display: flex;
-        height: calc(100vh - 111px);
+        height: calc(100vh - 100px);
+        // height: calc(100vh - 105px);
         width: 40dvw;
         width: 40vw;
         order: 2;
-        min-height: 600px;
+        min-height: 300px;
+        overflow: hidden;
+
+        // background-color: green;
     }
     .cell:nth-of-type(3) {
         grid-column: auto / span 4;
@@ -431,7 +440,9 @@
     .headline-wrapper {
         min-height: 200px;
         height: 33vh;
+        height: 35vh;
         justify-content: end;
+        // background-color: green;
         :global(.heading) {
             // position: absolute;
             // top: 35%;
@@ -439,10 +450,10 @@
         }
     }
     .information-wrapper {
-
+        // background-color: red;
         height: 100%;
-        justify-content: start;
-        padding-top: 7%;
+        justify-content: center;
+        // padding-top: 7%;
         :global(.information) {
             // position: absolute;
             // bottom: 45%;
@@ -455,15 +466,21 @@
         align-items: end;
         height: 88%;
         bottom: 10%;
+        // bottom: 5%;
         overflow: hidden;
         max-width: 100%;
+        max-height: 800px;
         width: 100%;
+        // min-height: 100px;
+        // background: red;
         img {
             position: relative;
             height: 100%;
             width: auto;
-            max-height: 830px;
+            // max-height: 830px;
+            // max-height: 800px;
             min-height: 60%;
+            min-height: 100%;
             object-fit: cover;
             object-position: 0px center;
             overflow: hidden;
@@ -474,7 +491,7 @@
         max-width: var(--content-width);
         width: 100%;
         height: auto;
-        margin-top: -5rem;
+        margin-top: -4rem;
         .welcome {
             width: 100%;
             text-align: center;
