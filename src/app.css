@@ -1,4 +1,7 @@
 @import url(./lib/css/pico/pico.css);
+@font-face {
+  font-family: "Segoe UI";
+}
 *,
 *::before,
 *::after {
@@ -9,11 +12,11 @@
 
 :root {
   --font-body:
-      Arial,
+      // Arial,
       -apple-system,
       // BlinkMacSystemFont,
       // Oxygen,
-      Ubuntu,
+      // Ubuntu,
       // Cantarell,
       "Open Sans",
       // "Helvetica Neue",
@@ -31,7 +34,6 @@
   --secondary-hover: #cea917 !important;
   --svg-icon-fill: #060000;
   --svg-icon-stroke: #060000;
-  --font-family: "Open Sans";
   --font-family: "Segoe UI";
 }
 
@@ -119,7 +121,7 @@ html body {
   height: auto;
   width: 100%;
   margin: 0;
-  font-family: "Arial";
+  font-family: "Open Sans", sans-serif;
   letter-spacing: 1.2px;
   color: var(--text);
   background-color: var(--background);
@@ -173,7 +175,7 @@ html body li,
 html body a {
   text-decoration: none;
   list-style: none;
-  font-weight: 300;
+  font-weight: 100;
 }
 html body p {
   margin: 0;
@@ -186,7 +188,7 @@ html body p, html body .text {
   font-size: 0.9rem;
   font-size: 1rem;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 100;
   font-family: var(--font-family, "Segoe UI");
   color: var(--text);
 }
