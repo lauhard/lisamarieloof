@@ -58,6 +58,12 @@
         stroke: #fff !important;
         stroke-width: 0px;
     }
+    .cta{
+        color: #fff !important;
+        &:hover{
+            color: var(--attention) !important;
+        }
+    }
     .Information {
         position: relative;
         display: flex;
@@ -105,6 +111,7 @@
                     // text-align: justify;
                     // letter-spacing: .06rem;
                 }
+               
             }
         }
     }

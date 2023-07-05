@@ -21,6 +21,9 @@
     import Information from "$lib/components/Information.svelte";
     import Contact from "$lib/components/Contact.svelte";
     import Faq from "$lib/components/FAQ.svelte";
+    import PhoneSvg from "$lib/components/svgs/phoneSvg.svelte";
+    import EmailSvg from "$lib/components/svgs/emailSvg.svelte";
+    import MapSvg from "$lib/components/svgs/mapSvg.svelte";
     // import { openMaps, scrollToAnchor } from "$lib/utils";
     // $: vars = `--background-image: url(${profile});`;
     $: loading = false;
@@ -99,6 +102,7 @@
             </div>
         </div>
         <div class="cell cell-greeter">
+            
             <div class="greeter-wrapper">
                 <span style="visibility:hidden;" id="willkommen" />
                 <h1 class="welcome">Herzlich Willkommen</h1>
@@ -170,22 +174,12 @@
 
                     <div class="contact-buttons">
                         <a class="cta" type="button" href="tel:+4369919048032">
-                            <img
-                                alt="svg icon"
-                                src={tel}
-                                width="26"
-                                height="26"
-                            />
+                            <PhoneSvg width="30px" height="22px" classNames="onHover" --fill="var(--white)" ></PhoneSvg>
                             +43 69919048032
                         </a>
 
                         <a class="cta" type="button" href="/kontakt">
-                            <img
-                                alt="svg icon"
-                                src={mail}
-                                width="26"
-                                height="26"
-                            />
+                            <EmailSvg width="30px" height="22px" classNames="onHover" --fill="var(--white)" ></EmailSvg>
                             Kontakformular
                         </a>
                     </div>
@@ -205,10 +199,12 @@
                         class="cta"
                         href="https://goo.gl/maps/JhctkWRnJmyWfm3Y8"
                         target="_blank"
-                        rel="noopener noreferrer">Karte öffnen</a
+                        rel="noopener noreferrer">
+                        <MapSvg width="35px" height="25px" classNames="onHover"  --fill="var(--white)"></MapSvg>Karte öffnen</a
                     >
                 </div>
             </div>
+
         </div>
         <div class="cell cell-hypnose">
             <div class="hypnose-wrapper">
@@ -274,8 +270,7 @@
 </div>
 
 <style lang="scss">
-    
-
+  
     .section {
         --section-min-height: 100vh;
         --section-height: 100%;
@@ -513,9 +508,10 @@
                 font-size: 18px;
             }
             img {
-                padding: 10px 10px;
+                padding: .5rem 10px 0px 10px;
                 height: 100%;
-                width: 50px;
+                max-width: 40px;
+                width: 100%;
             }
         }
         .intro {
@@ -579,9 +575,21 @@
                 font-family: var(--font-family, "Segoe UI");
                 color: #fff;
             }
+            
             a {
                 text-transform: uppercase;
                 justify-self: center;
+                color:#fff;
+
+                &:hover {
+                color: var(--attention);
+
+                    :global(.onHover){
+                        color: var(--attention);
+                    }
+                }
+                transition: all .5s ease-in-out !important;
+
             }
         }
     }

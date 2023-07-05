@@ -5,7 +5,6 @@
 <footer>
     <div class="grid">
         <div class="cell logo">
-            <!-- <div class="logo large"> -->
             <div class="svg-wrapper">
                 <LogoSvg
                     className="footer-background-svg"
@@ -13,7 +12,6 @@
                     --svg-stroke-width="0px"
                 />
             </div>
-            <!-- </div> -->
         </div>
         <div class="cell contact">
             <div class="address-wrapper">
@@ -85,7 +83,7 @@
             position: relative;
             display: grid;
             grid-gap: 0px;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
             grid-template-rows: auto;
             width: 100%;
             height: 100%;
@@ -105,7 +103,6 @@
         justify-content: end;
         justify-content: left;
         z-index: 10;
-
         li {
             margin: 0;
             padding: 0;
@@ -133,7 +130,6 @@
                 height: 1px;
                 background-color: #378d93;
                 background-color: var(--secondary);
-
                 margin-top: 5px;
             }
         }
@@ -146,36 +142,24 @@
         bottom: 0px;
         .svg-wrapper {
             position: absolute;
-            // width: 99%;
             height: 100%;
             left: 10px;
-            // bottom: -50px;
             bottom: 10px;
             padding:15px;
             :global(.footer-background-svg) {
                 position: relative;
-                // max-height: 250px;
                 height: 100%;
                 max-width:300px;
-                // width: 90%;
-        
                 z-index: 0 !important;
-                // bottom: 10px;
-                // background-color: red;
             }
         }
     }
     .contact {
         order: 2;
-        // margin-left: 50px;
         justify-content: left;
 
         .address-wrapper {
             width: 250px;
-            // overflow: hidden;
-            // p {
-            //     width: auto;
-            // }
         }
     }
     .sitemap {
@@ -188,13 +172,7 @@
         }
         .sitemap-wrapper {
             width: 250px;
-            // overflow: hidden;
-            // p {
-            //     width: auto;
-            // }
         }
-        // margin-left:195px;
-        // background-color: green;
     }
     .legal-notice {
         order: 4;
@@ -204,227 +182,68 @@
                 width: 6rem;
             }
         }
-        .legal-notice-wrapper {
-            // width: 250px;
-            // overflow: hidden;
-            // p {
-            //     width: auto;
-            // }
-        }
-        // margin-left:195px;
-        // background-color: blue;
     }
     @media screen and (max-width: 705px) {
         footer {
             .grid {
-                // grid-template-columns: repeat(2, min-max(80px,1fr));
-                // grid-template-rows: repeat(3, min-max(180px, 1fr));
-                // grid-gap: 0px;
-                // height: auto;
-                // min-height: 250px;
                 .cell {
-                    // width: 400px;
-                    // background-color: red;
-                    // margin-left: 60px;
-                    // justify-content: left;
                     padding-left: 20px;
-
-                }
-                .contact {
-                    // padding-top: 20px;
-
-                    // background-color: yellow;
                 }
                 .logo{
                     position: absolute;
                     order: 5;
                     grid-column: span auto;
                     grid-row: span auto;
-                    // background-color: red;
                     right:-70%;
-                    // bottom: 10px;
                     height: 100%;
                     bottom: 10px;
 
                     .svg-wrapper {
                         position: absolute;
-                        // height: 100%;
-                        // bottom: 10px;
-                        // min-width: 300px;
                         height: 90%;
                         bottom: 10px;
                         width: 100%;
                         max-width: 100%;
                         :global(.footer-background-svg) {
-                            // position: absolute;
                             position: relative;
-                            // bottom: 10px;
-                            // height: 500px;
                             height: 100%;
                             width: 100%;
-                        max-width: 100%;
-                            // min-width: 300px;
-                            // width: auto;
-                            // z-index: 0;
-                            // transform: translateX(-50%);
-                            // transform: translateX(0%);
-                            // right: 50%;
+                            max-width: 100%;
                         }
                     }
                 }
-                // .logo {
-                //     
-                // }
             }
         }
     }
     @media screen and (max-width: 400px) {
         footer {
-            // height: 100%;
             .grid {
                 grid-template-columns: repeat(2, min-max(80px, 1fr));
                 grid-template-rows: repeat(3, min-max(180px, 1fr));
-                // grid-gap: 0px;
-                // height: auto;
-                // min-height: 250px;
                 .cell {
-                    // width: 400px;
-                    // background-color: red;
                     margin-left: 20px;
                 }
-                // .logo {
-                //     background-color: red;
-                //     .svg-wrapper {
-                    
-                //         :global(.footer-background-svg) {
-                //             position: absolute;
-                //             // min-height: 250px;
-                //             // height: 100%;
-                //             // max-width: 250px;
-                //             // width: auto;
-                //             bottom: 0px;
-                //             // z-index: 0;
-                //             // transform: translateX(0%);
-                //             // left: 50%;
-                //         }
-                //     }
-                // }
                 .logo{
-                    // position: absolute;
                     order: 5;
                     grid-column: span auto;
                     grid-row: span auto;
-                    // background-color: red;
-                    // right:-75%;
-                    // bottom: -15%;
                     height: 100%;
-
                     .svg-wrapper {
                         position: absolute;
                         bottom: 0px;
                         right:2%;
-                        // width: auto;
-                        // max-width: auto;
                         height: 100%;
-                            width: 100%;
+                        width: 100%;
                         max-width: 100%;
-
                         :global(.footer-background-svg) {
                             position: relative;
                             height: 100%;
                             width: 100%;
-                        max-width: 100%;
-                        //     width: auto;
-                        // max-width: auto;
-                            // bottom: 10px;
-                            // bottom: 0px;
-                        // right:2%;
-                            // height: 50%;
-                            // min-width: 300px;
-                            // width: auto;
-                            // z-index: 0;
-                            // transform: translateX(-50%);
-                            // transform: translateX(0%);
+                            max-width: 100%;
                         }
                     }
                 }
             }
         }
     }
-    // a, p, small{
-    //     color:var(--text);
-    //     font-family: var(--font-family, "Segoe UI");
-    //     font-weight: 300;
-    //     font-size: .93rem !important;
-    //     line-height: 1.6rem;
-    //     color:white;
-    // }
-    // a, ul, li{
-    //     margin: 0;
-    //     padding: 0;
-    // }
-    // .flex{
-    //     display: flex;
-    // }
-    // .flex-wrap {
-    //     flex-wrap:wrap;
-    //     gap:20px;
-    // }
-
-    // .flex-row{
-    //     flex-direction: row;
-    // }
-    // .space-between {
-    //     justify-content: space-between;
-    // }
-    // .space-around {
-    //     justify-content: space-around;
-    // }
-    // .footer-wrapper{
-    //     position: relative;
-    // }
-    // .justify-center{
-    //     justify-content: center;
-
-    // }
-    // .align-center{
-    //     justify-content: center;
-    // }
-    // .box {
-    //     width:30%;
-    //     min-width: 200px;
-    //     height: auto;
-    //     width:auto;
-    //     z-index: 999;
-
-    // }
-    // .large{
-    //     height: 100%;
-    //     min-height: 100%;
-    //     align-self: start;
-    //     align-items: start;
-    //     justify-content: start;
-    //     width: 300px;
-    // }
-
-    // footer {
-    //     padding:20px 30px;
-    //     min-height: 300px;
-    //     height: auto;
-    //     width: 100%;
-    //     background-color: var(--primary);
-    //         .logo {
-
-    //         }
-    //         .flex-wrapper{
-    //             width: 100%;
-    //             .contact-wrapper{
-
-    //             }
-    //             .legal-notes{
-
-    //             }
-    //         }
-
-    //     }
 </style>
