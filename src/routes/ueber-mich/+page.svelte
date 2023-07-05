@@ -1,6 +1,7 @@
 <script>
     import leistungen from "$lib/images/leistungen.jpg";
     import cert from "$lib/images/cert.png";
+    import cert2 from "$lib/images/cert2.png";
 </script>
 
 <div class="section">
@@ -51,8 +52,8 @@
             </p>
         </div>
         <div class="cell certificates">
-            
-            <img src={cert} alt="" srcset="" width="100%" height="300px" />
+            <img src={cert} alt="zertifikat-1" srcset="" width="100%" height="300px" />
+            <img src={cert2} alt="zertifikat-2" srcset="" width="100%" height="300px" />
         </div>
     </div>
 </div>
@@ -169,8 +170,11 @@
     .certificates {
         max-width: var(--content-width);
         justify-self: center;
-        height: 300px;
+        min-height: 300px;
         display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 30%));
+        grid-template-rows: minmax();
+        justify-content: center;
         img{
             width:30%;
             min-width: 320px;

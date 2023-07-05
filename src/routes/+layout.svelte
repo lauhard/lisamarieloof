@@ -87,11 +87,11 @@
         transition: all 0.5s ease-in-out;
         transition: all .2s ease-in-out;
         background-color:#fff !important;
-        height: 85px !important;
+        height: 87px !important;
     }
     .content-wrapper {
         width: 100vw;
-        height: 80px;
+        height: 85px;
         display: flex;
         justify-content: center;
         align-items: center;

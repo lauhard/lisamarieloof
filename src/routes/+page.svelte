@@ -792,6 +792,12 @@
                 margin-top: 50px;
                 padding: 0 20px;
                 box-sizing: border-box;
+                h2::before{
+                    background-color: var(--secondary);
+                    position: absolute;
+                    border-color: var(--secondary);
+                    border-style: solid;
+                }
             }
         }
         @media (orientation: landscape) {

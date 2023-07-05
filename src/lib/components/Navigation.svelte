@@ -3,31 +3,35 @@
     import { onMount } from "svelte";
     import BurgerMenu from "./BurgerMenu.svelte";
     let open = false;
-    let oldScroll:number|undefined = undefined;
+    let oldScroll: number | undefined = undefined;
     export const offset = 50;
     export let scrollY = 0;
     // $: scrollY = 0;
     $: innerWidth = 0;
-    $:hide=false;
-    $: if(scrollY) {
-       if(oldScroll=== undefined) {
-            oldScroll=scrollY;
-       }
-       if(oldScroll < scrollY) {
-            hide=true;
-       } else{
-            hide=false;
-       }
-       oldScroll=scrollY;
+    $: hide = false;
+    $: if (scrollY) {
+        if (oldScroll === undefined) {
+            oldScroll = scrollY;
+        }
+        if (oldScroll < scrollY) {
+            hide = true;
+        } else {
+            hide = false;
+        }
+        oldScroll = scrollY;
     }
     onMount(async () => {});
 </script>
 
 <svelte:window bind:innerWidth />
 <!-- content here -->
-<nav class="navigation" class:scroll={scrollY > offset} class:hide={hide === true}>
+<nav
+    class="navigation"
+    class:scroll={scrollY > offset}
+    class:hide={hide === true}
+>
     <!-- <ul class="burger"> -->
-        <BurgerMenu bind:open className="burger" />
+    <BurgerMenu bind:open className="burger" />
     <!-- </ul> -->
     <ul class="menu-entries" class:mobile={innerWidth < 680 && open == true}>
         <li class:active={$page.url.pathname === "/"}>
@@ -56,7 +60,6 @@
         height: 70px;
         display: flex;
         justify-content: center;
-
         // background-color: blueviolet;
         // position: fixed;
         // top: 0;
@@ -126,11 +129,11 @@
         //     rgba(0, 0, 0, 0.093) 0px 3px 7px -3px;
         opacity: 1;
         transition: all 0.5s ease-in-out;
-        transition: all .2s ease-in-out;
+        transition: all 0.2s ease-in-out;
     }
     .hide {
         opacity: 0;
-        transition: all .2s ease-in-out;
+        transition: all 0.2s ease-in-out;
     }
 
     @media screen and (max-width: 680px) {
@@ -175,11 +178,10 @@
                         display: block;
                         text-align: center;
                         align-self: center;
-                    padding: 20px;
-                        
+                        padding: 20px;
+
                         height: 100%;
-                        width:100%;
-                        
+                        width: 100%;
                     }
                 }
             }

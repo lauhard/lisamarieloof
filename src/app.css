@@ -131,16 +131,20 @@ html body h4,
 html body h5,
 html body h6 {
   font-family: "Segoe UI";
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 1px;
   margin: 0;
+  color: var(--secondary);
+  color: var(--text);
 }
 html body h1.decorator::before,
 html body h2.decorator::before,
 html body h3.decorator::before {
   content: "";
+  background-color: var(--secondary);
   background-color: var(--primary);
   position: absolute;
+  border-color: var(--secondary);
   border-color: var(--primary);
   border-style: solid;
 }
