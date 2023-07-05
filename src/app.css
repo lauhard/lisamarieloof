@@ -109,7 +109,7 @@ html ::-webkit-scrollbar-thumb:hover {
   transition: background-color 0.3s ease-in-out;
 }
 html body {
-  font-family: var(--font-body);
+  font-family: var(--font-body) !important;
   min-height: 100vh;
   height: auto;
   width: 100%;
@@ -125,7 +125,7 @@ html body h3,
 html body h4,
 html body h5,
 html body h6 {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Segoe UI");
   font-weight: 400;
   letter-spacing: 1px;
   margin: 0;

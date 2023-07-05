@@ -118,7 +118,7 @@ html {
     }
 
     body {
-        font-family: var(--font-body);
+        font-family: var(--font-body) !important;
         min-height: 100vh;
         height: auto;
         width: 100%;
@@ -135,7 +135,7 @@ html {
         h4,
         h5,
         h6 {
-            font-family: var(--font-body);
+            font-family: var(--font-body,"Segoe UI");
             font-weight: 400;
             letter-spacing: 1px;
             margin: 0;

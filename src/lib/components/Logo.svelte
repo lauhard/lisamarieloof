@@ -73,7 +73,7 @@
 
             h1{
                 font-size: 16px;
-                font-family: "Segoe UI";
+                font-family: var(--font-family, "Segoe UI");
                 font-weight: 400;
                 color:var(--primary);
                 margin: 0;
