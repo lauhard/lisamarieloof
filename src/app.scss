@@ -1,6 +1,6 @@
 @import url(./lib/css/pico/pico.css);
 @font-face {
-    font-family: 'Segoe UI';
+    font-family: 'Segoe UI' !important;
 }
 *,
 *::before,
@@ -40,7 +40,7 @@
 
     --svg-icon-fill: #060000;
     --svg-icon-stroke: #060000;
-    --font-family: 'Segoe UI';
+    --font-family: 'Segoe UI',  sans-serif, -apple-system !important;
     // --font-family: 'Open Sans', sans-serif;
 
 }
