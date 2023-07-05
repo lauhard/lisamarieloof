@@ -168,7 +168,7 @@ html body li,
 html body a {
   text-decoration: none;
   list-style: none;
-  font-weight: 100;
+  font-weight: 300;
 }
 html body p {
   margin: 0;
@@ -181,7 +181,7 @@ html body p, html body .text {
   font-size: 0.9rem;
   font-size: 1rem;
   font-size: 18px;
-  font-weight: 100;
+  font-weight: 300;
   font-family: var(--font-family, "Segoe UI");
   color: var(--text);
 }
