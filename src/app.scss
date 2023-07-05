@@ -12,15 +12,8 @@
 
 :root {
     --font-body:
-        // Arial,
         -apple-system,
-        // BlinkMacSystemFont,
-        // Oxygen,
-        // Ubuntu,
-        // Cantarell,
         'Open Sans',
-        // 'Helvetica Neue',
-        // 'Poiret One',
         'Segoe UI',
         sans-serif;
 
@@ -41,7 +34,6 @@
     --svg-icon-fill: #060000;
     --svg-icon-stroke: #060000;
     --font-family: 'Segoe UI',  sans-serif, -apple-system !important;
-    // --font-family: 'Open Sans', sans-serif;
 
 }
 
@@ -143,7 +135,7 @@ html {
         h4,
         h5,
         h6 {
-            font-family: "Segoe UI";
+            font-family: var(--font-body);
             font-weight: 400;
             letter-spacing: 1px;
             margin: 0;

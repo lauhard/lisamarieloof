@@ -12,15 +12,8 @@
 
 :root {
   --font-body:
-      // Arial,
       -apple-system,
-      // BlinkMacSystemFont,
-      // Oxygen,
-      // Ubuntu,
-      // Cantarell,
       "Open Sans",
-      // "Helvetica Neue",
-      // "Poiret One",
       "Segoe UI",
       sans-serif;
   --content-width: 1240px;
@@ -132,7 +125,7 @@ html body h3,
 html body h4,
 html body h5,
 html body h6 {
-  font-family: "Segoe UI";
+  font-family: var(--font-body);
   font-weight: 400;
   letter-spacing: 1px;
   margin: 0;
