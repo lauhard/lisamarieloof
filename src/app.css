@@ -46,7 +46,7 @@
   width: 250px;
   height: auto;
   height: 58px;
-  padding: 20px;
+  padding: 20px !important;
   font-style: normal;
   font-weight: 300;
   font-size: 0.8rem;
@@ -59,19 +59,16 @@
 }
 .cta input[type=text],
 .cta input[type=button] {
-  -webkit-appearance: none;
-  -webkit-border-radius: 0;
+  -webkit-appearance: none !important;
+  -webkit-border-radius: 0px !important;
+  -moz-appearance: none;
+  appearance: none;
   border-style: none;
+  border-radius: 0px !important;
 }
-.cta img {
-  height: 20px;
-  margin: 0;
-  margin-right: 5px;
-  padding: 0;
+.cta svg {
   margin-top: -3px;
-}
-.cta img:hover {
-  cursor: pointer;
+  margin-right: 5px;
 }
 .cta:hover {
   background-color: var(--secondary-hover);

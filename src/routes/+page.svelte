@@ -556,7 +556,6 @@
             width: 600px;
             height: 300px;
             display: flex;
-            border-radius: 0 !important;
 
             flex-direction: column;
             padding: 20px;

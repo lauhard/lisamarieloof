@@ -49,9 +49,12 @@
 .cta {
     input[type="text"],
     input[type="button"] {
-        -webkit-appearance: none;
-        -webkit-border-radius: 0;
+        -webkit-appearance: none !important;
+        -webkit-border-radius: 0px !important;
+        -moz-appearance: none;
+        appearance: none;
         border-style: none;
+        border-radius: 0px !important;
     }
     background-color: var(--secondary);
     font-family: var(--font-family, "Segoe UI");
@@ -59,7 +62,7 @@
     width: 250px;
     height: auto;
     height: 58px;
-    padding: 20px;
+    padding: 20px !important;
     font-style: normal;
     font-weight: 300;
     font-size: 0.8rem;
@@ -69,16 +72,20 @@
     /* identical to box height */
     text-align: center;
     margin-bottom: 10px;
-    img {
-        height: 20px;
-        margin: 0;
-        margin-right: 5px;
-        padding: 0;
+    svg{
         margin-top: -3px;
-        &:hover {
-            cursor: pointer;
-        }
+        margin-right: 5px;
     }
+    // img {
+    //     height: 20px;
+    //     margin: 0;
+    //     margin-right: 5px;
+    //     padding: 0;
+    //     margin-top: -3px;
+    //     &:hover {
+    //         cursor: pointer;
+    //     }
+    // }
     &:hover {
         background-color: var(--secondary-hover) ;
         color: #fff;
