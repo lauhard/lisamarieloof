@@ -45,8 +45,16 @@
     stroke: var(--svg-icon-stroke);
     fill: var(--svg-icon-fill);
 }
+
 button,
 button:hover,
+input[type="text"],
+input[type="button"] {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+}
+
 .cta {
     button,
     button:hover,
@@ -55,7 +63,7 @@ button:hover,
         -webkit-appearance: none !important;
         -webkit-border-radius: 0px !important;
         -moz-appearance: none;
-        appearance: none;
+        appearance: none !important;
         border-style: none;
         border: none !important;
         border-radius: 0px !important;

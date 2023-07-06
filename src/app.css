@@ -41,6 +41,13 @@
 
 button,
 button:hover,
+input[type=text],
+input[type=button] {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
+
 .cta {
   outline: none !important;
   border: none !important;
@@ -63,14 +70,6 @@ button:hover,
   text-align: center;
   margin-bottom: 10px;
 }
-button button,
-button button:hover,
-button input[type=text],
-button input[type=button],
-button:hover button,
-button:hover button:hover,
-button:hover input[type=text],
-button:hover input[type=button],
 .cta button,
 .cta button:hover,
 .cta input[type=text],
@@ -78,7 +77,7 @@ button:hover input[type=button],
   -webkit-appearance: none !important;
   -webkit-border-radius: 0px !important;
   -moz-appearance: none;
-  appearance: none;
+  appearance: none !important;
   border-style: none;
   border: none !important;
   border-radius: 0px !important;
@@ -86,20 +85,14 @@ button:hover input[type=button],
   outline: none !important;
   justify-self: center;
 }
-button svg,
-button:hover svg,
 .cta svg {
   margin-top: -3px;
   margin-right: 5px;
 }
-button:hover,
-button:hover:hover,
 .cta:hover {
   background-color: var(--secondary-hover);
   color: #fff;
 }
-button:hover a,
-button:hover:hover a,
 .cta:hover a {
   color: var(--text);
 }
