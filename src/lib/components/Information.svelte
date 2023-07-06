@@ -36,7 +36,7 @@
                 <span class="attention">Schlafprobleme</span>?
             </p>
         </div>
-        <a class="cta" type="button" style="background:blue;"href="/leistungen"
+        <a class="cta" type="button" style=""href="/leistungen"
             >HIER ERFAHREN SIE MEHR</a
         >
     </div>

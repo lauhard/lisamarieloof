@@ -47,7 +47,7 @@ a[type=button] {
   -webkit-appearance: none !important;
   -moz-appearance: none !important;
   appearance: none !important;
-  border-radius: 0px !important;
+  border-radius: 0px;
   border-style: none !important;
   border: none !important;
   outline: none !important;

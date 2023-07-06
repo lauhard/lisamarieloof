@@ -37,7 +37,7 @@
         // width: 45px;
         // min-height: 45px;
         // height: 45px;
-        // border-radius: 50%;
+        // border-radius: 50% !important;
         color: var(--text);
         // background-color: var(--primary);
         // background-color: blue;
