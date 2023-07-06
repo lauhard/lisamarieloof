@@ -56,9 +56,11 @@ a[type=button] {
   background-color: var(--secondary);
   font-family: var(--font-family, "Segoe UI");
   box-sizing: border-box;
-  width: 250px;
+  min-width: 250px;
+  width: auto;
   height: auto;
-  height: 58px;
+  min-height: 58px;
+  height: auto;
   padding: 20px !important;
   font-style: normal;
   font-weight: 300;
