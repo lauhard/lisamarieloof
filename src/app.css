@@ -42,7 +42,8 @@
 button,
 button:hover,
 input[type=text],
-input[type=button] {
+input[type=button],
+a[type=button] {
   -webkit-appearance: none !important;
   -moz-appearance: none !important;
   appearance: none !important;
@@ -73,6 +74,7 @@ input[type=button] {
 .cta button,
 .cta button:hover,
 .cta input[type=text],
+.cta a[type=button],
 .cta input[type=button] {
   -webkit-appearance: none !important;
   -webkit-border-radius: 0px !important;
