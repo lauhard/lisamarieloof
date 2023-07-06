@@ -54,28 +54,20 @@ a[type="button"] {
     -webkit-appearance: none !important;
     -moz-appearance: none !important;
     appearance: none !important;
+    -webkit-border-radius: 0px !important;
+    border-radius: 0px !important;
+    border-style: none !important;
+    border: none !important;
+    outline: none !important;
 }
 
 .cta {
     button,
     button:hover,
-    input[type="text"],
     a[type="button"],
     input[type="button"] {
-        -webkit-appearance: none !important;
-        -webkit-border-radius: 0px !important;
-        -moz-appearance: none;
-        appearance: none !important;
-        border-style: none;
-        border: none !important;
-        border-radius: 0px !important;
-        border: none !important;
-        outline: none !important;
         justify-self: center;
     }
-    outline: none !important;
-    border: none !important;
-    border-radius: 0px !important;
     background-color: var(--secondary);
     font-family: var(--font-family, "Segoe UI");
     box-sizing: border-box;

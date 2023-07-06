@@ -173,12 +173,12 @@
                     </p>
 
                     <div class="contact-buttons">
-                        <a class="cta" href="tel:+4369919048032">
+                        <a class="cta" type="button" href="tel:+4369919048032">
                             <PhoneSvg width="30px" height="22px" classNames="onHover" --fill="var(--white)" ></PhoneSvg>
                             +43 69919048032
                         </a>
 
-                        <a class="cta" href="/kontakt">
+                        <a class="cta" type="button" href="/kontakt">
                             <EmailSvg width="30px" height="22px" classNames="onHover" --fill="var(--white)" ></EmailSvg>
                             Kontakformular
                         </a>
