@@ -40,6 +40,9 @@
 }
 
 .cta {
+  outline: none !important;
+  border: none !important;
+  border-radius: 0px !important;
   background-color: var(--secondary);
   font-family: var(--font-family, "Segoe UI");
   box-sizing: border-box;
@@ -57,6 +60,8 @@
   text-align: center;
   margin-bottom: 10px;
 }
+.cta button,
+.cta button:hover,
 .cta input[type=text],
 .cta input[type=button] {
   -webkit-appearance: none !important;
@@ -64,7 +69,10 @@
   -moz-appearance: none;
   appearance: none;
   border-style: none;
+  border: none !important;
   border-radius: 0px !important;
+  border: none !important;
+  outline: none !important;
 }
 .cta svg {
   margin-top: -3px;
