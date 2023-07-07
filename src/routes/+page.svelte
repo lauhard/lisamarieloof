@@ -35,7 +35,7 @@
     export let data: PageServerData;
     export let document:PrismicDocument = data?.document as PrismicDocument
     const popup = document.data.body.filter(s =>s.slice_type == "popup");
-    let env:boolean = dev;
+    // let env:boolean = dev;
 
 
 
@@ -101,7 +101,7 @@
             <ArrowDownSvg width="20px" height="30px" --fill="#fff" />
         </a>
     </RoundButton>
-<SliceZone slices={popup} components={{"popup":Popup}} />
+<!-- <SliceZone slices={popup} components={{"popup":Popup}} /> -->
 
     <div class="grid">
         <div class="cell cell-headline">

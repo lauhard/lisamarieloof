@@ -42,7 +42,6 @@
 		"animejs": "^3.2.1",
 		"nodemailer": "^6.9.3",
 		"postmark": "^3.0.18",
-		"svelte-email": "^0.0.4",
 		"zod": "^3.21.4"
 	}
 }
