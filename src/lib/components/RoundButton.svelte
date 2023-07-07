@@ -33,19 +33,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        // min-width: 45px;
-        // width: 45px;
-        // min-height: 45px;
-        // height: 45px;
-        // border-radius: 50% !important;
-        color: var(--text);
-        // background-color: var(--primary);
-        // background-color: blue;
         &:hover {
-            // background-color: var(--primary-hover);
             color: var(--text);
-            transition: all 0.3s ease-in-out;
-            // animation: hover 4s ease-in-out infinite;
+            transition: all 0.2s ease-in-out;
         }
     }
 </style>

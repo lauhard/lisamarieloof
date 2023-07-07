@@ -22,9 +22,9 @@
 <style lang="scss">
     .base {
         color: var(--fill);
-        transition: all 0.5s ease-in-out;
+        transition: all 0.2s ease-in-out;
     }
     #emailSvg svg path .base {
-        transition: all 0.5s ease-in-out;
+        transition: all 0.2s ease-in-out;
     }
 </style>

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import checkmark from "$lib/svg/checkmark.svg";
     import mail from "$lib/svg/mail-solid.svg";
     import tel from "$lib/svg/telephone.svg";
@@ -17,19 +17,34 @@
     // import { ObserveProps, observer } from "$lib/actions/observer";
     import profileImage from "$lib/images/lisa-min.webp";
 
-    import Profile from "$lib/components/Profile.svelte";
     import Information from "$lib/components/Information.svelte";
-    import Contact from "$lib/components/Contact.svelte";
     import Faq from "$lib/components/FAQ.svelte";
     import PhoneSvg from "$lib/components/svgs/phoneSvg.svelte";
     import EmailSvg from "$lib/components/svgs/emailSvg.svelte";
     import MapSvg from "$lib/components/svgs/mapSvg.svelte";
+
+
+    import { dev } from '$app/environment';
+    import type { PageServerData } from "./$types";
+    import { SliceZone } from "@prismicio/svelte";
+    import * as prismic from '@prismicio/client'
+    import type { PrismicDocument } from '@prismicio/client';
+    import Popup from '$lib/components/slices/Popup.svelte';
+    // import Maps from '$lib/components/slices/Maps.svelte';
+
+    export let data: PageServerData;
+    export let document:PrismicDocument = data?.document as PrismicDocument
+    const popup = document.data.body.filter(s =>s.slice_type == "popup");
+    let env:boolean = dev;
+
+
+
     // import { openMaps, scrollToAnchor } from "$lib/utils";
     // $: vars = `--background-image: url(${profile});`;
-    $: loading = false;
-    onMount(() => {
-        loading = true;
-    });
+    // $: loading = false;
+    // onMount(() => {
+    //     loading = true;
+    // });
     // onDestroy(() => {});
 
     // let params = {
@@ -48,6 +63,7 @@
     <title>Startseite</title>
     <link rel="preload" as="image" href={profileImage} />
     <link rel="preload" as="image" href={hypose} />
+    
 </svelte:head>
 
 <!-- content here -->
@@ -68,7 +84,11 @@
         />
     </div>
 </div>
+
+	
+
 <div class="section">
+
     <RoundButton
         classNames="hover scroll-down"
         title="scroll to the next headline"
@@ -78,9 +98,10 @@
             aria-label="links to section 2"
             style="padding:0 10px;"
         >
-            <ArrowDownSvg width="20px" height="30px" />
+            <ArrowDownSvg width="20px" height="30px" --fill="#fff" />
         </a>
     </RoundButton>
+<SliceZone slices={popup} components={{"popup":Popup}} />
 
     <div class="grid">
         <div class="cell cell-headline">
@@ -269,6 +290,11 @@
     </div>
 </div>
 
+<!-- <pre>
+    {JSON.stringify(document.data.body, null, 2)}
+    {JSON.stringify(document.data.body.filter(s =>s.slice_type == "popup"), null, 2)}
+</pre> -->
+
 <style lang="scss">
   
     .section {
@@ -300,6 +326,9 @@
             z-index: 9999;
             &:hover {
                 background: var(--secondary-hover) !important;
+                :global(.base) {
+                    --fill:var(--attention);
+                }
             }
         }
     }
@@ -590,7 +619,7 @@
                         color: var(--attention);
                     }
                 }
-                transition: all .5s ease-in-out !important;
+                transition: all .2s ease-in-out !important;
 
             }
         }
@@ -677,6 +706,9 @@
     }
 
     @media screen and (max-width: 1200px) {
+        :global(.scroll-down) {
+            display: none !important;
+        }
         .background-svg-banner {
             bottom: 0px;
             height: 100dvh;
@@ -964,9 +996,6 @@
     }
     // fix image for mobile
     @media screen and (max-width: 510px) {
-        :global(.scroll-down) {
-            display: none !important;
-        }
         .background-svg-banner {
             bottom: 0px;
             height: 100dvh;

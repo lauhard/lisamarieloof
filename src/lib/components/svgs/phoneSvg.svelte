@@ -56,11 +56,11 @@
     
    .base {
         color:var(--fill);
-        transition: all .5s ease-in-out ;
+        transition: all .2s ease-in-out ;
 
    }
    #phoneSvg svg path .base{
-        transition: all .5s ease-in-out ;
+        transition: all .2s ease-in-out ;
    }
        
 </style>
